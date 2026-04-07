@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaSphere | Marketing Companion Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">N</div>
+        <div>
+          <div class="brand-title">NovaSphere</div>
+          <div class="brand-subtitle">Marketing Companion Demo</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard">Overview</button>
+        <button class="nav-item" data-view="campaign">Campaign Copilot</button>
+        <button class="nav-item" data-view="coaching">Manager Coaching</button>
+        <button class="nav-item" data-view="field">Field Activation</button>
+        <button class="nav-item" data-view="insights">Adoption Insights</button>
+      </nav>
+
+      <div class="sidebar-card">
+        <div class="eyebrow">Demo mode</div>
+        <h3>Internal only</h3>
+        <p>All outputs are simulated for presentation purposes.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">WEC cluster transformation workspace</div>
+          <h1 id="pageTitle">Overview</h1>
+        </div>
+        <div class="topbar-right">
+          <span class="status-pill">AI policy checks enabled</span>
+          <div class="user-chip">Yvan · Demo Lead</div>
+        </div>
+      </header>
+
+      <section class="view active" id="dashboardView">
+        <div class="hero-card">
+          <div>
+            <div class="eyebrow">Transformation objective</div>
+            <h2>Embed AI-supported omnichannel marketing into daily work.</h2>
+            <p>
+              This demo simulates an internal AI companion that helps junior marketeers,
+              senior marketeers, and sales leaders adopt new ways of working through guided
+              planning, coaching, and execution support.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn" data-jump="campaign">Launch campaign flow</button>
+              <button class="secondary-btn" data-jump="coaching">Open manager toolkit</button>
+            </div>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-label">Monthly active users</span>
+              <strong>68%</strong>
+              <span class="metric-trend positive">+14 pts vs. pilot month 1</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Campaign planning time</span>
+              <strong>-43%</strong>
+              <span class="metric-trend positive">vs. baseline</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Training completion</span>
+              <strong>81%</strong>
+              <span class="metric-trend positive">on target</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid two-col">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Role-based use cases</h3>
+              <span class="tag">3 scripted flows</span>
+            </div>
+            <div class="use-case-list">
+              <div class="use-case-item">
+                <strong>Junior marketeer</strong>
+                <p>Creates an omnichannel HCP campaign with country and budget constraints.</p>
+              </div>
+              <div class="use-case-item">
+                <strong>Senior marketeer</strong>
+                <p>Receives a coaching toolkit to lead AI adoption across the team.</p>
+              </div>
+              <div class="use-case-item">
+                <strong>Sales manager</strong>
+                <p>Turns brand strategy into field-rep activation materials.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Compliance guardrails</h3>
+              <span class="tag amber">Pharma-aware</span>
+            </div>
+            <ul class="guardrail-list">
+              <li>Approved source content only</li>
+              <li>Country localization required before external use</li>
+              <li>Medical-legal-regulatory review for promotional content</li>
+              <li>Human approval remains mandatory</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="campaignView">
+        <div class="grid two-col-form">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Campaign Copilot</h3>
+              <span class="tag">Scenario 1</span>
+            </div>
+            <div class="form-grid">
+              <label>
+                Product / franchise
+                <input id="campaignProduct" value="Cardiovascular therapy launch" />
+              </label>
+              <label>
+                Country
+                <select id="campaignCountry">
+                  <option>Switzerland</option>
+                  <option>Belgium</option>
+                  <option>Netherlands</option>
+                  <option>Austria</option>
+                  <option>Portugal</option>
+                  <option>Ireland</option>
+                  <option>Nordics</option>
+                </select>
+              </label>
+              <label>
+                Audience
+                <select id="campaignAudience">
+                  <option>Cardiologists</option>
+                  <option>Neurologists</option>
+                  <option>Oncologists</option>
+                  <option>General practitioners</option>
+                </select>
+              </label>
+              <label>
+                Objective
+                <select id="campaignObjective">
+                  <option>Awareness</option>
+                  <option>Message recall</option>
+                  <option>Event registration</option>
+                  <option>Follow-up conversion</option>
+                </select>
+              </label>
+              <label>
+                Budget level
+                <select id="campaignBudget">
+                  <option>Limited</option>
+                  <option>Moderate</option>
+                  <option>High</option>
+                </select>
+              </label>
+              <label>
+                Preferred channels
+                <input id="campaignChannels" value="Email, webinar, field follow-up" />
+              </label>
+            </div>
+            <button class="primary-btn full-width" id="generateCampaignBtn">Generate omnichannel plan</button>
+          </div>
+
+          <div class="panel output-panel">
+            <div class="panel-head">
+              <h3>AI output</h3>
+              <span class="tag success">Structured recommendation</span>
+            </div>
+            <div id="campaignLoader" class="loader hidden">
+              <div class="spinner"></div>
+              <p>Analyzing audience, constraints, and approved content modules...</p>
+            </div>
+            <div id="campaignOutput" class="output-card muted">
+              Click “Generate omnichannel plan” to display the scripted recommendation.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="coachingView">
+        <div class="grid two-col-form">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Manager Coaching</h3>
+              <span class="tag">Scenario 2</span>
+            </div>
+            <div class="form-grid">
+              <label>
+                Team maturity
+                <select id="coachMaturity">
+                  <option>Low AI readiness</option>
+                  <option>Mixed maturity</option>
+                  <option>Advanced but inconsistent</option>
+                </select>
+              </label>
+              <label>
+                Main barrier
+                <select id="coachBarrier">
+                  <option>Resistance to change</option>
+                  <option>Lack of practical use cases</option>
+                  <option>Compliance anxiety</option>
+                  <option>Low confidence with tools</option>
+                </select>
+              </label>
+              <label>
+                Country cluster
+                <select id="coachCountry">
+                  <option>WEC cluster wide</option>
+                  <option>Switzerland</option>
+                  <option>Belgium</option>
+                  <option>Nordics</option>
+                </select>
+              </label>
+              <label>
+                Priority horizon
+                <select id="coachHorizon">
+                  <option>Next 30 days</option>
+                  <option>Next 60 days</option>
+                  <option>Next 90 days</option>
+                </select>
+              </label>
+            </div>
+            <button class="primary-btn full-width" id="generateCoachingBtn">Create coaching toolkit</button>
+          </div>
+
+          <div class="panel output-panel">
+            <div class="panel-head">
+              <h3>AI output</h3>
+              <span class="tag success">Team adoption plan</span>
+            </div>
+            <div id="coachingLoader" class="loader hidden">
+              <div class="spinner"></div>
+              <p>Building manager talking points, enablement modules, and reinforcement plan...</p>
+            </div>
+            <div id="coachingOutput" class="output-card muted">
+              Click “Create coaching toolkit” to display the scripted recommendation.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="fieldView">
+        <div class="grid two-col-form">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Field Activation</h3>
+              <span class="tag">Scenario 3</span>
+            </div>
+            <div class="form-grid">
+              <label>
+                Brand message
+                <input id="fieldMessage" value="Improve message recall after digital touchpoints" />
+              </label>
+              <label>
+                Rep objective
+                <select id="fieldObjective">
+                  <option>Improve follow-up quality</option>
+                  <option>Drive meeting conversion</option>
+                  <option>Increase content usage</option>
+                </select>
+              </label>
+              <label>
+                Customer segment
+                <select id="fieldSegment">
+                  <option>High-value HCPs</option>
+                  <option>Low-engagement HCPs</option>
+                  <option>Recently contacted HCPs</option>
+                </select>
+              </label>
+              <label>
+                Market
+                <select id="fieldCountry">
+                  <option>Belgium</option>
+                  <option>Switzerland</option>
+                  <option>Austria</option>
+                  <option>Portugal</option>
+                </select>
+              </label>
+            </div>
+            <button class="primary-btn full-width" id="generateFieldBtn">Generate rep activation kit</button>
+          </div>
+
+          <div class="panel output-panel">
+            <div class="panel-head">
+              <h3>AI output</h3>
+              <span class="tag success">Execution pack</span>
+            </div>
+            <div id="fieldLoader" class="loader hidden">
+              <div class="spinner"></div>
+              <p>Preparing rep briefing, suggested actions, and follow-up sequence...</p>
+            </div>
+            <div id="fieldOutput" class="output-card muted">
+              Click “Generate rep activation kit” to display the scripted recommendation.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="insightsView">
+        <div class="grid insights-grid">
+          <div class="panel stat-panel">
+            <span class="metric-label">Active users</span>
+            <strong>214</strong>
+            <span class="metric-trend positive">+18% month on month</span>
+          </div>
+          <div class="panel stat-panel">
+            <span class="metric-label">Avg. campaigns assisted</span>
+            <strong>5.6</strong>
+            <span class="metric-trend positive">per user / month</span>
+          </div>
+          <div class="panel stat-panel">
+            <span class="metric-label">Content reuse rate</span>
+            <strong>72%</strong>
+            <span class="metric-trend positive">above target</span>
+          </div>
+          <div class="panel stat-panel">
+            <span class="metric-label">Manager coaching adoption</span>
+            <strong>64%</strong>
+            <span class="metric-trend neutral">still scaling</span>
+          </div>
+        </div>
+
+        <div class="grid two-col">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Transformation score by market</h3>
+              <span class="tag">Illustrative KPI</span>
+            </div>
+            <div class="bar-chart">
+              <div class="bar-row"><span>Switzerland</span><div class="bar"><div style="width: 82%"></div></div><strong>82</strong></div>
+              <div class="bar-row"><span>Belgium</span><div class="bar"><div style="width: 76%"></div></div><strong>76</strong></div>
+              <div class="bar-row"><span>Netherlands</span><div class="bar"><div style="width: 71%"></div></div><strong>71</strong></div>
+              <div class="bar-row"><span>Austria</span><div class="bar"><div style="width: 68%"></div></div><strong>68</strong></div>
+              <div class="bar-row"><span>Portugal</span><div class="bar"><div style="width: 64%"></div></div><strong>64</strong></div>
+              <div class="bar-row"><span>Ireland</span><div class="bar"><div style="width: 73%"></div></div><strong>73</strong></div>
+              <div class="bar-row"><span>Nordics</span><div class="bar"><div style="width: 79%"></div></div><strong>79</strong></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Recommended next actions</h3>
+              <span class="tag amber">Change reinforcement</span>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <strong>Week 1</strong>
+                <p>Run manager-led team huddles focused on one practical use case per role.</p>
+              </div>
+              <div class="timeline-item">
+                <strong>Week 2</strong>
+                <p>Publish best-practice examples from Switzerland and Nordics pilot teams.</p>
+              </div>
+              <div class="timeline-item">
+                <strong>Week 3</strong>
+                <p>Push role-specific nudges tied to active campaigns and field priorities.</p>
+              </div>
+              <div class="timeline-item">
+                <strong>Week 4</strong>
+                <p>Review KPI movement and refresh enablement assets in low-adoption markets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
