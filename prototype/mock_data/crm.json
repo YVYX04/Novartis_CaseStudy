@@ -1,0 +1,73 @@
+{
+  "hcp_id": "hcp_zurich_cardiologist_0047",
+  "hcp_name": "Dr. Anna Müller",
+  "account_owner": "Marc Huber",
+  "last_interactions": [
+    {
+      "date": "2026-01-09",
+      "type": "In-person visit",
+      "rep": "Marc Huber",
+      "duration_min": 12,
+      "topic": "Entresto — HFrEF evidence update, PARADIGM-HF subgroup data",
+      "outcome": "Positive — Dr. Müller asked for the EMPEROR-Reduced comparison data. Agreed to review the materials and follow up.",
+      "next_action": "Send EMPEROR-Reduced comparison deck. Invite to February webinar.",
+      "sentiment": "engaged"
+    },
+    {
+      "date": "2025-11-14",
+      "type": "In-person visit",
+      "rep": "Marc Huber",
+      "duration_min": 8,
+      "topic": "Entresto dose titration in elderly patients",
+      "outcome": "Neutral — Limited time. Raised tolerability question for patients > 75y. Said she'd check the TRANSITION data herself.",
+      "next_action": "Follow up with TRANSITION trial PDF. Monitor prescribing pattern in Q1.",
+      "sentiment": "neutral"
+    },
+    {
+      "date": "2025-10-03",
+      "type": "Webinar attendance",
+      "rep": "N/A (digital)",
+      "duration_min": 45,
+      "topic": "ESC 2025 — New heart failure guidelines overview",
+      "outcome": "Attended full session. Asked 2 questions in Q&A on HFmrEF management.",
+      "sentiment": "highly engaged"
+    }
+  ],
+  "digital_engagement": [
+    {
+      "date": "2026-02-18",
+      "channel": "Email",
+      "asset": "Entresto Q1 2026 — HF management newsletter",
+      "action": "Opened, clicked CTA (PARADIGM-HF data PDF)",
+      "time_on_asset_sec": 140
+    },
+    {
+      "date": "2026-01-30",
+      "channel": "Email",
+      "asset": "Entresto — Dose titration guide for elderly patients",
+      "action": "Opened, no click",
+      "time_on_asset_sec": 0
+    },
+    {
+      "date": "2025-12-10",
+      "channel": "Veeva Engage (remote detail)",
+      "asset": "HFrEF Management with Entresto — slide deck",
+      "action": "Full session, 3 slides bookmarked",
+      "time_on_asset_sec": 420
+    }
+  ],
+  "prescribing_trend": [
+    { "month": "Oct 2025", "entresto_rx": 21 },
+    { "month": "Nov 2025", "entresto_rx": 19 },
+    { "month": "Dec 2025", "entresto_rx": 16 },
+    { "month": "Jan 2026", "entresto_rx": 17 },
+    { "month": "Feb 2026", "entresto_rx": 15 }
+  ],
+  "open_action_items": [
+    "Send EMPEROR-Reduced vs. Entresto comparison data (overdue from January visit)",
+    "Invite to Entresto Nordics webinar on Thursday — cardiologists welcome",
+    "Check if she reviewed TRANSITION trial — mentioned in November visit"
+  ],
+  "next_visit_scheduled": "2026-04-08T11:00:00",
+  "visit_objective": "Re-engage on prescribing trend decline. Address tolerability concern in elderly. Invite to peer webinar."
+}

@@ -1,0 +1,58 @@
+{
+  "dr_muller_anna": {
+    "id": "hcp_zurich_cardiologist_0047",
+    "name": "Dr. Anna Müller",
+    "specialty": "Cardiology — Heart Failure & Hypertension",
+    "institution": "UniversitätsSpital Zürich, Department of Cardiology",
+    "city": "Zurich",
+    "country": "Switzerland",
+    "tier": "Key Account — Tier 1",
+    "years_in_practice": 14,
+    "languages": ["German", "English"],
+    "patient_volume_hf_per_month": 45,
+    "academic_affiliations": ["ESC Heart Failure Working Group", "Swiss Society of Cardiology"],
+    "prescribing_profile": {
+      "Entresto": {
+        "status": "Regular prescriber",
+        "monthly_rx": 18,
+        "trend": "Stable — slight dip in Q4 2025",
+        "notes": "Prefers Entresto for HFrEF patients, EF < 40%. Occasionally switches to competitor (Sacubitril generic) for budget-sensitive patients."
+      },
+      "Cosentyx": "Not relevant (not in specialty)",
+      "Kisqali": "Not relevant (not in specialty)"
+    },
+    "key_interests": [
+      "Real-world evidence data on Entresto in elderly patients",
+      "New ESC 2024 guidelines on HFmrEF management",
+      "Patient adherence strategies",
+      "Digital health tools for remote patient monitoring"
+    ],
+    "known_concerns": [
+      "Questions tolerability data in patients > 75 years",
+      "Has raised reimbursement uncertainty in Switzerland for some indications",
+      "Does not like promotional-heavy visits — prefers scientific discussion"
+    ],
+    "preferred_engagement": ["In-person scientific discussion", "Email with data references", "Peer webinars"],
+    "digital_channels": ["Email: high engagement", "Veeva Engage: 2 sessions", "Congress: last attended ESC 2025 Amsterdam"],
+    "do_not_discuss": ["Competitor negative comparisons", "Price/discount discussions (refer to market access)"]
+  },
+  "dr_dubois_paul": {
+    "id": "hcp_brussels_immuno_0089",
+    "name": "Dr. Paul Dubois",
+    "specialty": "Rheumatology & Immunology",
+    "institution": "CHU Saint-Luc, Brussels",
+    "city": "Brussels",
+    "country": "Belgium",
+    "tier": "Tier 2",
+    "prescribing_profile": {
+      "Cosentyx": {
+        "status": "Occasional prescriber",
+        "monthly_rx": 6,
+        "trend": "Declining — competitor biologic gaining share",
+        "notes": "Switched 2 AS patients to competitor in Q3. Cites fewer injections/month as patient preference."
+      }
+    },
+    "key_interests": ["Comparative data vs. IL-17 competitors", "Patient-reported outcomes", "Biosimilar landscape"],
+    "preferred_engagement": ["Email", "In-person with clinical data"]
+  }
+}

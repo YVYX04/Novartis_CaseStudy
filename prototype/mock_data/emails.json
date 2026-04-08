@@ -1,0 +1,58 @@
+[
+  {
+    "id": "email_001",
+    "from": "sophie.vandenberghe@novartis.com",
+    "from_name": "Sophie Vandenberghe",
+    "role": "Country Manager Belgium",
+    "subject": "URGENT: Cosentyx Q1 campaign — email open rates below threshold",
+    "received": "07:12",
+    "body": "Hi team, overnight CRM pull shows our Cosentyx Belgium email campaign dropped to 18% open rate — well below the 28% target. Three accounts in Ghent and Antwerp haven't engaged in 6 weeks. Need a revised channel plan before the team meeting at 10am. Also, regional MLR has flagged one asset for revision. Can we discuss?",
+    "priority": "high",
+    "tags": ["campaign", "MLR", "Belgium", "Cosentyx"]
+  },
+  {
+    "id": "email_002",
+    "from": "lars.nielsen@novartis.com",
+    "from_name": "Lars Nielsen",
+    "role": "Marketing Lead Nordics",
+    "subject": "Entresto webinar — 94 registrations confirmed for Thursday",
+    "received": "06:48",
+    "body": "Great news: the Entresto heart failure webinar is at 94 registrations vs. a 75 target. We have 4 high-value cardiologists confirmed from Oslo and Stockholm. I'm attaching the latest slide deck for your review — one slide on the PARADIGM-HF data needs your sign-off before we can upload to the platform.",
+    "priority": "medium",
+    "tags": ["webinar", "Entresto", "Nordics"],
+    "attachment": "Entresto_HF_Webinar_v3_DRAFT.pptx"
+  },
+  {
+    "id": "email_003",
+    "from": "compliance.alerts@novartis.com",
+    "from_name": "Compliance Hub (automated)",
+    "role": "System",
+    "subject": "[ACTION REQUIRED] MLR review cycle closes Friday 17:00 CET",
+    "received": "06:00",
+    "body": "Automated reminder: you have 2 assets currently in MLR review for Switzerland and Portugal. Deadline for feedback submission is Friday 17:00 CET. Assets pending: (1) Kisqali CH email — sent for review 5 days ago. (2) Cosentyx PT digital banner — 2 days in review. Please ensure local reviewers have responded.",
+    "priority": "high",
+    "tags": ["MLR", "compliance", "deadline", "Switzerland", "Portugal"]
+  },
+  {
+    "id": "email_004",
+    "from": "marc.huber@novartis.com",
+    "from_name": "Marc Huber",
+    "role": "Field Representative, Switzerland",
+    "subject": "Dr. Keller (Bern, oncology) — requesting updated data on Kisqali combinations",
+    "received": "22:41",
+    "body": "Evening, Dr. Keller called just before close. She's treating a complex HR+/HER2- patient and wants the latest real-world data on Kisqali + letrozole. Can someone pull the RWE slides and the ESM0 2024 data pack? I have a follow-up call with her at 14:30 tomorrow. Would be great to have something by 13:00.",
+    "priority": "medium",
+    "tags": ["Kisqali", "Switzerland", "HCP request", "oncology"]
+  },
+  {
+    "id": "email_005",
+    "from": "campaign.tracker@novasphere.internal",
+    "from_name": "NovaSphere Campaign Tracker",
+    "role": "System",
+    "subject": "Today's campaign deadlines — 3 actions due",
+    "received": "07:00",
+    "body": "Good morning. Automated briefing for today:\n1. [DUE TODAY] Entresto Netherlands email — final copy approval needed by 12:00\n2. [DUE TODAY] Austria digital banner — translation review by 15:00\n3. [DUE TOMORROW] Cosentyx Belgium revised channel plan submission\n\nCampaign performance summary: 2 campaigns on track, 1 at risk (Belgium), 1 paused pending MLR.",
+    "priority": "medium",
+    "tags": ["deadlines", "campaign", "Netherlands", "Austria"]
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "reporting_week": "W14 2026 (Mar 30 – Apr 5)",
+  "cluster": "WEC",
+  "campaigns": [
+    {
+      "id": "entresto_ch_q1",
+      "name": "Entresto Switzerland — HF Spring Push",
+      "country": "Switzerland",
+      "brand": "Entresto",
+      "therapeutic_area": "Cardiovascular",
+      "audience": "Cardiologists, HF specialists",
+      "status": "Active",
+      "start_date": "2026-03-01",
+      "end_date": "2026-04-30",
+      "channels": {
+        "email": {
+          "sends": 420,
+          "open_rate": 0.31,
+          "click_rate": 0.09,
+          "target_open_rate": 0.30,
+          "target_click_rate": 0.10,
+          "status": "on_track"
+        },
+        "webinar": {
+          "invitations": 280,
+          "registrations": 94,
+          "registration_rate": 0.336,
+          "target_registration_rate": 0.27,
+          "attended": 71,
+          "status": "above_target"
+        },
+        "field_visits": {
+          "planned": 65,
+          "completed": 38,
+          "completion_rate": 0.585,
+          "target_completion_rate": 0.80,
+          "avg_duration_min": 9.2,
+          "status": "at_risk"
+        }
+      },
+      "overall_kpis": {
+        "message_recall_lift": "+7pts",
+        "target_message_recall_lift": "+10pts",
+        "hcp_satisfaction_score": 7.8,
+        "target_hcp_satisfaction": 8.0
+      },
+      "manager_notes": "Field visit completion lagging due to Easter holidays and two reps on leave. Webinar over-performing — consider adding a second session."
+    },
+    {
+      "id": "cosentyx_be_q1",
+      "name": "Cosentyx Belgium — Rheumatology Re-engagement",
+      "country": "Belgium",
+      "brand": "Cosentyx",
+      "therapeutic_area": "Immunology",
+      "audience": "Rheumatologists, Dermatologists",
+      "status": "At Risk",
+      "start_date": "2026-02-15",
+      "end_date": "2026-04-15",
+      "channels": {
+        "email": {
+          "sends": 380,
+          "open_rate": 0.18,
+          "click_rate": 0.04,
+          "target_open_rate": 0.28,
+          "target_click_rate": 0.08,
+          "status": "underperforming"
+        },
+        "field_visits": {
+          "planned": 90,
+          "completed": 72,
+          "completion_rate": 0.80,
+          "target_completion_rate": 0.80,
+          "avg_duration_min": 11.4,
+          "status": "on_track"
+        },
+        "digital_banner": {
+          "impressions": 12400,
+          "clicks": 148,
+          "ctr": 0.012,
+          "target_ctr": 0.018,
+          "status": "underperforming"
+        }
+      },
+      "overall_kpis": {
+        "message_recall_lift": "+3pts",
+        "target_message_recall_lift": "+8pts",
+        "competitor_share_shift": "-1.2pts",
+        "target_competitor_shift": "+2pts"
+      },
+      "manager_notes": "Email open rates collapsed after subject line A/B test failed. Banner creative was developed 6 weeks ago — likely audience fatigue. Field reps are performing well but digital is dragging overall impact. MLR flagged one asset — waiting on revision."
+    },
+    {
+      "id": "kesimpta_nl_q1",
+      "name": "Kesimpta Netherlands — MS New Prescriber Drive",
+      "country": "Netherlands",
+      "brand": "Kesimpta",
+      "therapeutic_area": "Neuroscience",
+      "audience": "Neurologists",
+      "status": "On Track",
+      "start_date": "2026-03-15",
+      "end_date": "2026-05-31",
+      "channels": {
+        "email": {
+          "sends": 210,
+          "open_rate": 0.34,
+          "click_rate": 0.12,
+          "target_open_rate": 0.30,
+          "target_click_rate": 0.10,
+          "status": "above_target"
+        },
+        "field_visits": {
+          "planned": 55,
+          "completed": 48,
+          "completion_rate": 0.873,
+          "target_completion_rate": 0.80,
+          "status": "above_target"
+        }
+      },
+      "overall_kpis": {
+        "new_prescribers_activated": 6,
+        "target_new_prescribers": 8,
+        "message_recall_lift": "+9pts",
+        "target_message_recall_lift": "+10pts"
+      },
+      "manager_notes": "Strong start. Two potential new prescribers in pipeline — follow up with medical info requests pending."
+    },
+    {
+      "id": "kisqali_pt_q1",
+      "name": "Kisqali Portugal — Breast Cancer Awareness",
+      "country": "Portugal",
+      "brand": "Kisqali",
+      "therapeutic_area": "Oncology",
+      "audience": "Oncologists",
+      "status": "Paused",
+      "start_date": "2026-03-01",
+      "end_date": "2026-05-31",
+      "channels": {
+        "email": {
+          "sends": 0,
+          "status": "paused_pending_mlr"
+        }
+      },
+      "overall_kpis": {
+        "message_recall_lift": "N/A — campaign paused",
+        "pause_reason": "Awaiting MLR approval for revised email copy. Expected clearance: April 10."
+      },
+      "manager_notes": "Campaign paused for 12 days pending MLR. Original asset had an unapproved efficacy claim. Revised copy submitted April 3."
+    }
+  ],
+  "cluster_summary": {
+    "campaigns_on_track": 2,
+    "campaigns_at_risk": 1,
+    "campaigns_paused": 1,
+    "top_performing_channel_this_week": "Webinar (Entresto CH)",
+    "most_urgent_issue": "Cosentyx BE email open rate collapse — immediate subject line and creative refresh needed",
+    "recommended_manager_focus": ["Belgium digital channel rescue", "Switzerland field visit catch-up", "Portugal MLR unblock"]
+  }
+}
