@@ -17,7 +17,7 @@ const [emails, crm, campaigns, hcpProfiles] = await Promise.all([
 ]);
 
 // ── Navigation ──
-const navItems = document.querySelectorAll('.agent-nav-item');
+const navItems = document.querySelectorAll('.tl-item');
 const views = document.querySelectorAll('.agent-view');
 
 navItems.forEach(btn => {

@@ -7,309 +7,309 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <!-- Minimal markdown renderer -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="app-shell">
 
-    <!-- ── Sidebar ── -->
-    <aside class="sidebar">
-      <div class="brand-block">
-        <div class="brand-logo">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="14" fill="url(#g1)"/>
-            <path d="M10 21V11l6 5 6-5v10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs><linearGradient id="g1" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#3B7BFF"/><stop offset="1" stop-color="#7B4BFF"/></linearGradient></defs>
-          </svg>
-        </div>
+  <div class="app">
+
+    <!-- ── Top bar ── -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-logo">N</div>
         <div>
           <div class="brand-name">NovaSphere</div>
           <div class="brand-sub">AI Agent Demo</div>
         </div>
       </div>
-
-      <div class="sidebar-section-label">Day in the life</div>
-
-      <nav class="agent-nav">
-        <button class="agent-nav-item active" data-agent="briefing">
-          <div class="agent-time">08:00</div>
-          <div class="agent-info">
-            <div class="agent-title">Morning Briefing</div>
-            <div class="agent-role">Senior Marketeer</div>
-          </div>
-          <div class="agent-badge" id="badge-briefing"></div>
-        </button>
-        <button class="agent-nav-item" data-agent="precall">
-          <div class="agent-time">09:30</div>
-          <div class="agent-info">
-            <div class="agent-title">Pre-Call Intel</div>
-            <div class="agent-role">Field Rep</div>
-          </div>
-          <div class="agent-badge" id="badge-precall"></div>
-        </button>
-        <button class="agent-nav-item" data-agent="content">
-          <div class="agent-time">11:00</div>
-          <div class="agent-info">
-            <div class="agent-title">Content + MLR</div>
-            <div class="agent-role">Junior Marketeer</div>
-          </div>
-          <div class="agent-badge" id="badge-content"></div>
-        </button>
-        <button class="agent-nav-item" data-agent="coaching">
-          <div class="agent-time">15:00</div>
-          <div class="agent-info">
-            <div class="agent-title">Performance Coach</div>
-            <div class="agent-role">Marketing Manager</div>
-          </div>
-          <div class="agent-badge" id="badge-coaching"></div>
-        </button>
-      </nav>
-
-      <div class="sidebar-spacer"></div>
-
-      <div class="sidebar-footer">
-        <div class="footer-pill">WEC cluster · 7 countries</div>
-        <div class="footer-note">Simulation only. Mock data.</div>
+      <div class="topbar-badges">
+        <span class="badge blue">WEC cluster · 7 countries</span>
+        <span class="badge gray">Mock data · Demo only</span>
       </div>
-    </aside>
+    </header>
 
-    <!-- ── Main ── -->
-    <main class="main">
+    <!-- ── Timeline navigation ── -->
+    <nav class="timeline">
+      <div class="timeline-inner">
 
-      <!-- Agent: Briefing -->
+        <button class="tl-item active" data-agent="briefing">
+          <div class="tl-time">08:00</div>
+          <div class="tl-dot amber" id="badge-briefing"></div>
+          <div class="tl-label">Morning Briefing</div>
+          <div class="tl-role">Senior Marketeer</div>
+        </button>
+
+        <div class="tl-connector"></div>
+
+        <button class="tl-item" data-agent="precall">
+          <div class="tl-time">09:30</div>
+          <div class="tl-dot sky" id="badge-precall"></div>
+          <div class="tl-label">Pre-Call Intel</div>
+          <div class="tl-role">Field Rep</div>
+        </button>
+
+        <div class="tl-connector"></div>
+
+        <button class="tl-item" data-agent="content">
+          <div class="tl-time">11:00</div>
+          <div class="tl-dot green" id="badge-content"></div>
+          <div class="tl-label">Content + MLR</div>
+          <div class="tl-role">Junior Marketeer</div>
+        </button>
+
+        <div class="tl-connector"></div>
+
+        <button class="tl-item" data-agent="coaching">
+          <div class="tl-time">15:00</div>
+          <div class="tl-dot purple" id="badge-coaching"></div>
+          <div class="tl-label">Performance Coach</div>
+          <div class="tl-role">Marketing Manager</div>
+        </button>
+
+      </div>
+    </nav>
+
+    <!-- ── Main scroll area ── -->
+    <main class="main-scroll">
+
+      <!-- ══ Agent 1: Morning Briefing ══ -->
       <section class="agent-view active" id="view-briefing">
-        <div class="view-header">
-          <div class="view-header-left">
-            <div class="view-time-badge">08:00 AM</div>
-            <div>
-              <h1>Morning Briefing Agent</h1>
-              <p class="view-desc">Reads the overnight inbox, flags urgent items, pulls today's campaign deadlines, and produces a 60-second briefing card.</p>
+
+        <div class="hero amber-hero">
+          <div class="hero-icon">📥</div>
+          <div class="hero-body">
+            <div class="hero-meta">08:00 AM · Senior Marketeer</div>
+            <h1>Morning Briefing Agent</h1>
+            <p>Reads the overnight inbox, flags urgent items, surfaces today's campaign deadlines — all synthesized into a 60-second briefing card.</p>
+            <div class="hero-pills">
+              <span class="pill">5 overnight emails</span>
+              <span class="pill">4 active campaigns</span>
+              <span class="pill">3 deadlines today</span>
+              <span class="pill">WEC cluster</span>
             </div>
           </div>
-          <button class="run-btn" id="run-briefing">
+          <button class="run-btn amber-btn" id="run-briefing">
             <span class="run-icon">▶</span> Run Agent
           </button>
         </div>
 
-        <div class="agent-body">
-          <div class="left-panel">
-            <div class="panel-card">
-              <div class="panel-card-header">
-                <span class="panel-card-icon">📥</span>
-                <span>Input context</span>
-              </div>
-              <div class="context-items">
-                <div class="ctx-item"><span class="ctx-label">Inbox</span><span class="ctx-val">5 overnight emails</span></div>
-                <div class="ctx-item"><span class="ctx-label">Campaigns</span><span class="ctx-val">4 active (WEC cluster)</span></div>
-                <div class="ctx-item"><span class="ctx-label">Deadlines today</span><span class="ctx-val">3 action items</span></div>
-                <div class="ctx-item"><span class="ctx-label">User</span><span class="ctx-val">Sophie — Senior Marketeer</span></div>
-              </div>
-            </div>
-            <div class="steps-card" id="steps-briefing">
-              <div class="steps-header">Agent steps</div>
-              <div class="steps-list" id="steplist-briefing">
-                <div class="step idle" data-step="inbox">Reading inbox</div>
-                <div class="step idle" data-step="deadlines">Checking campaign deadlines</div>
-                <div class="step idle" data-step="urgency">Analyzing urgency flags</div>
-                <div class="step idle" data-step="generate">Generating morning briefing</div>
-              </div>
-            </div>
+        <div class="steps-row" id="steplist-briefing">
+          <div class="step idle" data-step="inbox">
+            <div class="step-num">01</div>
+            <div class="step-label">Reading inbox</div>
           </div>
-          <div class="output-panel">
-            <div class="output-header">
-              <span>Agent output</span>
-              <span class="output-tag" id="tag-briefing">Ready</span>
-            </div>
-            <div class="output-body markdown-output idle-output" id="output-briefing">
-              Click <strong>Run Agent</strong> to start the morning briefing.
-            </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="deadlines">
+            <div class="step-num">02</div>
+            <div class="step-label">Checking deadlines</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="urgency">
+            <div class="step-num">03</div>
+            <div class="step-label">Analyzing urgency</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="generate">
+            <div class="step-num">04</div>
+            <div class="step-label">Generating briefing</div>
           </div>
         </div>
+
+        <div class="output-section">
+          <div class="output-header">
+            <span class="output-title">Agent output</span>
+            <span class="output-tag" id="tag-briefing">Ready</span>
+          </div>
+          <div class="output-body markdown-output idle-output" id="output-briefing">
+            Click <strong>Run Agent</strong> above to generate the morning briefing.
+          </div>
+        </div>
+
       </section>
 
-      <!-- Agent: Pre-Call -->
+      <!-- ══ Agent 2: Pre-Call Intel ══ -->
       <section class="agent-view" id="view-precall">
-        <div class="view-header">
-          <div class="view-header-left">
-            <div class="view-time-badge">09:30 AM</div>
-            <div>
-              <h1>Rep Pre-Call Intelligence Agent</h1>
-              <p class="view-desc">Pulls CRM history, digital engagements and Rx trends to generate a tailored pre-call briefing card before an HCP visit.</p>
+
+        <div class="hero sky-hero">
+          <div class="hero-icon">🩺</div>
+          <div class="hero-body">
+            <div class="hero-meta">09:30 AM · Field Rep — Marc Huber</div>
+            <h1>Rep Pre-Call Intelligence Agent</h1>
+            <p>Pulls CRM history, digital engagement data, and Rx trends to generate a tailored pre-call briefing before the visit with Dr. Müller.</p>
+            <div class="hero-pills">
+              <span class="pill">Dr. Anna Müller · Zurich</span>
+              <span class="pill">Cardiology · HF specialist</span>
+              <span class="pill">Entresto Rx ↓ 21→15</span>
+              <span class="pill">Visit at 11:00 AM</span>
             </div>
           </div>
-          <button class="run-btn" id="run-precall">
+          <button class="run-btn sky-btn" id="run-precall">
             <span class="run-icon">▶</span> Run Agent
           </button>
         </div>
 
-        <div class="agent-body">
-          <div class="left-panel">
-            <div class="panel-card">
-              <div class="panel-card-header">
-                <span class="panel-card-icon">🩺</span>
-                <span>Upcoming visit</span>
-              </div>
-              <div class="context-items">
-                <div class="ctx-item"><span class="ctx-label">HCP</span><span class="ctx-val">Dr. Anna Müller</span></div>
-                <div class="ctx-item"><span class="ctx-label">Specialty</span><span class="ctx-val">Cardiology — Heart Failure</span></div>
-                <div class="ctx-item"><span class="ctx-label">Location</span><span class="ctx-val">UniversitätsSpital Zürich</span></div>
-                <div class="ctx-item"><span class="ctx-label">Visit time</span><span class="ctx-val">11:00 AM today</span></div>
-                <div class="ctx-item"><span class="ctx-label">Rep</span><span class="ctx-val">Marc Huber</span></div>
-              </div>
-              <div class="ctx-divider"></div>
-              <div class="context-items">
-                <div class="ctx-item"><span class="ctx-label">CRM history</span><span class="ctx-val">3 interactions</span></div>
-                <div class="ctx-item"><span class="ctx-label">Digital touchpoints</span><span class="ctx-val">3 email events, 1 webinar</span></div>
-                <div class="ctx-item"><span class="ctx-label">Rx trend</span><span class="ctx-val">Entresto ↓ 21→15 (5 months)</span></div>
-              </div>
-            </div>
-            <div class="steps-card" id="steps-precall">
-              <div class="steps-header">Agent steps</div>
-              <div class="steps-list" id="steplist-precall">
-                <div class="step idle" data-step="crm">Pulling CRM history</div>
-                <div class="step idle" data-step="digital">Checking digital engagement</div>
-                <div class="step idle" data-step="rx">Analyzing prescribing trend</div>
-                <div class="step idle" data-step="generate">Generating pre-call briefing</div>
-              </div>
-            </div>
+        <div class="steps-row" id="steplist-precall">
+          <div class="step idle" data-step="crm">
+            <div class="step-num">01</div>
+            <div class="step-label">Pulling CRM history</div>
           </div>
-          <div class="output-panel">
-            <div class="output-header">
-              <span>Agent output</span>
-              <span class="output-tag" id="tag-precall">Ready</span>
-            </div>
-            <div class="output-body markdown-output idle-output" id="output-precall">
-              Click <strong>Run Agent</strong> to generate the pre-call briefing for Dr. Müller.
-            </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="digital">
+            <div class="step-num">02</div>
+            <div class="step-label">Digital engagement</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="rx">
+            <div class="step-num">03</div>
+            <div class="step-label">Rx trend analysis</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="generate">
+            <div class="step-num">04</div>
+            <div class="step-label">Generating briefing</div>
           </div>
         </div>
+
+        <div class="output-section">
+          <div class="output-header">
+            <span class="output-title">Agent output</span>
+            <span class="output-tag" id="tag-precall">Ready</span>
+          </div>
+          <div class="output-body markdown-output idle-output" id="output-precall">
+            Click <strong>Run Agent</strong> above to generate the pre-call briefing for Dr. Müller.
+          </div>
+        </div>
+
       </section>
 
-      <!-- Agent: Content + MLR -->
+      <!-- ══ Agent 3: Content + MLR ══ -->
       <section class="agent-view" id="view-content">
-        <div class="view-header">
-          <div class="view-header-left">
-            <div class="view-time-badge">11:00 AM</div>
-            <div>
-              <h1>Content Generation + MLR Pre-Screener</h1>
-              <p class="view-desc">Generates HCP email content, then runs it through a compliance sub-agent that checks for off-label claims — and loops until cleared.</p>
+
+        <div class="hero green-hero">
+          <div class="hero-icon">✍️</div>
+          <div class="hero-body">
+            <div class="hero-meta">11:00 AM · Junior Marketeer</div>
+            <h1>Content Generation + MLR Pre-Screener</h1>
+            <p>Generates HCP email content from the brief below, then runs it through a compliance sub-agent — and loops until the content is cleared.</p>
+            <div class="hero-pills">
+              <span class="pill">Entresto · Switzerland</span>
+              <span class="pill">Cardiologist audience</span>
+              <span class="pill">Generate → MLR → Revise loop</span>
             </div>
           </div>
-          <button class="run-btn" id="run-content">
+          <button class="run-btn green-btn" id="run-content">
             <span class="run-icon">▶</span> Run Agent
           </button>
         </div>
 
-        <div class="agent-body">
-          <div class="left-panel">
-            <div class="panel-card">
-              <div class="panel-card-header">
-                <span class="panel-card-icon">✍️</span>
-                <span>Campaign brief</span>
-              </div>
-              <div class="brief-editor">
-                <textarea id="content-brief" rows="10">Campaign: Entresto Switzerland — Heart Failure Spring Push
+        <div class="brief-section">
+          <div class="brief-label">Campaign brief — editable</div>
+          <textarea id="content-brief" rows="6">Campaign: Entresto Switzerland — Heart Failure Spring Push
 Audience: Cardiologists managing HFrEF patients
 Objective: Drive awareness of PARADIGM-HF data and invite HCPs to Thursday webinar
 Key message: Entresto demonstrated superior reduction in CV death and HF hospitalization vs. enalapril in PARADIGM-HF (HR 0.80, p<0.001)
 CTA: Register for the live webinar — April 10, 18:30 CET
 Constraints: Switzerland market, German-speaking audience, no competitor mentions, no pricing, include disclaimer placeholder</textarea>
-              </div>
-              <div class="brief-note">The agent will generate content, run MLR check, and revise if needed.</div>
-            </div>
-            <div class="steps-card" id="steps-content">
-              <div class="steps-header">Agent steps (agentic loop)</div>
-              <div class="steps-list" id="steplist-content">
-                <div class="step idle" data-step="brief">Reading campaign brief</div>
-                <div class="step idle" data-step="generate">Generating email content</div>
-                <div class="step idle" data-step="mlr">Running MLR compliance check</div>
-                <div class="step idle" data-step="revise">Revising content (if needed)</div>
-                <div class="step idle" data-step="recheck">Re-running MLR check</div>
-                <div class="step idle" data-step="final">Content cleared</div>
-              </div>
-            </div>
+        </div>
+
+        <div class="steps-row" id="steplist-content">
+          <div class="step idle" data-step="brief">
+            <div class="step-num">01</div>
+            <div class="step-label">Reading brief</div>
           </div>
-          <div class="output-panel">
-            <div class="output-header">
-              <span>Agent output — full loop trace</span>
-              <span class="output-tag" id="tag-content">Ready</span>
-            </div>
-            <div class="output-body markdown-output idle-output" id="output-content">
-              Click <strong>Run Agent</strong> to start the content generation and MLR loop.
-            </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="generate">
+            <div class="step-num">02</div>
+            <div class="step-label">Generating content</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="mlr">
+            <div class="step-num">03</div>
+            <div class="step-label">MLR check</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="revise">
+            <div class="step-num">04</div>
+            <div class="step-label">Revising content</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="recheck">
+            <div class="step-num">05</div>
+            <div class="step-label">Re-checking MLR</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="final">
+            <div class="step-num">06</div>
+            <div class="step-label">Cleared</div>
           </div>
         </div>
+
+        <div class="output-section">
+          <div class="output-header">
+            <span class="output-title">Agent output — full loop trace</span>
+            <span class="output-tag" id="tag-content">Ready</span>
+          </div>
+          <div class="output-body markdown-output idle-output" id="output-content">
+            Click <strong>Run Agent</strong> above to start the content generation and MLR compliance loop.
+          </div>
+        </div>
+
       </section>
 
-      <!-- Agent: Coaching -->
+      <!-- ══ Agent 4: Performance Coach ══ -->
       <section class="agent-view" id="view-coaching">
-        <div class="view-header">
-          <div class="view-header-left">
-            <div class="view-time-badge">03:00 PM</div>
-            <div>
-              <h1>Campaign Performance & Coaching Agent</h1>
-              <p class="view-desc">Pulls weekly KPIs, diagnoses underperforming channels, and generates a coaching note for the manager with next week's adjusted plan.</p>
+
+        <div class="hero purple-hero">
+          <div class="hero-icon">📊</div>
+          <div class="hero-body">
+            <div class="hero-meta">15:00 PM · Marketing Manager</div>
+            <h1>Campaign Performance &amp; Coaching Agent</h1>
+            <p>Pulls weekly KPIs across the WEC cluster, diagnoses underperforming channels, and drafts a coaching note with next week's adjusted plan.</p>
+            <div class="hero-pills">
+              <span class="pill">W14 2026</span>
+              <span class="pill amber-pill">Cosentyx BE at risk</span>
+              <span class="pill green-pill">Entresto CH webinar above target</span>
+              <span class="pill gray-pill">Kisqali PT paused</span>
             </div>
           </div>
-          <button class="run-btn" id="run-coaching">
+          <button class="run-btn purple-btn" id="run-coaching">
             <span class="run-icon">▶</span> Run Agent
           </button>
         </div>
 
-        <div class="agent-body">
-          <div class="left-panel">
-            <div class="panel-card">
-              <div class="panel-card-header">
-                <span class="panel-card-icon">📊</span>
-                <span>W14 campaign data</span>
-              </div>
-              <div class="kpi-grid">
-                <div class="kpi-item">
-                  <div class="kpi-label">Entresto CH</div>
-                  <div class="kpi-status on-track">On track</div>
-                </div>
-                <div class="kpi-item">
-                  <div class="kpi-label">Cosentyx BE</div>
-                  <div class="kpi-status at-risk">At risk</div>
-                </div>
-                <div class="kpi-item">
-                  <div class="kpi-label">Kesimpta NL</div>
-                  <div class="kpi-status on-track">On track</div>
-                </div>
-                <div class="kpi-item">
-                  <div class="kpi-label">Kisqali PT</div>
-                  <div class="kpi-status paused">Paused</div>
-                </div>
-              </div>
-              <div class="ctx-divider"></div>
-              <div class="context-items">
-                <div class="ctx-item"><span class="ctx-label">Most urgent</span><span class="ctx-val">Cosentyx BE email (18% open vs 28% target)</span></div>
-                <div class="ctx-item"><span class="ctx-label">Best performer</span><span class="ctx-val">Entresto CH webinar (94 reg, 34% rate)</span></div>
-                <div class="ctx-item"><span class="ctx-label">Paused campaign</span><span class="ctx-val">Kisqali PT — awaiting MLR</span></div>
-              </div>
-            </div>
-            <div class="steps-card" id="steps-coaching">
-              <div class="steps-header">Agent steps</div>
-              <div class="steps-list" id="steplist-coaching">
-                <div class="step idle" data-step="kpis">Pulling campaign KPIs</div>
-                <div class="step idle" data-step="channels">Scoring channel performance</div>
-                <div class="step idle" data-step="diagnose">Diagnosing underperforming campaigns</div>
-                <div class="step idle" data-step="generate">Generating coaching note & plan</div>
-              </div>
-            </div>
+        <div class="steps-row" id="steplist-coaching">
+          <div class="step idle" data-step="kpis">
+            <div class="step-num">01</div>
+            <div class="step-label">Pulling KPIs</div>
           </div>
-          <div class="output-panel">
-            <div class="output-header">
-              <span>Agent output</span>
-              <span class="output-tag" id="tag-coaching">Ready</span>
-            </div>
-            <div class="output-body markdown-output idle-output" id="output-coaching">
-              Click <strong>Run Agent</strong> to generate the W14 performance analysis and coaching note.
-            </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="channels">
+            <div class="step-num">02</div>
+            <div class="step-label">Scoring channels</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="diagnose">
+            <div class="step-num">03</div>
+            <div class="step-label">Diagnosing issues</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step idle" data-step="generate">
+            <div class="step-num">04</div>
+            <div class="step-label">Writing coaching note</div>
           </div>
         </div>
+
+        <div class="output-section">
+          <div class="output-header">
+            <span class="output-title">Agent output</span>
+            <span class="output-tag" id="tag-coaching">Ready</span>
+          </div>
+          <div class="output-body markdown-output idle-output" id="output-coaching">
+            Click <strong>Run Agent</strong> above to generate the W14 performance analysis and coaching note.
+          </div>
+        </div>
+
       </section>
 
     </main>
