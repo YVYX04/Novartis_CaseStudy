@@ -3,85 +3,219 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NovaSphere | AI Agent Demo</title>
+  <title>NovaSphere · Mary Laurent</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<div id="app">
 
-  <div class="app">
-
-    <!-- ── Top bar ── -->
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand-logo">N</div>
-        <div>
-          <div class="brand-name">NovaSphere</div>
-          <div class="brand-sub">AI Agent Demo</div>
+  <!-- ── Shared top bar ── -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="brand-mark">
+        <span class="brand-n">N</span>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">NovaSphere</span>
+        <span class="brand-divider">|</span>
+        <span class="brand-suite">by Novartis</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        AI Connected
+      </div>
+      <div class="user-chip">
+        <div class="user-avatar">M</div>
+        <div class="user-info">
+          <span class="user-name">Mary Laurent</span>
+          <span class="user-role">Senior Marketeer · WEC</span>
         </div>
       </div>
-      <div class="topbar-badges">
-        <span class="badge blue">WEC cluster · 7 countries</span>
-        <span class="badge gray">Mock data · Demo only</span>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PAGE 1 — DASHBOARD                         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="dashboard" class="page active">
+    <div class="dashboard-inner">
+
+      <!-- Greeting -->
+      <section class="greeting-section">
+        <div class="greeting-left">
+          <p class="greeting-eyebrow" id="greeting-date">Thursday, 24 April 2026</p>
+          <h1 class="greeting-headline" id="greeting-text">Good morning, Mary.</h1>
+          <p class="greeting-sub">Your personalized AI command center is ready.</p>
+        </div>
+        <div class="greeting-right">
+          <div class="greeting-clock" id="live-clock">--:--</div>
+          <div class="greeting-tz">Zürich · CET</div>
+        </div>
+      </section>
+
+      <!-- Quick stats -->
+      <section class="stats-strip">
+        <div class="stat-card">
+          <div class="stat-icon amber-icon">📥</div>
+          <div class="stat-body">
+            <div class="stat-value">5</div>
+            <div class="stat-label">Overnight emails</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon sky-icon">📊</div>
+          <div class="stat-body">
+            <div class="stat-value">4</div>
+            <div class="stat-label">Active campaigns</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon red-icon">⚡</div>
+          <div class="stat-body">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Deadlines today</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green-icon">🌍</div>
+          <div class="stat-body">
+            <div class="stat-value">7</div>
+            <div class="stat-label">WEC countries</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Agents grid -->
+      <section class="agents-section">
+        <div class="agents-header">
+          <h2 class="agents-title">Your AI Agents</h2>
+          <p class="agents-sub">Intelligent assistants tailored to your role and daily workflow</p>
+        </div>
+
+        <div class="agents-grid">
+
+          <!-- Agent 1: Morning Briefing -->
+          <div class="agent-card" data-agent="briefing">
+            <div class="agent-card-header amber-header">
+              <div class="agent-card-icon">📥</div>
+              <div class="agent-time-badge amber-badge">08:00 AM</div>
+            </div>
+            <div class="agent-card-body">
+              <span class="role-chip primary-chip">✦ Your primary agent</span>
+              <h3 class="agent-card-name">Morning Briefing</h3>
+              <p class="agent-card-desc">Synthesizes overnight emails, campaign deadlines, and urgent items into a 60-second briefing — before your first meeting.</p>
+              <div class="agent-tags">
+                <span class="atag">5 emails</span>
+                <span class="atag">4 campaigns</span>
+                <span class="atag">3 deadlines</span>
+              </div>
+            </div>
+            <button class="launch-btn amber-launch">
+              <span class="launch-label">Launch Agent</span>
+              <span class="launch-arrow">→</span>
+            </button>
+          </div>
+
+          <!-- Agent 2: Pre-Call Intel -->
+          <div class="agent-card" data-agent="precall">
+            <div class="agent-card-header sky-header">
+              <div class="agent-card-icon">🩺</div>
+              <div class="agent-time-badge sky-badge">09:30 AM</div>
+            </div>
+            <div class="agent-card-body">
+              <span class="role-chip field-chip">Field Rep Tool</span>
+              <h3 class="agent-card-name">Pre-Call Intel</h3>
+              <p class="agent-card-desc">Pulls CRM history, digital engagement, and Rx trends to generate a tailored briefing before each HCP visit.</p>
+              <div class="agent-tags">
+                <span class="atag">Dr. Müller · Zürich</span>
+                <span class="atag">Cardiology</span>
+              </div>
+            </div>
+            <button class="launch-btn sky-launch">
+              <span class="launch-label">Launch Agent</span>
+              <span class="launch-arrow">→</span>
+            </button>
+          </div>
+
+          <!-- Agent 3: Content + MLR -->
+          <div class="agent-card" data-agent="content">
+            <div class="agent-card-header green-header">
+              <div class="agent-card-icon">✍️</div>
+              <div class="agent-time-badge green-badge">11:00 AM</div>
+            </div>
+            <div class="agent-card-body">
+              <span class="role-chip content-chip">Content Loop</span>
+              <h3 class="agent-card-name">Content + MLR</h3>
+              <p class="agent-card-desc">Generates HCP email content, runs it through a compliance pre-screener, and auto-revises until fully cleared.</p>
+              <div class="agent-tags">
+                <span class="atag">Entresto · CH</span>
+                <span class="atag">Generate → MLR → Revise</span>
+              </div>
+            </div>
+            <button class="launch-btn green-launch">
+              <span class="launch-label">Launch Agent</span>
+              <span class="launch-arrow">→</span>
+            </button>
+          </div>
+
+          <!-- Agent 4: Performance Coach -->
+          <div class="agent-card" data-agent="coaching">
+            <div class="agent-card-header purple-header">
+              <div class="agent-card-icon">📊</div>
+              <div class="agent-time-badge purple-badge">15:00 PM</div>
+            </div>
+            <div class="agent-card-body">
+              <span class="role-chip coach-chip">Manager Tool</span>
+              <h3 class="agent-card-name">Performance Coach</h3>
+              <p class="agent-card-desc">Analyzes WEC cluster KPIs, diagnoses underperforming channels, and drafts a coaching note with next week's plan.</p>
+              <div class="agent-tags">
+                <span class="atag atag-amber">Cosentyx BE at risk</span>
+                <span class="atag atag-green">Entresto CH ✓</span>
+              </div>
+            </div>
+            <button class="launch-btn purple-launch">
+              <span class="launch-label">Launch Agent</span>
+              <span class="launch-arrow">→</span>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- PAGE 2 — AGENT DETAIL                      -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="agent-page" class="page">
+
+    <div class="agent-subbar">
+      <button id="back-btn" class="back-btn">
+        <span>←</span> Dashboard
+      </button>
+      <div class="subbar-crumb">
+        <span class="crumb-sep">/</span>
+        <span id="breadcrumb-name">Agent</span>
       </div>
-    </header>
+    </div>
 
-    <!-- ── Timeline navigation ── -->
-    <nav class="timeline">
-      <div class="timeline-inner">
-
-        <button class="tl-item active" data-agent="briefing">
-          <div class="tl-time">08:00</div>
-          <div class="tl-dot amber" id="badge-briefing"></div>
-          <div class="tl-label">Morning Briefing</div>
-          <div class="tl-role">Senior Marketeer</div>
-        </button>
-
-        <div class="tl-connector"></div>
-
-        <button class="tl-item" data-agent="precall">
-          <div class="tl-time">09:30</div>
-          <div class="tl-dot sky" id="badge-precall"></div>
-          <div class="tl-label">Pre-Call Intel</div>
-          <div class="tl-role">Field Rep</div>
-        </button>
-
-        <div class="tl-connector"></div>
-
-        <button class="tl-item" data-agent="content">
-          <div class="tl-time">11:00</div>
-          <div class="tl-dot green" id="badge-content"></div>
-          <div class="tl-label">Content + MLR</div>
-          <div class="tl-role">Junior Marketeer</div>
-        </button>
-
-        <div class="tl-connector"></div>
-
-        <button class="tl-item" data-agent="coaching">
-          <div class="tl-time">15:00</div>
-          <div class="tl-dot purple" id="badge-coaching"></div>
-          <div class="tl-label">Performance Coach</div>
-          <div class="tl-role">Marketing Manager</div>
-        </button>
-
-      </div>
-    </nav>
-
-    <!-- ── Main scroll area ── -->
-    <main class="main-scroll">
+    <div class="agent-page-scroll">
 
       <!-- ══ Agent 1: Morning Briefing ══ -->
       <section class="agent-view active" id="view-briefing">
-
         <div class="hero amber-hero">
           <div class="hero-icon">📥</div>
           <div class="hero-body">
-            <div class="hero-meta">08:00 AM · Senior Marketeer</div>
+            <div class="hero-meta">08:00 AM · Mary's Morning Briefing</div>
             <h1>Morning Briefing Agent</h1>
-            <p>Reads the overnight inbox, flags urgent items, surfaces today's campaign deadlines — all synthesized into a 60-second briefing card.</p>
+            <p>Reads Mary's overnight inbox, flags urgent items, and surfaces today's campaign deadlines — synthesized into a 60-second briefing card.</p>
             <div class="hero-pills">
               <span class="pill">5 overnight emails</span>
               <span class="pill">4 active campaigns</span>
@@ -122,15 +256,13 @@
             <span class="output-tag" id="tag-briefing">Ready</span>
           </div>
           <div class="output-body markdown-output idle-output" id="output-briefing">
-            Click <strong>Run Agent</strong> above to generate the morning briefing.
+            Click <strong>Run Agent</strong> above to generate Mary's morning briefing.
           </div>
         </div>
-
       </section>
 
       <!-- ══ Agent 2: Pre-Call Intel ══ -->
       <section class="agent-view" id="view-precall">
-
         <div class="hero sky-hero">
           <div class="hero-icon">🩺</div>
           <div class="hero-body">
@@ -180,12 +312,10 @@
             Click <strong>Run Agent</strong> above to generate the pre-call briefing for Dr. Müller.
           </div>
         </div>
-
       </section>
 
       <!-- ══ Agent 3: Content + MLR ══ -->
       <section class="agent-view" id="view-content">
-
         <div class="hero green-hero">
           <div class="hero-icon">✍️</div>
           <div class="hero-body">
@@ -254,12 +384,10 @@ Constraints: Switzerland market, German-speaking audience, no competitor mention
             Click <strong>Run Agent</strong> above to start the content generation and MLR compliance loop.
           </div>
         </div>
-
       </section>
 
       <!-- ══ Agent 4: Performance Coach ══ -->
       <section class="agent-view" id="view-coaching">
-
         <div class="hero purple-hero">
           <div class="hero-icon">📊</div>
           <div class="hero-body">
@@ -309,12 +437,12 @@ Constraints: Switzerland market, German-speaking audience, no competitor mention
             Click <strong>Run Agent</strong> above to generate the W14 performance analysis and coaching note.
           </div>
         </div>
-
       </section>
 
-    </main>
+    </div>
   </div>
 
-  <script type="module" src="app.js"></script>
+</div>
+<script type="module" src="app.js"></script>
 </body>
 </html>
