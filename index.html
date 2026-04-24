@@ -1,0 +1,3483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NovaSphere · sage atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   NovaSphere — sage atelier palette variant.
+   Auto-generated from index.html via palette remap.
+   ============================================================ */
+
+:root{
+  /* Aurora — retuned to a neutral, sophisticated palette */
+  --a-cream:    #E8EDE2;   /* warm sand */
+  --a-bronze:   #BCC8AE;   /* warm bronze */
+  --a-amber:    #6B8460;   /* burnt amber */
+  --a-slate:    #4E5B7A;   /* muted slate blue */
+  --a-indigo:   #2E3A56;   /* deep indigo */
+  --a-deep:     #1A2338;   /* near-black indigo */
+
+  /* Canvas — warm taupe-cream */
+  --cream:        #F3F2EC;
+  --cream-2:      #E8E7DF;
+  --cream-warm:   #F8F7F2;
+  --ink:          #1F2432;   /* deep warm ink */
+  --ink-2:        #424859;
+  --ink-3:        #76808F;
+  --ink-4:        #A7B0BE;
+  --line:         rgba(46,58,86, 0.12);
+  --line-2:       rgba(46,58,86, 0.06);
+
+  /* Novartis heritage */
+  --nv-blue:       #0460A9;
+
+  /* Agent accents — each a distinct but restrained slice */
+  --a-briefing:    #4E5B7A;   /* slate blue */
+  --a-briefing-2:  #6E7C9A;
+  --a-precall:     #6B8460;   /* burnt amber */
+  --a-precall-2:   #A8B89A;
+  --a-content:     #5A6A8A;   /* muted plum-grey */
+  --a-content-2:   #7A8CAD;
+  --a-coaching:    #A68B55;   /* warm bronze */
+  --a-coaching-2:  #C7AE7D;
+
+  /* Depth */
+  --lift-1: 0 1px 2px rgba(31,36,50,0.04), 0 2px 8px rgba(31,36,50,0.04);
+  --lift-2: 0 4px 14px rgba(31,36,50,0.07), 0 14px 36px rgba(46,58,86,0.07);
+  --lift-3: 0 12px 30px rgba(31,36,50,0.1), 0 30px 80px rgba(46,58,86,0.12);
+
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-xl: 28px;
+
+  /* Neutral aurora gradient — for the sphere only */
+  --grad-aurora: linear-gradient(135deg, #A8B89A 0%, #6B8460 28%, #5A6A8A 62%, #4E5B7A 100%);
+  --grad-aurora-soft: linear-gradient(135deg, #DCE4CE 0%, #BFCEAE 30%, #A8B5C0 62%, #7A8CAD 100%);
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ height:100%; font-family:'Inter',system-ui,-apple-system,sans-serif; background:var(--cream); color:var(--ink); overflow:hidden; -webkit-font-smoothing:antialiased; font-feature-settings:'ss01','cv11'; }
+button,input,select,textarea{ font:inherit; color:inherit; }
+button{ cursor:pointer; border:none; background:none; }
+
+#app{ position:relative; width:100vw; height:100vh; overflow:hidden; isolation:isolate; }
+
+/* Ambient background — soft neutral wash */
+#app::before{
+  content:'';
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 50% at 8% -6%, rgba(107,132,96,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 95% 5%, rgba(90,106,138,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 55% at 50% 115%, rgba(78,91,122,0.08) 0%, transparent 55%),
+    linear-gradient(180deg, #F8F7F2 0%, #F3F2EC 60%, #DEDDD3 100%);
+}
+#app::after{
+  content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    radial-gradient(rgba(46,58,86,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 30%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 30%, transparent 90%);
+  opacity:0.6;
+}
+
+.screen{ position:absolute; inset:0; z-index:1; }
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+.ns-logo{ display:inline-flex; align-items:center; gap:12px; }
+.ns-logo-mark{ width:38px; height:38px; position:relative; flex-shrink:0; }
+.ns-logo-mark svg{ width:100%; height:100%; display:block; overflow:visible; }
+.ns-logo-text{ display:flex; flex-direction:column; line-height:1; }
+.ns-logo-title{ font-family:'Inter',sans-serif; font-weight:800; font-size:18px; letter-spacing:-0.015em; color:var(--ink); }
+.ns-logo-sub{ font-family:'JetBrains Mono',monospace; font-weight:500; font-size:9px; letter-spacing:0.3em; color:var(--ink-3); margin-top:4px; text-transform:uppercase; }
+
+/* ============================================================
+   SCREEN 1 — WELCOME
+   ============================================================ */
+#welcome{
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 45%, #F8F7F2 0%, #D2D0C4 50%, #BDBBAE 100%);
+  display:flex; align-items:center; justify-content:center; flex-direction:column;
+  overflow:hidden;
+}
+#welcome.hidden{ opacity:0; pointer-events:none; transition:opacity 0.7s ease; }
+
+/* Hero sphere — neutral but richly dimensional */
+.w-sphere{
+  position:absolute; top:50%; left:50%;
+  width:min(56vmin,500px); height:min(56vmin,500px);
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255,255,255,0.85) 0%, transparent 35%),
+    radial-gradient(circle at 40% 35%, #E4E9D8 0%, #A8B89A 15%, #6B8460 38%, #5A6A8A 65%, #2E3A56 92%, #15192A 100%);
+  box-shadow:
+    inset -30px -60px 120px rgba(28,31,46,0.5),
+    inset 10px 20px 60px rgba(255,255,255,0.12),
+    0 60px 140px rgba(46,58,86,0.3),
+    0 0 220px rgba(90,106,138,0.25),
+    0 20px 60px rgba(107,132,96,0.2);
+  animation: sphere-breathe 5s ease-in-out infinite alternate;
+}
+.w-sphere::after{
+  content:''; position:absolute; inset:0; border-radius:50%;
+  background: radial-gradient(ellipse 55% 35% at 32% 24%, rgba(255,255,255,0.5) 0%, transparent 65%);
+}
+@keyframes sphere-breathe{
+  from{ transform:translate(-50%,-50%) scale(1); filter:brightness(1); }
+  to{   transform:translate(-50%,-50%) scale(1.04); filter:brightness(1.06); }
+}
+
+.w-ring{
+  position:absolute; top:50%; left:50%;
+  border-radius:50%;
+  transform:translate(-50%,-50%) rotate(-22deg);
+  pointer-events:none;
+}
+.w-ring-main{
+  width:min(85vmin,780px);
+  height:min(32vmin,290px);
+  border: 2.5px solid transparent;
+  background: linear-gradient(135deg, #A8B89A 0%, #6B8460 30%, #5A6A8A 60%, #4E5B7A 100%) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  filter: drop-shadow(0 0 20px rgba(90,106,138,0.3));
+  animation: ring-spin 40s linear infinite;
+}
+.w-ring-outer{
+  width:min(125vmin,1150px);
+  height:min(48vmin,440px);
+  border: 1px dashed rgba(46,58,86,0.22);
+  animation: ring-spin 60s linear infinite reverse;
+}
+@keyframes ring-spin{ to{ transform:translate(-50%,-50%) rotate(338deg); } }
+
+.w-spark{
+  position:absolute; top:50%; left:50%;
+  width:14px; height:14px; border-radius:50%;
+  background: radial-gradient(circle, #E4E9D8, #A8B89A);
+  box-shadow: 0 0 20px #A8B89A, 0 0 40px #6B8460, 0 0 80px rgba(107,132,96,0.5);
+  transform: translate(-50%,-50%);
+  animation: spark-orbit 12s linear infinite;
+}
+@keyframes spark-orbit{
+  from{ transform: translate(-50%,-50%) rotate(0deg) translateX(min(42vmin,390px)) rotate(0deg); }
+  to  { transform: translate(-50%,-50%) rotate(360deg) translateX(min(42vmin,390px)) rotate(-360deg); }
+}
+
+.w-content{
+  position:relative; z-index:3;
+  display:flex; flex-direction:column; align-items:center;
+  padding:40px;
+  padding-top: min(50vmin, 460px);
+}
+.w-chip{
+  display:flex; align-items:center; gap:10px;
+  padding:8px 16px 8px 10px;
+  border-radius:100px;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border:1px solid rgba(46,58,86,0.15);
+  box-shadow: 0 6px 24px rgba(46,58,86,0.08);
+  margin-bottom:28px;
+  opacity:0; animation: fade-drop 0.6s ease 0.2s forwards;
+}
+.w-chip-dot{ width:6px; height:6px; border-radius:50%; background:#6B8460; box-shadow:0 0 10px #6B8460; animation: pulse 1.6s ease-in-out infinite; }
+.w-chip-text{ font-size:11px; font-weight:600; letter-spacing:0.18em; color:var(--ink-2); text-transform:uppercase; font-family:'JetBrains Mono',monospace; }
+@keyframes pulse{ 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+.w-headline{
+  text-align:center; opacity:0;
+  animation: hero-appear 0.9s cubic-bezier(0.16,1,0.3,1) 0.7s forwards;
+}
+@keyframes hero-appear{
+  from{ opacity:0; transform:scale(0.88); filter:blur(18px); }
+  to  { opacity:1; transform:scale(1); filter:blur(0); }
+}
+.w-eyebrow{
+  font-family:'Instrument Serif',serif; font-style:italic;
+  font-size:28px; font-weight:400; color:#F8F7F2;
+  margin-bottom:4px; letter-spacing:-0.01em;
+  text-shadow: 0 2px 24px rgba(31,36,50,0.45), 0 0 40px rgba(31,36,50,0.35);
+}
+.w-name{
+  font-family:'Inter',sans-serif;
+  font-size:clamp(72px, 9.5vw, 128px);
+  font-weight:800; letter-spacing:-0.05em; line-height:0.95;
+  color:transparent;
+  background: var(--grad-aurora);
+  -webkit-background-clip: text; background-clip: text;
+  filter: drop-shadow(0 14px 40px rgba(90,106,138,0.25));
+}
+.w-tagline{
+  margin-top:16px;
+  font-size:15px; font-weight:500; color:var(--ink-2);
+  opacity:0; animation: fade-drop 0.5s ease 1.4s forwards;
+  max-width:460px; text-align:center; line-height:1.5;
+}
+.w-tagline em{ font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; color:var(--a-amber); }
+
+.w-loader{
+  width:280px; height:2px; border-radius:99px;
+  background:rgba(46,58,86,0.12);
+  margin-top:36px; position:relative; overflow:hidden;
+  opacity:0; animation: fade-drop 0.5s ease 1.8s forwards;
+}
+.w-loader-fill{
+  position:absolute; inset:0;
+  background: linear-gradient(90deg, transparent, #6B8460 25%, #5A6A8A 50%, #4E5B7A 75%, transparent);
+  transform:translateX(-100%);
+  animation: loader 2.2s ease-in-out 2s forwards;
+}
+@keyframes loader{ to{ transform:translateX(100%); } }
+.w-loader-text{
+  margin-top:14px; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.3em; color:var(--ink-4); text-transform:uppercase;
+  opacity:0; animation: fade-drop 0.5s ease 2s forwards;
+}
+
+.w-skip{
+  position:fixed; bottom:28px; right:32px; z-index:10;
+  padding:9px 18px; border-radius:99px;
+  background:rgba(255,255,255,0.8); backdrop-filter:blur(12px);
+  border:1px solid rgba(46,58,86,0.15); color:var(--ink-2);
+  font-size:12px; font-weight:600; letter-spacing:0.04em;
+  opacity:0; animation: fade-drop 0.4s ease 2.5s forwards;
+  transition: all 0.2s ease;
+}
+.w-skip:hover{ background:#fff; color:var(--a-indigo); transform:translateY(-1px); box-shadow: 0 6px 16px rgba(46,58,86,0.15); }
+
+.w-cobrand{
+  position:fixed; bottom:28px; left:32px; z-index:10;
+  display:flex; align-items:center; gap:10px;
+  font-size:10px; color:var(--ink-3); letter-spacing:0.25em; text-transform:uppercase;
+  font-family:'JetBrains Mono',monospace;
+  opacity:0; animation: fade-drop 0.4s ease 2.4s forwards;
+}
+.w-cobrand-bar{ width:1px; height:12px; background:rgba(46,58,86,0.25); }
+.w-cobrand-novartis{ font-family:'Inter',sans-serif; font-weight:800; letter-spacing:0.08em; color:var(--nv-blue); }
+
+@keyframes fade-drop{ from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+
+/* ============================================================
+   MAIN SHELL
+   ============================================================ */
+#main{ display:flex; flex-direction:column; height:100%; opacity:0; pointer-events:none; transition: opacity 0.6s ease; }
+#main.visible{ opacity:1; pointer-events:auto; }
+
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 32px; position:relative; z-index:10;
+  background:rgba(248,247,242,0.78); backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-left{ display:flex; align-items:center; gap:32px; }
+.topbar-nav{ display:flex; align-items:center; gap:4px; }
+.topbar-nav-item{
+  padding:8px 14px; border-radius:99px;
+  font-size:13px; font-weight:500; color:var(--ink-3);
+  transition: all 0.15s ease;
+}
+.topbar-nav-item:hover{ background:rgba(46,58,86,0.06); color:var(--ink); }
+.topbar-nav-item.active{
+  background: rgba(46,58,86,0.1);
+  color:var(--a-indigo); font-weight:600;
+}
+
+.topbar-right{ display:flex; align-items:center; gap:14px; }
+.topbar-clock{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px; font-weight:500; color:var(--ink-2);
+  padding:8px 14px; border-radius:99px;
+  background:rgba(46,58,86,0.06);
+  letter-spacing:0.08em;
+}
+.topbar-search{
+  display:flex; align-items:center; gap:8px;
+  padding:8px 14px; border-radius:99px;
+  background:rgba(255,255,255,0.7); border:1px solid var(--line);
+  color:var(--ink-3); font-size:13px; min-width:240px;
+}
+.topbar-search svg{ width:14px; height:14px; }
+.topbar-search kbd{
+  margin-left:auto; font-size:10px; padding:2px 6px; border-radius:4px;
+  background:rgba(46,58,86,0.08); color:var(--ink-3); font-family:'JetBrains Mono',monospace;
+  border:1px solid var(--line);
+}
+.topbar-avatar{
+  width:34px; height:34px; border-radius:50%;
+  background: linear-gradient(135deg, #A8B89A, #5A6A8A);
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:12px;
+  border:2px solid #fff; box-shadow: 0 4px 12px rgba(90,106,138,0.35);
+}
+
+.main-content{ flex:1; overflow-y:auto; position:relative; z-index:1; }
+.main-content::-webkit-scrollbar{ width:8px; }
+.main-content::-webkit-scrollbar-thumb{ background:rgba(46,58,86,0.18); border-radius:99px; }
+
+/* ============================================================
+   DASHBOARD
+   ============================================================ */
+.dashboard{ max-width:1320px; margin:0 auto; padding:44px 40px 80px; }
+.dash-hero{ margin-bottom:28px; position:relative; display:grid; grid-template-columns: 1fr auto; gap:32px; align-items:end; }
+.dash-eyebrow{
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.22em;
+  color:var(--ink-4); text-transform:uppercase; margin-bottom:14px;
+}
+.dash-greeting{
+  font-size:clamp(46px, 5.2vw, 68px); font-weight:700;
+  letter-spacing:-0.035em; line-height:1.02;
+  color:var(--ink); margin-bottom:12px;
+}
+.dash-greeting em{
+  font-family:'Instrument Serif',serif; font-style:italic; font-weight:400;
+  background: var(--grad-aurora);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.dash-sub{
+  font-size:17px; color:var(--ink-2); max-width:640px; line-height:1.5;
+}
+
+/* Mary's rhythm — a personalized daily glance card */
+.rhythm{
+  background: linear-gradient(160deg, rgba(255,255,255,0.95), rgba(248,247,242,0.75));
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: var(--r-lg);
+  padding: 18px 22px;
+  min-width: 300px;
+  box-shadow: var(--lift-1);
+  position:relative; overflow:hidden;
+  backdrop-filter: blur(12px);
+  cursor:pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align:left; width:100%;
+  font-family: inherit;
+}
+.rhythm:hover{ transform: translateY(-2px); box-shadow: 0 4px 10px rgba(31,36,50,0.06), 0 20px 40px -12px rgba(31,36,50,0.15); border-color: rgba(107,132,96,0.3); }
+.rhythm-hint{ margin-top:10px; padding-top:10px; border-top:1px dashed rgba(46,58,86,0.12); font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--a-sage,#6B8460); font-family:'JetBrains Mono',monospace; display:flex; align-items:center; justify-content:space-between; opacity:0.4; transition:opacity 0.2s ease; position:relative; z-index:1; }
+.rhythm:hover .rhythm-hint{ opacity:1; }
+.rhythm-hint span{ transition: transform 0.2s ease; }
+.rhythm:hover .rhythm-hint span{ transform: translateX(4px); }
+.rhythm::before{
+  content:''; position:absolute; top:0; right:0; width:60%; height:100%;
+  background: radial-gradient(ellipse 100% 100% at 100% 0%, rgba(107,132,96,0.15), transparent 60%);
+  pointer-events:none;
+}
+.rhythm-head{ display:flex; align-items:center; gap:8px; font-size:10px; font-weight:700; letter-spacing:0.22em; color:var(--ink-3); text-transform:uppercase; font-family:'JetBrains Mono',monospace; margin-bottom:12px; position:relative; z-index:1; }
+.rhythm-head::before{ content:''; width:6px; height:6px; border-radius:50%; background:var(--a-amber); box-shadow:0 0 10px var(--a-amber); animation:pulse 1.4s infinite; }
+.rhythm-now{ font-size:13px; color:var(--ink); font-weight:600; margin-bottom:4px; position:relative; z-index:1; }
+.rhythm-next{ font-size:12px; color:var(--ink-3); position:relative; z-index:1; display:flex; align-items:center; gap:6px; }
+.rhythm-next strong{ color:var(--ink-2); font-weight:600; }
+.rhythm-streak{ margin-top:12px; padding-top:12px; border-top:1px dashed rgba(46,58,86,0.15); display:flex; align-items:center; justify-content:space-between; font-size:11px; color:var(--ink-3); position:relative; z-index:1; }
+.rhythm-streak-value{ font-size:13px; font-weight:700; color:var(--a-amber); font-variant-numeric:tabular-nums; }
+.rhythm-streak-value span{ font-size:10px; color:var(--ink-3); font-weight:500; margin-left:4px; }
+
+/* Stat strip — neutral aurora glass */
+.stat-strip{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:16px;
+  margin-bottom:28px; margin-top:4px;
+}
+
+/* ============================================================
+   CLUSTER PULSE — live WEC map
+   ============================================================ */
+.pulse{
+  position:relative;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.88) 0%, rgba(248,247,242,0.75) 100%);
+  border:1px solid rgba(255,255,255,0.7);
+  border-radius:var(--r-xl);
+  padding:26px 28px;
+  margin-top:56px;
+  margin-bottom:44px;
+  box-shadow: var(--lift-2);
+  overflow:hidden;
+  backdrop-filter: blur(14px);
+}
+.pulse::before{
+  content:''; position:absolute; inset:0; pointer-events:none; border-radius:inherit;
+  background:
+    radial-gradient(ellipse 40% 60% at 8% 0%, rgba(78,91,122,0.1), transparent 60%),
+    radial-gradient(ellipse 40% 60% at 100% 100%, rgba(107,132,96,0.08), transparent 60%);
+}
+.pulse-head{ display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:22px; position:relative; z-index:1; }
+.pulse-title{ font-size:18px; font-weight:700; letter-spacing:-0.015em; color:var(--ink); display:flex; align-items:center; gap:10px; }
+.pulse-title::before{ content:''; width:8px; height:8px; border-radius:50%; background:var(--a-amber); box-shadow:0 0 12px var(--a-amber); animation:pulse 1.6s ease-in-out infinite; }
+.pulse-sub{ font-size:13px; color:var(--ink-3); margin-top:4px; }
+.pulse-legend{ display:flex; gap:14px; font-size:11px; font-weight:500; color:var(--ink-3); font-family:'JetBrains Mono',monospace; letter-spacing:0.08em; text-transform:uppercase; }
+.pulse-legend-item{ display:flex; align-items:center; gap:6px; }
+.pulse-legend-dot{ width:7px; height:7px; border-radius:50%; }
+.pulse-legend-dot.on{ background:#4F7A4A; box-shadow:0 0 8px rgba(79,122,74,0.6); }
+.pulse-legend-dot.risk{ background:#6B8460; box-shadow:0 0 8px rgba(107,132,96,0.6); }
+.pulse-legend-dot.paused{ background:#A7B0BE; }
+
+.pulse-body{
+  position:relative; z-index:1;
+  display:grid; grid-template-columns: 1.15fr 1fr; gap:28px; align-items:center;
+}
+
+/* SVG map wrapper */
+.pulse-map{
+  position:relative;
+  aspect-ratio: 1.45 / 1;
+  border-radius:var(--r-lg);
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 45%, rgba(78,91,122,0.08), transparent 70%),
+    linear-gradient(160deg, rgba(248,247,242,0.6), rgba(229,222,210,0.35));
+  border:1px solid var(--line-2);
+  overflow:hidden;
+}
+.pulse-map svg{ width:100%; height:100%; display:block; }
+.pulse-country-path{
+  fill: rgba(78,91,122,0.12);
+  stroke: rgba(46,58,86,0.22);
+  stroke-width: 0.5;
+  transition: fill 0.25s ease;
+  cursor:pointer;
+}
+.pulse-country-path:hover{ fill: rgba(78,91,122,0.22); }
+.pulse-country-path.on{ fill: rgba(79,122,74,0.22); stroke: rgba(79,122,74,0.45); }
+.pulse-country-path.on:hover{ fill: rgba(79,122,74,0.35); }
+.pulse-country-path.risk{ fill: rgba(107,132,96,0.28); stroke: rgba(107,132,96,0.55); }
+.pulse-country-path.risk:hover{ fill: rgba(107,132,96,0.42); }
+.pulse-country-path.paused{ fill: rgba(168,162,176,0.28); stroke: rgba(168,162,176,0.55); stroke-dasharray: 1.5 1.5; }
+
+.pulse-dot{
+  position:absolute;
+  width:12px; height:12px; border-radius:50%;
+  transform: translate(-50%,-50%);
+  cursor:pointer;
+  z-index:2;
+}
+.pulse-dot::before{
+  content:''; position:absolute; inset:0; border-radius:50%;
+  background: var(--d-color, #4F7A4A);
+  box-shadow: 0 0 0 2px #fff, 0 4px 10px var(--d-shadow, rgba(79,122,74,0.6));
+  z-index:2;
+}
+.pulse-dot::after{
+  content:''; position:absolute; inset:-4px; border-radius:50%;
+  background: var(--d-color, #4F7A4A);
+  opacity:0.4;
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+.pulse-dot.risk{ --d-color:#6B8460; --d-shadow: rgba(107,132,96,0.6); }
+.pulse-dot.paused{ --d-color:#A7B0BE; --d-shadow: rgba(168,162,176,0.4); }
+.pulse-dot.paused::after{ animation:none; }
+@keyframes pulse-ring{
+  0%{ transform:scale(0.9); opacity:0.5; }
+  70%{ transform:scale(2.4); opacity:0; }
+  100%{ transform:scale(2.4); opacity:0; }
+}
+.pulse-dot-label{
+  position:absolute; top:14px; left:50%; transform:translateX(-50%);
+  font-size:10px; font-weight:700; color:var(--ink); white-space:nowrap;
+  font-family:'JetBrains Mono',monospace; letter-spacing:0.04em;
+  background: rgba(255,255,255,0.92); padding:2px 6px; border-radius:6px;
+  border:1px solid var(--line-2); pointer-events:none;
+  opacity:0; transition: opacity 0.15s;
+}
+.pulse-dot:hover .pulse-dot-label{ opacity:1; }
+
+/* Ticker / country list on the right */
+.pulse-list{ display:flex; flex-direction:column; gap:6px; }
+.pulse-row{
+  display:grid; grid-template-columns: 24px 1fr auto auto; gap:12px; align-items:center;
+  padding:10px 12px; border-radius:var(--r-sm);
+  transition: background 0.15s ease;
+  cursor:pointer;
+  border: 1px solid transparent;
+}
+.pulse-row:hover{ background: rgba(255,255,255,0.7); border-color: var(--line-2); }
+.pulse-row-flag{ font-size:18px; line-height:1; }
+.pulse-row-name{ font-size:13px; font-weight:600; color:var(--ink); }
+.pulse-row-sub{ font-size:11px; color:var(--ink-3); margin-top:1px; }
+.pulse-row-rx{ font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700; font-variant-numeric:tabular-nums; }
+.pulse-row-rx.up{ color:#4F7A4A; }
+.pulse-row-rx.down{ color:#6B8460; }
+.pulse-row-rx.flat{ color:var(--ink-4); }
+.pulse-row-status{ width:8px; height:8px; border-radius:50%; }
+.pulse-row-status.on{ background:#4F7A4A; box-shadow:0 0 8px rgba(79,122,74,0.5); }
+.pulse-row-status.risk{ background:#6B8460; box-shadow:0 0 8px rgba(107,132,96,0.5); }
+.pulse-row-status.paused{ background:#A7B0BE; }
+
+/* Footnote strip */
+.pulse-foot{
+  margin-top:16px; padding-top:14px; border-top:1px dashed var(--line-2);
+  display:flex; align-items:center; justify-content:space-between;
+  font-size:12px; color:var(--ink-3); position:relative; z-index:1;
+}
+.pulse-foot strong{ color:var(--a-amber); font-weight:700; }
+.pulse-foot-cta{ padding:6px 12px; border-radius:99px; background: var(--ink); color:#fff; font-size:11px; font-weight:600; letter-spacing:0.04em; }
+.pulse-foot-cta:hover{ background: var(--a-indigo); }
+/* ============================================================
+   STAT CARDS — editorial, asymmetric, mini-viz
+   ============================================================ */
+.stat-card{
+  position:relative;
+  padding:22px 22px 18px;
+  border-radius:var(--r-lg);
+  background:
+    linear-gradient(165deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.78) 100%);
+  color:var(--ink); text-align:left;
+  overflow:hidden;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+  box-shadow:
+    0 1px 2px rgba(31,36,50,0.04),
+    0 14px 34px -10px rgba(31,36,50,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+  border: 1px solid rgba(46,58,86,0.08);
+  cursor:pointer;
+  display:flex; flex-direction:column; gap:14px;
+  min-height:182px;
+  backdrop-filter: blur(12px);
+}
+.stat-card::before{
+  content:''; position:absolute; inset:0; pointer-events:none; border-radius:inherit;
+  background: radial-gradient(ellipse 130% 95% at 115% -12%, var(--glow,rgba(90,106,138,0.22)) 0%, transparent 55%);
+  z-index:0;
+}
+.stat-card::after{
+  content:''; position:absolute; left:18px; right:18px; bottom:0; height:2px;
+  background: var(--glow-line,rgba(90,106,138,0.6));
+  border-radius:2px 2px 0 0;
+  transform-origin: left center;
+  transform: scaleX(0);
+  opacity:0;
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease;
+}
+.stat-card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(46,58,86,0.14);
+  box-shadow:
+    0 4px 10px rgba(31,36,50,0.06),
+    0 32px 60px -14px rgba(31,36,50,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.95);
+}
+.stat-card:hover::after{ transform: scaleX(1); opacity:1; }
+.stat-card:active{ transform: translateY(-1px); }
+
+.stat-head{
+  display:flex; align-items:flex-start; justify-content:space-between;
+  gap:12px; position:relative; z-index:1;
+}
+.stat-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--ink-3); line-height:1.35;
+  padding-top:8px;
+  max-width:150px;
+}
+.stat-icon-wrap{
+  width:38px; height:38px; border-radius:50%;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,0.85), rgba(255,255,255,0.2) 60%),
+    linear-gradient(140deg, var(--glow-line,rgba(90,106,138,0.65)) 0%, var(--glow,rgba(90,106,138,0.35)) 100%);
+  border: 1px solid rgba(255,255,255,0.6);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+  box-shadow:
+    0 6px 14px var(--glow,rgba(90,106,138,0.25)),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+  position:relative; z-index:1;
+}
+.stat-icon-wrap svg{ width:17px; height:17px; color:#fff; stroke-width:2; }
+
+.stat-mid{
+  display:flex; align-items:flex-end; justify-content:space-between;
+  gap:14px; position:relative; z-index:1;
+  margin-top:auto;
+  padding-bottom:4px;
+}
+.stat-value{
+  font-family:'Instrument Serif',serif;
+  font-size:56px; font-weight:400; font-style:italic;
+  letter-spacing:-0.03em; line-height:0.9; color:var(--ink);
+  font-feature-settings:'tnum';
+}
+
+/* Mini-viz variants */
+.stat-viz{
+  flex-shrink:0;
+  display:flex; align-items:flex-end; justify-content:flex-end;
+  gap:3px;
+  margin-bottom:6px;
+}
+.viz-dots{ display:flex; gap:5px; align-items:center; height:22px; }
+.viz-dots span{
+  width:9px; height:9px; border-radius:50%;
+  background: var(--glow-line, rgba(90,106,138,0.55));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
+}
+.viz-dots span.muted{ background: rgba(46,58,86,0.12); box-shadow:none; }
+.viz-dots span.risk{ background:#A68B55; }
+.viz-dots span.paused{ background: rgba(46,58,86,0.2); }
+
+.viz-spark{ width:82px; height:26px; }
+
+.viz-ring{ width:38px; height:38px; position:relative; }
+.viz-ring svg{ width:100%; height:100%; transform:rotate(-90deg); }
+.viz-ring .track{ stroke: rgba(46,58,86,0.1); fill:none; }
+.viz-ring .fill{ stroke: var(--glow-line, rgba(90,106,138,0.8)); stroke-linecap:round; fill:none; }
+.viz-ring .label{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:700;
+  color:var(--ink-2);
+}
+.viz-clock{ display:flex; flex-direction:column; gap:3px; align-items:flex-end; }
+.viz-clock span{
+  font-family:'JetBrains Mono',monospace; font-size:9.5px; font-weight:600;
+  letter-spacing:0.04em; color:var(--ink-3);
+  padding:2px 6px; border-radius:4px;
+  background: rgba(46,58,86,0.06);
+}
+.viz-clock span.hot{
+  background: var(--glow,rgba(166,139,85,0.25));
+  color:var(--ink);
+}
+
+.stat-foot{
+  display:flex; align-items:center; justify-content:space-between;
+  font-size:10.5px; font-family:'JetBrains Mono',monospace;
+  color:var(--ink-3); letter-spacing:0.04em;
+  position:relative; z-index:1;
+  padding-top:12px;
+  border-top:1px dashed rgba(46,58,86,0.1);
+  text-transform:uppercase;
+}
+.stat-delta{ font-weight:600; }
+.stat-delta.up{ color:#4F7A4A; }
+.stat-delta.down{ color:#A68B55; }
+.stat-delta.warn{ color:#A68B55; }
+.stat-jump{
+  display:inline-flex; align-items:center; gap:5px;
+  color:var(--ink-3); opacity:0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateX(-4px);
+  font-weight:600;
+}
+.stat-card:hover .stat-jump{ opacity:1; transform:translateX(0); color:var(--ink); }
+
+.section-header{ display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:22px; }
+.section-title{ font-size:22px; font-weight:700; letter-spacing:-0.02em; color:var(--ink); }
+.section-subtitle{ font-size:13px; color:var(--ink-3); margin-top:4px; }
+.section-link{ font-size:13px; font-weight:600; color:var(--a-indigo); padding:6px 12px; border-radius:99px; transition: background 0.15s; }
+.section-link:hover{ background:rgba(46,58,86,0.08); }
+
+/* Agent grid — neutral aurora tiles */
+.agent-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
+@media (max-width: 1180px){ .agent-grid{ grid-template-columns:repeat(2, 1fr); } }
+.agent-card{
+  position:relative;
+  padding:26px;
+  border-radius:var(--r-xl);
+  background:
+    linear-gradient(160deg,
+      color-mix(in srgb, var(--accent,#4E5B7A) 12%, #ffffff) 0%,
+      color-mix(in srgb, var(--accent2,#6E7C9A) 6%, #ffffff) 60%,
+      #ffffff 100%);
+  color:var(--ink); text-align:left; overflow:hidden;
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+  box-shadow:
+    0 1px 2px rgba(31,36,50,0.04),
+    0 18px 40px -12px color-mix(in srgb, var(--accent,#4E5B7A) 25%, transparent),
+    inset 0 1px 0 rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.6);
+  cursor:pointer;
+  min-height:220px;
+  display:flex; flex-direction:column; justify-content:space-between;
+  backdrop-filter: blur(12px);
+}
+
+/* Shimmer sweep across card on hover */
+.agent-card .agent-shimmer{
+  position:absolute; inset:0; pointer-events:none; overflow:hidden; border-radius:inherit; z-index:0;
+}
+.agent-card .agent-shimmer::after{
+  content:''; position:absolute; top:-50%; left:-60%; width:60%; height:200%;
+  background: linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.55) 50%, transparent 80%);
+  transform: rotate(14deg) translateX(0);
+  transition: transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.agent-card:hover .agent-shimmer::after{ transform: rotate(14deg) translateX(380%); }
+.agent-card::before{
+  content:''; position:absolute; inset:-30px; pointer-events:none; opacity:0.5;
+  background:
+    radial-gradient(ellipse 55% 50% at 100% 0%, var(--accent,#4E5B7A) 0%, transparent 55%),
+    radial-gradient(ellipse 45% 50% at 0% 100%, var(--accent2,#6E7C9A) 0%, transparent 55%);
+  filter: blur(30px);
+  transition: opacity 0.3s ease;
+}
+.agent-card::after{
+  content:''; position:absolute; top:-50px; right:-50px;
+  width:180px; height:180px; border-radius:50%; pointer-events:none;
+  background:
+    radial-gradient(circle at 40% 35%, rgba(255,255,255,0.6) 0%, transparent 35%),
+    radial-gradient(circle, var(--accent,#4E5B7A) 0%, var(--accent2,#6E7C9A) 55%, transparent 90%);
+  opacity:0.3;
+  filter: blur(6px);
+  transition: all 0.4s ease;
+}
+.agent-card:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 4px 10px rgba(31,36,50,0.06),
+    0 40px 70px -15px color-mix(in srgb, var(--accent,#4E5B7A) 40%, transparent),
+    0 0 60px -10px var(--accent,#4E5B7A);
+}
+.agent-card:hover::before{ opacity:0.8; }
+.agent-card:hover::after{ opacity:0.5; transform:scale(1.1) rotate(12deg); }
+.agent-card.live::before{ opacity:0.8; animation: accent-drift 8s ease-in-out infinite alternate; }
+@keyframes accent-drift{ from{ transform:translate(-14px,-10px) scale(1); } to{ transform:translate(12px,10px) scale(1.1); } }
+
+.agent-top{ display:flex; align-items:flex-start; justify-content:space-between; position:relative; z-index:2; }
+.agent-mark{
+  width:54px; height:54px; border-radius:16px;
+  background: linear-gradient(140deg, var(--accent,#4E5B7A), var(--accent2,#6E7C9A));
+  border: 1px solid rgba(255,255,255,0.6);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:
+    0 12px 28px color-mix(in srgb, var(--accent,#4E5B7A) 50%, transparent),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+  position:relative; overflow:hidden;
+}
+.agent-mark::before{
+  content:''; position:absolute; inset:-40%;
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(255,255,255,0.5) 60deg, transparent 120deg, transparent 360deg);
+  animation: mark-halo 6s linear infinite;
+  opacity:0.6;
+}
+.agent-card:hover .agent-mark::before{ opacity:1; animation-duration: 2.5s; }
+@keyframes mark-halo{ to{ transform: rotate(360deg); } }
+.agent-mark svg{ width:26px; height:26px; color:#fff; position:relative; z-index:1; }
+
+.agent-pill{
+  font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700;
+  letter-spacing:0.18em; text-transform:uppercase;
+  padding:6px 11px; border-radius:99px;
+  background: rgba(255,255,255,0.7); backdrop-filter:blur(6px);
+  color:var(--ink-2);
+  border:1px solid rgba(46,58,86,0.15);
+}
+.agent-pill.live{
+  background: linear-gradient(135deg, #6B8460, #A8B89A);
+  color:#fff; border-color:transparent;
+  box-shadow: 0 4px 14px rgba(107,132,96,0.4);
+}
+.agent-pill.live::before{ content:''; display:inline-block; width:6px; height:6px; border-radius:50%; background:#fff; box-shadow:0 0 10px #fff; margin-right:6px; animation: pulse 1.4s ease-in-out infinite; vertical-align:middle; }
+
+.agent-body{ position:relative; z-index:2; margin-top:26px; }
+.agent-name{ font-size:22px; font-weight:700; letter-spacing:-0.02em; color:var(--ink); margin-bottom:6px; }
+.agent-desc{ font-size:14px; line-height:1.5; color:var(--ink-2); max-width:85%; }
+
+.agent-bottom{ display:flex; align-items:center; justify-content:space-between; position:relative; z-index:2; margin-top:16px; }
+.agent-status{ font-size:10px; color:var(--ink-3); font-family:'JetBrains Mono',monospace; letter-spacing:0.18em; font-weight:600; }
+.agent-enter{
+  display:flex; align-items:center; gap:8px;
+  padding:8px 14px; border-radius:99px;
+  background: rgba(255,255,255,0.7); backdrop-filter:blur(6px);
+  border:1px solid rgba(46,58,86,0.15);
+  color:var(--ink); font-size:13px; font-weight:600;
+  transition: all 0.2s ease;
+}
+.agent-card:hover .agent-enter{
+  background: var(--ink); color:#fff; border-color:var(--ink);
+  transform: translateX(2px);
+}
+
+/* Focus strip */
+.focus-strip{
+  margin-top:40px; padding:22px; border-radius:var(--r-lg);
+  background:rgba(255,255,255,0.7); backdrop-filter:blur(12px);
+  border:1px solid var(--line);
+  display:grid; grid-template-columns: auto 1fr auto; gap:20px;
+  align-items:center; box-shadow: var(--lift-1);
+  position:relative; overflow:hidden;
+}
+.focus-strip::before{
+  content:''; position:absolute; top:0; right:0; width:40%; height:100%;
+  background: radial-gradient(ellipse 100% 100% at 100% 50%, rgba(107,132,96,0.12), transparent 70%);
+  pointer-events:none;
+}
+.focus-mark{
+  width:44px; height:44px; border-radius:12px;
+  background: var(--grad-aurora);
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; box-shadow: 0 8px 22px rgba(90,106,138,0.35);
+  position:relative; z-index:1;
+}
+.focus-body{ position:relative; z-index:1; }
+.focus-body h4{ font-size:14px; font-weight:700; color:var(--ink); margin-bottom:2px; }
+.focus-body p{ font-size:13px; color:var(--ink-2); }
+.focus-cta{ padding:9px 18px; border-radius:99px; background:var(--ink); color:#fff; font-size:12px; font-weight:600; transition: all 0.15s; position:relative; z-index:1; }
+.focus-cta:hover{ background:var(--a-indigo); }
+
+/* ============================================================
+   INBOX
+   ============================================================ */
+.inbox{ max-width:1320px; margin:0 auto; padding:36px 40px 80px; display:grid; grid-template-columns: 380px 1fr; gap:28px; }
+.inbox-header{ grid-column:1/-1; display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:8px; }
+.inbox-title-wrap{ display:flex; align-items:center; gap:14px; }
+.inbox-back{ display:flex; align-items:center; gap:6px; padding:8px 12px; border-radius:99px; color:var(--ink-3); font-size:13px; font-weight:500; transition: all 0.15s; }
+.inbox-back:hover{ background: rgba(46,58,86,0.08); color:var(--a-indigo); }
+.inbox-title{ font-size:32px; font-weight:700; letter-spacing:-0.025em; color:var(--ink); }
+.inbox-filters{ display:flex; gap:6px; }
+.inbox-filter{ padding:6px 12px; border-radius:99px; font-size:12px; font-weight:500; color:var(--ink-3); border:1px solid transparent; }
+.inbox-filter.active{ background:#fff; border-color:var(--line); color:var(--ink); box-shadow: var(--lift-1); }
+
+.inbox-list{
+  background: rgba(255,255,255,0.75); backdrop-filter:blur(8px);
+  border:1px solid var(--line); border-radius:var(--r-lg);
+  overflow:hidden; box-shadow: var(--lift-1); height:fit-content;
+}
+.inbox-item{
+  display:flex; flex-direction:column; gap:6px;
+  padding:16px 18px; border-bottom:1px solid var(--line-2);
+  cursor:pointer; position:relative; transition: background 0.15s ease;
+  text-align:left; width:100%;
+}
+.inbox-item:last-child{ border-bottom:0; }
+.inbox-item:hover{ background:rgba(46,58,86,0.04); }
+.inbox-item.selected{ background: linear-gradient(90deg, rgba(46,58,86,0.1), rgba(107,132,96,0.05)); }
+.inbox-item.selected::before{
+  content:''; position:absolute; left:0; top:10px; bottom:10px; width:3px;
+  background: var(--grad-aurora);
+  border-radius:0 2px 2px 0;
+}
+.inbox-item-top{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.inbox-from{ display:flex; align-items:center; gap:8px; font-weight:600; font-size:13px; color:var(--ink); }
+.inbox-avatar{ width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#fff; flex-shrink:0; }
+.inbox-time{ font-size:11px; color:var(--ink-4); font-family:'JetBrains Mono',monospace; }
+.inbox-subject{ font-size:13px; color:var(--ink); font-weight:500; line-height:1.35; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.inbox-item.unread .inbox-subject{ font-weight:600; }
+.inbox-preview{ font-size:12px; color:var(--ink-3); line-height:1.4; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; }
+.inbox-tags{ display:flex; gap:4px; flex-wrap:wrap; margin-top:2px; }
+.inbox-tag{ font-size:10px; padding:2px 7px; border-radius:99px; background:rgba(46,58,86,0.08); color:var(--ink-3); font-weight:500; }
+.inbox-priority-high{ font-size:10px; padding:2px 7px; border-radius:99px; background:rgba(107,132,96,0.18); color:#4A5F40; font-weight:600; letter-spacing:0.03em; }
+
+.inbox-detail{
+  background: rgba(255,255,255,0.85); backdrop-filter:blur(8px);
+  border:1px solid var(--line); border-radius:var(--r-lg);
+  padding:32px; box-shadow: var(--lift-1);
+}
+.id-header{ display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:22px; padding-bottom:20px; border-bottom:1px solid var(--line-2); gap:16px; }
+.id-subject{ font-size:22px; font-weight:700; letter-spacing:-0.02em; color:var(--ink); line-height:1.3; margin-bottom:14px; }
+.id-from-row{ display:flex; align-items:center; gap:12px; }
+.id-from-info{ display:flex; flex-direction:column; }
+.id-from-name{ font-weight:600; font-size:14px; color:var(--ink); }
+.id-from-meta{ font-size:12px; color:var(--ink-3); }
+.id-time-row{ display:flex; flex-direction:column; align-items:flex-end; gap:6px; font-size:12px; color:var(--ink-3); font-family:'JetBrains Mono',monospace; }
+.id-body{ font-size:15px; line-height:1.65; color:var(--ink-2); white-space:pre-wrap; }
+.id-attachment{ margin-top:20px; padding:12px 14px; border-radius:var(--r-sm); background:rgba(46,58,86,0.05); border:1px solid var(--line); display:flex; align-items:center; gap:10px; font-size:13px; color:var(--ink-2); }
+.id-attachment svg{ color:var(--a-indigo); flex-shrink:0; }
+
+.id-ai{
+  margin-top:24px; padding:20px 22px;
+  border-radius:var(--r-md);
+  background: linear-gradient(135deg, #4E5B7A 0%, #5A6A8A 50%, #6B8460 100%);
+  color:#fff; position:relative; overflow:hidden;
+  box-shadow: 0 14px 32px rgba(90,106,138,0.25);
+}
+.id-ai::before{
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 100% 0%, rgba(168,184,154,0.5), transparent 60%),
+    radial-gradient(ellipse 50% 70% at 0% 100%, rgba(78,91,122,0.4), transparent 60%);
+}
+.id-ai::after{
+  content:''; position:absolute; top:-40px; right:-40px;
+  width:140px; height:140px; border-radius:50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.7), rgba(168,184,154,0.5) 40%, transparent 70%);
+  filter: blur(4px); opacity:0.5;
+}
+.id-ai-label{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.22em; opacity:0.85; text-transform:uppercase; margin-bottom:10px; position:relative; z-index:1; display:flex; align-items:center; gap:8px; }
+.id-ai-label::before{ content:''; width:6px; height:6px; border-radius:50%; background:#A8B89A; box-shadow:0 0 10px #A8B89A; animation:pulse 1.4s infinite; }
+.id-ai-text{ font-size:14px; line-height:1.55; position:relative; z-index:1; }
+.id-ai-actions{ display:flex; gap:8px; margin-top:14px; position:relative; z-index:1; }
+.id-ai-btn{ padding:8px 14px; border-radius:99px; background:rgba(255,255,255,0.12); color:#fff; font-size:12px; font-weight:600; border:1px solid rgba(255,255,255,0.14); transition: background 0.15s; }
+.id-ai-btn:hover{ background:rgba(255,255,255,0.22); }
+.id-ai-btn.primary{ background:#fff; color:var(--ink); }
+
+/* ============================================================
+   AGENT DETAIL
+   ============================================================ */
+.agent-page{ max-width:1320px; margin:0 auto; padding:36px 40px 80px; }
+.ap-crumbs{ display:flex; align-items:center; gap:8px; margin-bottom:14px; font-size:13px; color:var(--ink-3); }
+.ap-crumbs button{ color:var(--ink-3); font-size:13px; }
+.ap-crumbs button:hover{ color:var(--a-indigo); }
+.ap-crumbs-sep{ color:var(--ink-4); }
+
+.ap-hero{
+  position:relative;
+  border-radius:var(--r-xl);
+  background: linear-gradient(135deg,
+    var(--accent,#4E5B7A) 0%,
+    var(--accent2,#6E7C9A) 60%,
+    color-mix(in srgb, var(--accent2,#6E7C9A) 60%, #A8B89A) 100%);
+  color:#fff;
+  padding:44px;
+  overflow:hidden;
+  box-shadow:
+    0 1px 2px rgba(31,36,50,0.06),
+    0 24px 60px -15px color-mix(in srgb, var(--accent,#4E5B7A) 50%, transparent);
+  border:1px solid rgba(255,255,255,0.3);
+  margin-bottom:28px;
+}
+.ap-hero::before{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 55% 65% at 85% -10%, rgba(168,184,154,0.5), transparent 55%),
+    radial-gradient(ellipse 40% 55% at 15% 115%, rgba(46,58,86,0.35), transparent 55%);
+  animation: accent-drift 10s ease-in-out infinite alternate;
+}
+.ap-hero::after{
+  content:''; position:absolute; top:-80px; right:-60px;
+  width:260px; height:260px; border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.8) 0%, transparent 40%),
+    radial-gradient(circle, #A8B89A 0%, #6B8460 35%, #5A6A8A 70%, transparent 100%);
+  filter: blur(2px); opacity:0.5;
+  pointer-events:none;
+}
+.ap-hero-inner{ position:relative; z-index:1; display:grid; grid-template-columns: 80px 1fr auto; gap:24px; align-items:center; }
+.ap-hero-mark{ width:80px; height:80px; border-radius:22px; background: linear-gradient(140deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1)); border:1px solid rgba(255,255,255,0.35); display:flex; align-items:center; justify-content:center; box-shadow: 0 16px 36px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.4); position:relative; overflow:hidden; backdrop-filter: blur(8px); }
+.ap-hero-mark::before{ content:''; position:absolute; inset:0; background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.5), transparent 60%); }
+.ap-hero-mark svg{ width:38px; height:38px; color:#fff; position:relative; z-index:1; }
+.ap-hero-text h1{ font-size:32px; font-weight:700; letter-spacing:-0.025em; line-height:1.1; margin-bottom:8px; text-shadow:0 2px 20px rgba(0,0,0,0.15); }
+.ap-hero-text p{ font-size:15px; color:rgba(255,255,255,0.88); max-width:580px; line-height:1.55; }
+.ap-hero-action{ padding:13px 22px; border-radius:99px; background:#fff; color:var(--ink); font-size:14px; font-weight:600; display:flex; align-items:center; gap:8px; transition: all 0.2s; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+.ap-hero-action:hover{ transform:translateY(-1px); box-shadow: 0 14px 28px rgba(0,0,0,0.25); }
+
+.ap-grid{ display:grid; grid-template-columns: 320px 1fr; gap:24px; }
+
+.pipeline{
+  background:rgba(255,255,255,0.85); backdrop-filter:blur(8px);
+  border:1px solid var(--line); border-radius:var(--r-lg);
+  padding:22px; box-shadow: var(--lift-1); height:fit-content;
+}
+.pipeline-title{ font-size:11px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--ink-3); margin-bottom:18px; font-family:'JetBrains Mono',monospace; }
+.pipeline-list{ display:flex; flex-direction:column; gap:0; position:relative; }
+.pipeline-list::before{ content:''; position:absolute; left:13px; top:14px; bottom:14px; width:2px; background:var(--line-2); }
+.pipe-item{ display:flex; gap:14px; padding:8px 0; position:relative; }
+.pipe-dot{ width:28px; height:28px; border-radius:50%; background:#fff; border:2px solid var(--line); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:11px; font-weight:700; color:var(--ink-4); z-index:1; transition: all 0.3s ease; }
+.pipe-item.done .pipe-dot{ background:var(--accent,#4E5B7A); border-color:var(--accent,#4E5B7A); color:#fff; }
+.pipe-item.active .pipe-dot{ background:#fff; border-color:var(--accent,#4E5B7A); color:var(--accent,#4E5B7A); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent,#4E5B7A) 18%, transparent); animation: dot-pulse 1.5s ease-in-out infinite; }
+@keyframes dot-pulse{ 50%{ box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent,#4E5B7A) 8%, transparent); } }
+.pipe-body{ flex:1; padding-top:4px; }
+.pipe-label{ font-size:13px; font-weight:600; color:var(--ink); }
+.pipe-item.pending .pipe-label{ color:var(--ink-3); }
+.pipe-detail{ font-size:12px; color:var(--ink-3); margin-top:2px; line-height:1.4; }
+
+.stream{
+  background:rgba(255,255,255,0.95); backdrop-filter:blur(8px);
+  border:1px solid var(--line); border-radius:var(--r-lg);
+  overflow:hidden; box-shadow: var(--lift-2);
+}
+.stream-header{ padding:16px 22px; border-bottom:1px solid var(--line-2); display:flex; align-items:center; justify-content:space-between; background:rgba(248,247,242,0.6); }
+.stream-title{ font-size:13px; font-weight:700; color:var(--ink); display:flex; align-items:center; gap:10px; }
+.stream-title::before{ content:''; width:8px; height:8px; border-radius:50%; background:var(--accent,#4E5B7A); box-shadow:0 0 12px var(--accent,#4E5B7A); animation:pulse 1.4s infinite; }
+.stream-actions{ display:flex; gap:8px; }
+.stream-btn{ padding:6px 12px; border-radius:99px; font-size:11px; font-weight:600; color:var(--ink-3); border:1px solid var(--line); background:#fff; transition: all 0.15s; }
+.stream-btn:hover{ color:var(--ink); border-color:var(--ink-3); }
+.stream-btn.primary{ background:var(--ink); color:#fff; border-color:var(--ink); }
+.stream-btn.primary:hover{ background:var(--a-indigo); border-color:var(--a-indigo); color:#fff; }
+.stream-body{
+  padding:30px;
+  font-size:15px; line-height:1.7; color:var(--ink);
+  min-height:420px; max-height:640px; overflow-y:auto;
+}
+.stream-body h2{ font-size:22px; font-weight:700; letter-spacing:-0.02em; margin:20px 0 12px; color:var(--ink); }
+.stream-body h2:first-child{ margin-top:0; }
+.stream-body h3{ font-size:11px; font-weight:700; margin:20px 0 8px; color:var(--accent,#4E5B7A); text-transform:uppercase; letter-spacing:0.12em; font-family:'JetBrains Mono',monospace; }
+.stream-body p{ margin-bottom:10px; color:var(--ink-2); }
+.stream-body ul, .stream-body ol{ margin:0 0 14px 22px; }
+.stream-body li{ margin-bottom:6px; color:var(--ink-2); }
+.stream-body strong{ color:var(--ink); font-weight:700; }
+.stream-body code{ font-family:'JetBrains Mono',monospace; font-size:0.88em; padding:1px 5px; border-radius:4px; background:rgba(46,58,86,0.07); color:var(--a-indigo); }
+.stream-body blockquote{ margin:16px 0; padding:14px 18px; background: linear-gradient(90deg, rgba(46,58,86,0.07), rgba(107,132,96,0.04)); border-left:3px solid var(--accent,#4E5B7A); border-radius:8px; font-size:14px; color:var(--ink); font-style:italic; }
+.stream-cursor{ display:inline-block; width:2px; height:1em; background:var(--accent,#4E5B7A); vertical-align:text-bottom; animation: blink 0.9s steps(2) infinite; }
+@keyframes blink{ 50%{ opacity:0; } }
+
+/* ============================================================
+   VISUAL OUTPUT BLOCKS — friendly, scannable agent output
+   ============================================================ */
+
+/* Hero summary card — the one-line TL;DR */
+.vo-tldr{
+  display:grid; grid-template-columns: 44px 1fr; gap:14px;
+  padding:18px 20px; margin-bottom:22px;
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--accent,#4E5B7A) 8%, #ffffff) 0%,
+    color-mix(in srgb, var(--accent2,#6E7C9A) 4%, #ffffff) 100%);
+  border:1px solid color-mix(in srgb, var(--accent,#4E5B7A) 18%, var(--line));
+  border-radius: var(--r-md);
+  position:relative; overflow:hidden;
+}
+.vo-tldr::before{
+  content:''; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background: linear-gradient(180deg, var(--accent,#4E5B7A), var(--accent2,#6E7C9A));
+}
+.vo-tldr-mark{
+  width:44px; height:44px; border-radius:12px;
+  background: linear-gradient(135deg, var(--accent,#4E5B7A), var(--accent2,#6E7C9A));
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; flex-shrink:0;
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent,#4E5B7A) 35%, transparent);
+}
+.vo-tldr-mark svg{ width:22px; height:22px; }
+.vo-tldr-label{
+  font-size:10px; font-weight:700; letter-spacing:0.18em;
+  color: var(--accent,#4E5B7A); text-transform:uppercase;
+  font-family:'JetBrains Mono',monospace; margin-bottom:4px;
+}
+.vo-tldr-text{
+  font-size:17px; font-weight:500; color:var(--ink); line-height:1.45;
+  letter-spacing:-0.01em;
+}
+.vo-tldr-text strong{ font-weight:700; }
+
+/* Section heading — cleaner than h3 */
+.vo-section{ margin:26px 0 14px; display:flex; align-items:center; gap:10px; }
+.vo-section-num{
+  width:22px; height:22px; border-radius:6px;
+  background: color-mix(in srgb, var(--accent,#4E5B7A) 12%, transparent);
+  color: var(--accent,#4E5B7A);
+  font-size:11px; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'JetBrains Mono',monospace;
+}
+.vo-section-title{
+  font-size:14px; font-weight:700; color:var(--ink);
+  letter-spacing:-0.01em;
+}
+.vo-section-rule{
+  flex:1; height:1px;
+  background: linear-gradient(90deg, var(--line-2), transparent);
+}
+
+/* Stat chips row */
+.vo-stats{ display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:10px; margin-bottom:18px; }
+.vo-stat{
+  padding:14px 16px; border-radius: var(--r-sm);
+  background: rgba(255,255,255,0.75);
+  border:1px solid var(--line-2);
+  position:relative; overflow:hidden;
+}
+.vo-stat::before{
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background: linear-gradient(90deg, var(--s-accent, var(--accent,#4E5B7A)), transparent);
+}
+.vo-stat-label{ font-size:10px; font-weight:600; letter-spacing:0.14em; color:var(--ink-3); text-transform:uppercase; font-family:'JetBrains Mono',monospace; margin-bottom:6px; }
+.vo-stat-value{ font-size:22px; font-weight:700; color:var(--ink); letter-spacing:-0.02em; font-variant-numeric:tabular-nums; line-height:1; }
+.vo-stat-delta{ font-size:11px; font-weight:600; margin-top:4px; display:flex; align-items:center; gap:4px; }
+.vo-stat-delta.up{ color:#4A5F40; }
+.vo-stat-delta.down{ color:#8A3F22; }
+.vo-stat-delta.flat{ color:var(--ink-3); }
+.vo-stat.ok{ --s-accent:#6B8460; }
+.vo-stat.warn{ --s-accent:#B85C3C; }
+.vo-stat.paused{ --s-accent:#9A9283; }
+
+/* Action cards — clickable rows */
+.vo-actions{ display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
+.vo-action{
+  display:grid; grid-template-columns: 32px 1fr auto; gap:14px;
+  align-items:center;
+  padding:14px 16px; border-radius: var(--r-sm);
+  background:#fff; border:1px solid var(--line);
+  cursor:pointer; transition: all 0.15s;
+  box-shadow: 0 1px 2px rgba(31,36,50,0.04);
+  text-align:left; width:100%;
+}
+.vo-action:hover{
+  border-color: var(--accent,#4E5B7A);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent,#4E5B7A) 15%, transparent);
+}
+.vo-action-mark{
+  width:32px; height:32px; border-radius:9px;
+  background: color-mix(in srgb, var(--accent,#4E5B7A) 14%, transparent);
+  color: var(--accent,#4E5B7A);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.vo-action-mark svg{ width:15px; height:15px; }
+.vo-action-mark.done{ background:#E8EEE3; color:#4A5F40; }
+.vo-action-mark.warn{ background:#F7E9E2; color:#8A3F22; }
+.vo-action-body{ min-width:0; }
+.vo-action-label{ font-size:14px; font-weight:600; color:var(--ink); line-height:1.35; margin-bottom:2px; }
+.vo-action-detail{ font-size:12px; color:var(--ink-3); line-height:1.4; }
+.vo-action-cta{
+  padding:7px 14px; border-radius:99px;
+  background: var(--accent,#4E5B7A); color:#fff;
+  font-size:11px; font-weight:600; letter-spacing:0.02em;
+  display:flex; align-items:center; gap:5px;
+  flex-shrink:0; transition: all 0.15s;
+  pointer-events:none;
+}
+.vo-action:hover .vo-action-cta{ background: var(--ink); transform: translateX(2px); }
+.vo-action-cta svg{ width:11px; height:11px; }
+.vo-action-cta.ghost{ background:transparent; color:var(--ink-3); border:1px solid var(--line); }
+
+/* Signal list — for ranked intel items */
+.vo-signals{ display:flex; flex-direction:column; gap:10px; margin-bottom:18px; }
+.vo-signal{
+  display:grid; grid-template-columns: 28px 1fr auto; gap:12px;
+  padding:12px 14px; border-radius: var(--r-sm);
+  background: rgba(255,255,255,0.65);
+  border:1px solid var(--line-2);
+  align-items:center;
+}
+.vo-signal-mark{
+  width:28px; height:28px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700;
+  font-family:'JetBrains Mono',monospace;
+  flex-shrink:0;
+}
+.vo-signal.ok .vo-signal-mark{ background:#E8EEE3; color:#4A5F40; }
+.vo-signal.warn .vo-signal-mark{ background:#F7E9E2; color:#8A3F22; }
+.vo-signal.pause .vo-signal-mark{ background:rgba(46,58,86,0.08); color:var(--ink-3); }
+.vo-signal.info .vo-signal-mark{ background: color-mix(in srgb, var(--accent,#4E5B7A) 14%, transparent); color: var(--accent,#4E5B7A); }
+.vo-signal-text{ font-size:13.5px; color:var(--ink-2); line-height:1.5; }
+.vo-signal-text strong{ color:var(--ink); font-weight:700; }
+.vo-signal-meta{
+  font-size:11px; font-weight:600; color:var(--ink-3);
+  font-family:'JetBrains Mono',monospace; letter-spacing:0.04em;
+  flex-shrink:0;
+}
+
+/* Quote — the one-liner sign-off */
+.vo-quote{
+  display:grid; grid-template-columns:28px 1fr; gap:14px;
+  margin:22px 0 6px;
+  padding:18px 20px; border-radius: var(--r-md);
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--accent2,#6E7C9A) 8%, #ffffff),
+    color-mix(in srgb, var(--accent,#4E5B7A) 4%, #ffffff));
+  border:1px solid var(--line-2);
+}
+.vo-quote-mark{
+  font-family:'Instrument Serif',serif;
+  font-size:48px; line-height:0.8;
+  color: var(--accent,#4E5B7A); opacity:0.6;
+}
+.vo-quote-text{
+  font-family:'Instrument Serif',serif;
+  font-size:17px; font-style:italic;
+  color:var(--ink); line-height:1.5;
+  letter-spacing:-0.005em;
+}
+
+/* Email / message bubble — for draft responses */
+.vo-email{
+  margin:14px 0 18px;
+  background:#fff; border:1px solid var(--line);
+  border-radius: var(--r-md); overflow:hidden;
+  box-shadow: var(--lift-1);
+}
+.vo-email-head{
+  padding:12px 16px; border-bottom:1px solid var(--line-2);
+  display:flex; align-items:center; justify-content:space-between;
+  gap:10px; background: rgba(248,247,242,0.5);
+}
+.vo-email-meta{ display:flex; align-items:center; gap:10px; font-size:12px; color:var(--ink-3); }
+.vo-email-avatar{
+  width:26px; height:26px; border-radius:50%;
+  background: linear-gradient(135deg, var(--accent,#4E5B7A), var(--accent2,#6E7C9A));
+  color:#fff; display:flex; align-items:center; justify-content:center;
+  font-size:10px; font-weight:700;
+}
+.vo-email-from{ font-weight:600; color:var(--ink); }
+.vo-email-badge{
+  padding:3px 9px; border-radius:99px;
+  font-size:10px; font-weight:700; letter-spacing:0.08em;
+  text-transform:uppercase; font-family:'JetBrains Mono',monospace;
+}
+.vo-email-badge.recommended{ background:linear-gradient(135deg,#4A5F40,#6B8460); color:#fff; }
+.vo-email-badge.alt{ background: rgba(46,58,86,0.08); color:var(--ink-2); }
+.vo-email-subject{
+  padding:14px 16px 4px;
+  font-size:14px; font-weight:700; color:var(--ink);
+  letter-spacing:-0.01em;
+}
+.vo-email-body{
+  padding:4px 16px 16px;
+  font-size:13.5px; line-height:1.6; color:var(--ink-2);
+  white-space:pre-wrap;
+}
+.vo-email-body strong{ color:var(--ink); font-weight:600; }
+.vo-email-foot{
+  padding:10px 16px; border-top:1px solid var(--line-2);
+  display:flex; gap:8px; background: rgba(248,247,242,0.4);
+}
+.vo-email-btn{
+  padding:7px 14px; border-radius:99px;
+  font-size:11px; font-weight:600;
+  border:1px solid var(--line); background:#fff; color:var(--ink-2);
+  transition: all 0.15s;
+}
+.vo-email-btn:hover{ border-color:var(--ink-3); color:var(--ink); }
+.vo-email-btn.primary{ background:var(--ink); color:#fff; border-color:var(--ink); }
+.vo-email-btn.primary:hover{ background:var(--a-indigo); }
+
+/* Verdict pill — PASS / FAIL for MLR */
+.vo-verdict{
+  display:flex; align-items:center; gap:14px;
+  padding:14px 18px; margin:14px 0 18px;
+  border-radius: var(--r-sm); border:1px solid;
+  background:#fff;
+}
+.vo-verdict-pill{
+  padding:5px 12px; border-radius:99px;
+  font-size:11px; font-weight:800; letter-spacing:0.12em;
+  font-family:'JetBrains Mono',monospace;
+  display:flex; align-items:center; gap:6px;
+  flex-shrink:0;
+}
+.vo-verdict-pill svg{ width:12px; height:12px; }
+.vo-verdict.pass{ border-color:#B5CAA0; background: linear-gradient(135deg, #F0F5EC, #ffffff); }
+.vo-verdict.pass .vo-verdict-pill{ background:#4A5F40; color:#fff; }
+.vo-verdict.fail{ border-color:#DDB5A0; background: linear-gradient(135deg, #F8EEE7, #ffffff); }
+.vo-verdict.fail .vo-verdict-pill{ background:#8A3F22; color:#fff; }
+.vo-verdict-text{ font-size:13px; color:var(--ink-2); line-height:1.45; }
+.vo-verdict-text strong{ color:var(--ink); font-weight:700; }
+
+/* HCP profile card */
+.vo-profile{
+  display:grid; grid-template-columns: 56px 1fr;
+  gap:16px; padding:18px 20px;
+  background: #fff; border:1px solid var(--line);
+  border-radius: var(--r-md); margin-bottom:18px;
+  box-shadow: var(--lift-1);
+}
+.vo-profile-avatar{
+  width:56px; height:56px; border-radius:50%;
+  background: linear-gradient(135deg, var(--accent,#4E5B7A), var(--accent2,#6E7C9A));
+  color:#fff; display:flex; align-items:center; justify-content:center;
+  font-size:18px; font-weight:700; letter-spacing:-0.02em;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--accent,#4E5B7A) 25%, transparent);
+}
+.vo-profile-name{ font-size:17px; font-weight:700; color:var(--ink); letter-spacing:-0.02em; margin-bottom:3px; }
+.vo-profile-role{ font-size:12px; color:var(--ink-3); margin-bottom:8px; }
+.vo-profile-tags{ display:flex; gap:5px; flex-wrap:wrap; }
+.vo-profile-tag{
+  padding:3px 9px; border-radius:99px;
+  font-size:10px; font-weight:600; letter-spacing:0.04em;
+  background: rgba(46,58,86,0.06); color:var(--ink-2);
+}
+.vo-profile-tag.decile{ background: color-mix(in srgb, var(--accent,#4E5B7A) 12%, transparent); color: var(--accent,#4E5B7A); }
+
+/* Trend sparkline */
+.vo-trend{
+  display:grid; grid-template-columns: 1fr auto;
+  gap:20px; padding:16px 20px; margin-bottom:18px;
+  background: #fff; border:1px solid var(--line);
+  border-radius: var(--r-md); align-items:center;
+  box-shadow: var(--lift-1);
+}
+.vo-trend-label{ font-size:11px; font-weight:700; letter-spacing:0.14em; color:var(--ink-3); text-transform:uppercase; font-family:'JetBrains Mono',monospace; margin-bottom:4px; }
+.vo-trend-values{ display:flex; align-items:baseline; gap:10px; margin-bottom:3px; }
+.vo-trend-current{ font-size:28px; font-weight:700; color:var(--ink); letter-spacing:-0.02em; font-variant-numeric:tabular-nums; line-height:1; }
+.vo-trend-caption{ font-size:12px; color:var(--ink-3); line-height:1.4; }
+.vo-trend-chart{ width:120px; height:42px; flex-shrink:0; }
+.vo-trend-chart svg{ width:100%; height:100%; overflow:visible; }
+
+/* Talking points — numbered cards */
+.vo-points{ display:flex; flex-direction:column; gap:10px; margin-bottom:18px; }
+.vo-point{
+  display:grid; grid-template-columns: 30px 1fr;
+  gap:14px; padding:14px 16px;
+  background: #fff; border:1px solid var(--line);
+  border-radius: var(--r-sm);
+  box-shadow: 0 1px 2px rgba(31,36,50,0.03);
+}
+.vo-point-num{
+  width:30px; height:30px; border-radius:50%;
+  background: linear-gradient(135deg, var(--accent,#4E5B7A), var(--accent2,#6E7C9A));
+  color:#fff; display:flex; align-items:center; justify-content:center;
+  font-size:13px; font-weight:700;
+  font-family:'Instrument Serif',serif;
+  flex-shrink:0;
+  box-shadow: 0 3px 8px color-mix(in srgb, var(--accent,#4E5B7A) 30%, transparent);
+}
+.vo-point-title{ font-size:14px; font-weight:600; color:var(--ink); margin-bottom:4px; letter-spacing:-0.01em; }
+.vo-point-detail{ font-size:13px; color:var(--ink-3); line-height:1.5; }
+
+/* Don't list */
+.vo-dont{
+  display:flex; flex-direction:column; gap:8px; margin-bottom:18px;
+  padding:14px 18px;
+  background: linear-gradient(135deg, #FAF4EF, #ffffff);
+  border:1px solid #DDB5A0; border-radius: var(--r-sm);
+}
+.vo-dont-head{ display:flex; align-items:center; gap:8px; font-size:11px; font-weight:700; color:#8A3F22; text-transform:uppercase; letter-spacing:0.14em; font-family:'JetBrains Mono',monospace; }
+.vo-dont-head svg{ width:14px; height:14px; }
+.vo-dont-item{ display:flex; gap:8px; font-size:13px; color:var(--ink-2); line-height:1.5; }
+.vo-dont-item::before{ content:'✕'; color:#8A3F22; font-weight:700; flex-shrink:0; }
+
+/* ============================================================
+   CALENDAR
+   ============================================================ */
+.cal{ max-width:1440px; margin:0 auto; padding:36px 40px 80px; display:grid; grid-template-columns: 1fr 380px; gap:28px; }
+.cal-header{ grid-column:1/-1; display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:4px; }
+.cal-title-wrap{ display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; }
+.cal-eyebrow{ font-size:11px; font-weight:700; letter-spacing:0.22em; color:var(--ink-3); text-transform:uppercase; font-family:'JetBrains Mono',monospace; margin-bottom:8px; }
+.cal-title{ font-size:clamp(36px,4vw,48px); font-weight:700; letter-spacing:-0.03em; color:var(--ink); line-height:1.05; }
+.cal-title em{ font-style:italic; font-weight:500; background: linear-gradient(135deg, var(--a-indigo) 0%, var(--a-amber) 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.cal-today{ font-size:13px; color:var(--ink-3); }
+.cal-today strong{ color:var(--ink); font-weight:600; }
+.cal-toolbar{ display:flex; align-items:center; gap:8px; }
+.cal-view-toggle{ display:flex; background:rgba(255,255,255,0.7); border:1px solid var(--line); border-radius:99px; padding:3px; box-shadow: var(--lift-1); }
+.cal-view-btn{ padding:6px 14px; border-radius:99px; font-size:12px; font-weight:500; color:var(--ink-3); transition: all 0.15s; }
+.cal-view-btn.active{ background: var(--ink); color:#fff; box-shadow: 0 4px 12px rgba(31,36,50,0.3); }
+.cal-new{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 16px; border-radius:99px;
+  background: var(--grad-aurora); color:#fff;
+  font-size:13px; font-weight:600;
+  box-shadow: 0 6px 20px rgba(78,91,122,0.35), inset 0 1px 0 rgba(255,255,255,0.3);
+  transition: all 0.15s;
+}
+.cal-new:hover{ transform: translateY(-1px); box-shadow: 0 10px 28px rgba(78,91,122,0.45), inset 0 1px 0 rgba(255,255,255,0.3); }
+.cal-new svg{ width:14px; height:14px; }
+
+/* Week strip */
+.cal-weekstrip{
+  grid-column:1/-1;
+  display:grid; grid-template-columns: repeat(7, 1fr); gap:10px;
+  margin: 8px 0 16px;
+}
+.cal-day{
+  background: rgba(255,255,255,0.65); backdrop-filter: blur(10px);
+  border:1px solid var(--line); border-radius: var(--r-md);
+  padding: 12px 14px; text-align:left;
+  transition: all 0.2s;
+  display:flex; flex-direction:column; gap:8px; min-height:82px;
+  position:relative;
+}
+.cal-day:hover{ transform: translateY(-2px); box-shadow: var(--lift-1); border-color: rgba(46,58,86,0.18); }
+.cal-day.today{
+  background: linear-gradient(160deg, rgba(78,91,122,0.95), rgba(107,132,96,0.9));
+  border-color: transparent; color:#fff;
+  box-shadow: 0 12px 28px rgba(78,91,122,0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.cal-day.past{ opacity: 0.55; }
+.cal-day-top{ display:flex; align-items:baseline; justify-content:space-between; gap:6px; }
+.cal-dow{ font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; font-family:'JetBrains Mono',monospace; color:var(--ink-3); }
+.cal-day.today .cal-dow{ color:rgba(255,255,255,0.8); }
+.cal-dnum{ font-size:22px; font-weight:700; letter-spacing:-0.02em; color:var(--ink); font-family:'Cormorant Garamond',serif; }
+.cal-day.today .cal-dnum{ color:#fff; }
+.cal-day-chips{ display:flex; gap:3px; flex-wrap:wrap; }
+.cal-chip-pip{ width:6px; height:6px; border-radius:50%; background:var(--ink-3); opacity:0.5; }
+.cal-day.today .cal-chip-pip{ background:#fff; opacity:0.75; }
+.cal-chip-pip.hcp{ background: var(--a-sage,#6B8460); opacity:0.85; }
+.cal-chip-pip.focus{ background: var(--a-amber,#A68B55); opacity:0.85; }
+.cal-chip-pip.risk{ background: #B85C3C; opacity:0.9; }
+.cal-day.today .cal-chip-pip.hcp,
+.cal-day.today .cal-chip-pip.focus,
+.cal-day.today .cal-chip-pip.risk{ background:#fff; opacity:1; }
+.cal-day-count{ font-size:11px; color:var(--ink-3); font-family:'JetBrains Mono',monospace; letter-spacing:0.06em; margin-top:auto; }
+.cal-day.today .cal-day-count{ color:rgba(255,255,255,0.85); }
+
+/* Day view */
+.cal-day-view{
+  background: rgba(255,255,255,0.75); backdrop-filter: blur(10px);
+  border:1px solid var(--line); border-radius: var(--r-lg);
+  box-shadow: var(--lift-1);
+  overflow:hidden;
+  position:relative;
+}
+.cal-day-head{
+  padding: 18px 22px 14px; display:flex; align-items:baseline; justify-content:space-between;
+  border-bottom: 1px solid var(--line-2);
+  background: linear-gradient(180deg, rgba(248,247,242,0.6), transparent);
+}
+.cal-day-head-left{ display:flex; align-items:baseline; gap:12px; }
+.cal-day-head h2{ font-size:22px; font-weight:700; letter-spacing:-0.02em; color:var(--ink); }
+.cal-day-head-sub{ font-size:12px; color:var(--ink-3); font-family:'JetBrains Mono',monospace; letter-spacing:0.06em; }
+.cal-nav{ display:flex; gap:4px; }
+.cal-nav-btn{ width:28px; height:28px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:var(--ink-3); transition: all 0.15s; }
+.cal-nav-btn:hover{ background: rgba(46,58,86,0.08); color:var(--ink); }
+
+.cal-timeline{ padding: 14px 22px 22px; position:relative; }
+.cal-now-line{
+  position:absolute; left:0; right:0; height:2px;
+  background: linear-gradient(90deg, #B85C3C 0%, rgba(184,92,60,0.3) 80%, transparent);
+  z-index:3; pointer-events:none;
+}
+.cal-now-line::before{
+  content:''; position:absolute; left:78px; top:-4px; width:10px; height:10px; border-radius:50%;
+  background:#B85C3C; box-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 0 14px rgba(184,92,60,0.6);
+}
+.cal-now-line::after{
+  content: 'NOW'; position:absolute; left:18px; top:-9px;
+  font-size:9px; font-weight:800; letter-spacing:0.18em; color:#B85C3C;
+  font-family:'JetBrains Mono',monospace;
+  background: rgba(255,255,255,0.95); padding:2px 6px; border-radius:99px;
+  border: 1px solid rgba(184,92,60,0.3);
+}
+.cal-row{
+  display:grid; grid-template-columns: 72px 1fr; gap:14px;
+  align-items:start; min-height: 46px;
+  border-top: 1px dashed rgba(46,58,86,0.1);
+  padding: 10px 0 6px;
+  position:relative;
+}
+.cal-row:first-of-type{ border-top: 0; padding-top: 0; }
+.cal-hour{
+  font-size:11px; font-weight:600; color:var(--ink-4); font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.08em; padding-top:2px;
+}
+.cal-slots{ display:flex; flex-direction:column; gap:6px; }
+
+.cal-event{
+  position:relative;
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--e-border, rgba(46,58,86,0.14));
+  background: var(--e-bg, rgba(255,255,255,0.7));
+  box-shadow: 0 2px 8px rgba(31,36,50,0.04);
+  cursor:pointer;
+  text-align:left; width:100%;
+  transition: all 0.15s;
+  overflow:hidden;
+}
+.cal-event::before{
+  content:''; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background: var(--e-accent, var(--a-indigo));
+  border-radius: 2px 0 0 2px;
+}
+.cal-event:hover{ transform: translateY(-1px); box-shadow: 0 6px 18px rgba(31,36,50,0.1); border-color: var(--e-accent); }
+.cal-event.selected{
+  background: var(--e-bg-sel, linear-gradient(135deg, rgba(78,91,122,0.12), rgba(107,132,96,0.08)));
+  border-color: var(--e-accent); box-shadow: 0 6px 22px rgba(31,36,50,0.1);
+}
+.cal-event-top{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:2px; }
+.cal-event-time{ font-size:10px; font-weight:700; color: var(--e-accent, var(--a-indigo)); font-family:'JetBrains Mono',monospace; letter-spacing:0.1em; }
+.cal-event-dur{ font-size:10px; color:var(--ink-4); font-family:'JetBrains Mono',monospace; }
+.cal-event-title{ font-size:13px; font-weight:600; color:var(--ink); line-height:1.3; }
+.cal-event-sub{ font-size:11.5px; color:var(--ink-3); margin-top:2px; display:flex; align-items:center; gap:6px; }
+.cal-event-badge{ font-size:9px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:2px 6px; border-radius:99px; background: rgba(46,58,86,0.08); color:var(--ink-2); font-family:'JetBrains Mono',monospace; }
+.cal-event-badge.hcp{ background: rgba(107,132,96,0.18); color:#4A5F40; }
+.cal-event-badge.focus{ background: rgba(166,139,85,0.18); color:#7A6230; }
+.cal-event-badge.risk{ background: rgba(184,92,60,0.14); color:#8A3F22; }
+.cal-event-attendees{ display:flex; margin-left:auto; }
+.cal-att{ width:20px; height:20px; border-radius:50%; border:2px solid #fff; margin-left:-6px; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:700; color:#fff; background: linear-gradient(135deg, var(--a-indigo), var(--a-sage)); }
+
+.cal-event.current{
+  background: linear-gradient(135deg, rgba(184,92,60,0.08), rgba(255,255,255,0.9));
+  border-color: rgba(184,92,60,0.35);
+}
+.cal-event.current .cal-event-time{ color:#B85C3C; }
+.cal-event.current::before{ background:#B85C3C; }
+
+.cal-event.focus-block{
+  background: repeating-linear-gradient(135deg, rgba(166,139,85,0.08) 0, rgba(166,139,85,0.08) 8px, rgba(166,139,85,0.04) 8px, rgba(166,139,85,0.04) 16px);
+  border-color: rgba(166,139,85,0.28); border-style: dashed;
+}
+
+/* Agent rail (right) */
+.cal-rail{
+  display:flex; flex-direction:column; gap:16px;
+  position:sticky; top:20px;
+  align-self:start;
+}
+.cal-agent-card{
+  background: linear-gradient(160deg, rgba(107,132,96,0.98), rgba(78,91,122,0.95));
+  border-radius: var(--r-lg);
+  padding: 20px 22px;
+  color:#fff;
+  position:relative; overflow:hidden;
+  box-shadow: 0 16px 44px rgba(78,91,122,0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.cal-agent-card::before{
+  content:''; position:absolute; top:-40px; right:-40px;
+  width:180px; height:180px; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 65%);
+  pointer-events:none;
+}
+.cal-agent-label{ font-size:10px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; font-family:'JetBrains Mono',monospace; opacity:0.85; display:flex; align-items:center; gap:8px; margin-bottom:14px; position:relative; z-index:1; }
+.cal-agent-label::before{ content:''; width:6px; height:6px; border-radius:50%; background:#fff; box-shadow:0 0 10px #fff; animation:pulse 1.4s infinite; }
+.cal-agent-hero{ font-size:18px; font-weight:600; line-height:1.35; letter-spacing:-0.015em; margin-bottom:14px; position:relative; z-index:1; }
+.cal-agent-hero em{ font-style:italic; font-weight:500; }
+.cal-actions{ display:flex; flex-direction:column; gap:8px; position:relative; z-index:1; }
+.cal-action{
+  display:flex; align-items:center; gap:10px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.14); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
+  text-align:left;
+  color:#fff; transition: all 0.15s;
+}
+.cal-action:hover{ background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.3); transform: translateX(2px); }
+.cal-action-icon{
+  width:28px; height:28px; border-radius:8px;
+  background: rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.cal-action-icon svg{ width:14px; height:14px; }
+.cal-action-body{ flex:1; min-width:0; }
+.cal-action-label{ font-size:12px; font-weight:600; line-height:1.3; }
+.cal-action-detail{ font-size:10.5px; opacity:0.8; margin-top:1px; }
+.cal-action-chevron{ opacity:0.6; flex-shrink:0; }
+.cal-agent-foot{
+  margin-top:14px; padding-top:12px; border-top:1px dashed rgba(255,255,255,0.2);
+  font-size:11px; opacity:0.8; position:relative; z-index:1;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.cal-agent-open{ color:#fff; font-weight:600; display:flex; align-items:center; gap:4px; }
+
+/* Event detail card */
+.cal-detail{
+  background: rgba(255,255,255,0.82); backdrop-filter: blur(10px);
+  border:1px solid var(--line); border-radius: var(--r-lg);
+  box-shadow: var(--lift-1);
+  padding: 20px 22px;
+  position:relative;
+}
+.cal-detail-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:14px; }
+.cal-detail-time{ font-size:11px; color:var(--ink-3); font-family:'JetBrains Mono',monospace; letter-spacing:0.08em; margin-bottom:6px; }
+.cal-detail-title{ font-size:17px; font-weight:700; letter-spacing:-0.015em; color:var(--ink); line-height:1.3; }
+.cal-detail-where{ font-size:12px; color:var(--ink-3); margin-top:4px; }
+.cal-detail-section{ margin-top:14px; padding-top:12px; border-top:1px dashed var(--line-2); }
+.cal-detail-sec-label{ font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-3); font-family:'JetBrains Mono',monospace; margin-bottom:8px; }
+.cal-attendees{ display:flex; flex-direction:column; gap:8px; }
+.cal-attendee{ display:flex; align-items:center; gap:10px; }
+.cal-attendee-av{ width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#fff; flex-shrink:0; }
+.cal-attendee-body{ flex:1; min-width:0; }
+.cal-attendee-name{ font-size:12.5px; font-weight:600; color:var(--ink); }
+.cal-attendee-role{ font-size:11px; color:var(--ink-3); }
+.cal-attendee-status{ font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; font-family:'JetBrains Mono',monospace; padding:2px 6px; border-radius:99px; }
+.cal-attendee-status.accepted{ background:rgba(107,132,96,0.18); color:#4A5F40; }
+.cal-attendee-status.tentative{ background:rgba(166,139,85,0.18); color:#7A6230; }
+.cal-attendee-status.pending{ background:rgba(46,58,86,0.08); color:var(--ink-3); }
+
+.cal-detail-ctas{ display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:14px; }
+.cal-cta{
+  display:flex; align-items:center; justify-content:center; gap:6px;
+  padding:10px 12px; border-radius:10px;
+  font-size:12px; font-weight:600; text-align:center;
+  transition: all 0.15s;
+}
+.cal-cta.primary{
+  background: var(--ink); color:#fff;
+  box-shadow: 0 4px 14px rgba(31,36,50,0.25);
+}
+.cal-cta.primary:hover{ transform: translateY(-1px); box-shadow: 0 8px 22px rgba(31,36,50,0.35); }
+.cal-cta.ghost{
+  background: rgba(255,255,255,0.8); color:var(--ink); border:1px solid var(--line);
+}
+.cal-cta.ghost:hover{ background:#fff; border-color: rgba(46,58,86,0.2); }
+.cal-cta.warn{
+  background: linear-gradient(135deg, #B85C3C, #D17A5A); color:#fff;
+  box-shadow: 0 4px 14px rgba(184,92,60,0.4);
+}
+.cal-cta.warn:hover{ transform: translateY(-1px); box-shadow: 0 8px 22px rgba(184,92,60,0.5); }
+.cal-cta svg{ width:13px; height:13px; }
+.cal-cta.full{ grid-column: 1/-1; }
+
+.cal-prep{
+  margin-top:12px; padding:12px 14px;
+  background: linear-gradient(135deg, rgba(168,184,154,0.22), rgba(168,184,154,0.08));
+  border: 1px solid rgba(107,132,96,0.25);
+  border-radius: 10px;
+  font-size:12px; color:var(--ink-2); line-height:1.5;
+}
+.cal-prep strong{ color:var(--ink); font-weight:600; }
+.cal-prep-label{ font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color: #4A5F40; font-family:'JetBrains Mono',monospace; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
+.cal-prep-label::before{ content:''; width:5px; height:5px; border-radius:50%; background:#4A5F40; }
+
+.cal-toast{
+  position: fixed; bottom: 28px; left: 50%; transform: translate(-50%, 20px);
+  background: linear-gradient(135deg, #2E3A56, #3A4766);
+  color:#fff; padding: 12px 20px; border-radius: 99px;
+  font-size: 13px; font-weight: 500; letter-spacing: -0.005em;
+  box-shadow: 0 14px 40px rgba(46,58,86,0.35), inset 0 1px 0 rgba(255,255,255,0.15);
+  z-index: 1000; opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+  pointer-events: none;
+  max-width: min(520px, 90vw);
+}
+.cal-toast.in{ opacity: 1; transform: translate(-50%, 0); }
+
+/* ============================================================
+   CAMPAIGNS / HCPs / LIBRARY — common table card
+   ============================================================ */
+.page{ max-width:1320px; margin:0 auto; padding:36px 40px 80px; }
+.page-head{ display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:28px; gap:20px; flex-wrap:wrap; }
+.page-title{ font-size:clamp(36px,4vw,48px); font-weight:700; letter-spacing:-0.03em; color:var(--ink); line-height:1.05; }
+.page-title em{ font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; background: var(--grad-aurora); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.page-sub{ font-size:15px; color:var(--ink-2); margin-top:8px; max-width:560px; line-height:1.5; }
+.page-actions{ display:flex; gap:8px; }
+.page-cta{ padding:10px 18px; border-radius:99px; background:var(--ink); color:#fff; font-size:13px; font-weight:600; display:flex; align-items:center; gap:6px; transition: background 0.15s; }
+.page-cta:hover{ background:var(--a-indigo); }
+.page-cta.ghost{ background:rgba(255,255,255,0.7); color:var(--ink); border:1px solid var(--line); }
+.page-cta.ghost:hover{ background:#fff; }
+
+.page-tabs{ display:flex; gap:4px; margin-bottom:22px; }
+.page-tab{ padding:8px 14px; border-radius:99px; font-size:13px; font-weight:500; color:var(--ink-3); border:1px solid transparent; }
+.page-tab.active{ background:#fff; color:var(--ink); border-color:var(--line); box-shadow:var(--lift-1); font-weight:600; }
+
+.quick-kpis{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:26px; }
+.kpi-chip{
+  background: rgba(255,255,255,0.75); backdrop-filter:blur(10px);
+  border: 1px solid var(--line); border-radius:var(--r-md);
+  padding:16px 18px; box-shadow: var(--lift-1);
+  position:relative; overflow:hidden;
+}
+.kpi-chip::before{ content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background: linear-gradient(180deg, var(--k-accent, #4E5B7A), var(--k-accent2, #6E7C9A)); }
+.kpi-chip-label{ font-size:11px; font-weight:600; letter-spacing:0.14em; color:var(--ink-3); text-transform:uppercase; font-family:'JetBrains Mono',monospace; margin-bottom:8px; }
+.kpi-chip-value{ font-size:26px; font-weight:800; letter-spacing:-0.02em; color:var(--ink); font-variant-numeric:tabular-nums; }
+.kpi-chip-delta{ font-size:11px; font-weight:600; color:var(--ink-3); margin-top:3px; }
+.kpi-chip-delta.up{ color:#4F7A4A; }
+.kpi-chip-delta.down{ color:#6B8460; }
+
+.data-card{
+  background: rgba(255,255,255,0.85); backdrop-filter:blur(8px);
+  border:1px solid var(--line); border-radius:var(--r-lg);
+  box-shadow: var(--lift-1); overflow:hidden;
+}
+.data-row{
+  display:grid; gap:16px; align-items:center;
+  padding:16px 22px; border-bottom:1px solid var(--line-2);
+  transition: background 0.15s;
+}
+.data-row:last-child{ border-bottom:0; }
+.data-row:hover{ background:rgba(46,58,86,0.04); }
+.data-head{ background: rgba(248,247,242,0.5); font-size:10px; font-weight:700; letter-spacing:0.14em; color:var(--ink-3); text-transform:uppercase; font-family:'JetBrains Mono',monospace; padding-top:12px; padding-bottom:12px; }
+.data-head:hover{ background:rgba(248,247,242,0.5); }
+
+/* Campaigns layout */
+.campaigns-row{ grid-template-columns: 2fr 1fr 1fr 1fr 1fr 36px; }
+.camp-name{ display:flex; flex-direction:column; gap:2px; }
+.camp-name-title{ font-size:14px; font-weight:600; color:var(--ink); }
+.camp-name-sub{ font-size:12px; color:var(--ink-3); }
+.camp-flag{ display:inline-flex; align-items:center; gap:6px; }
+.camp-status{ display:inline-flex; padding:4px 10px; border-radius:99px; font-size:11px; font-weight:600; letter-spacing:0.03em; }
+.camp-status.on{ background:rgba(79,122,74,0.14); color:#3F6138; }
+.camp-status.risk{ background:rgba(107,132,96,0.18); color:#4A5F40; }
+.camp-status.paused{ background:rgba(46,58,86,0.12); color:var(--ink-2); }
+.camp-bar{ position:relative; height:6px; background:rgba(46,58,86,0.08); border-radius:99px; overflow:hidden; }
+.camp-bar-fill{ position:absolute; inset:0 auto 0 0; background: linear-gradient(90deg, var(--k-accent, #4E5B7A), var(--k-accent2, #6B8460)); border-radius:99px; }
+.camp-num{ font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; }
+.camp-chevron{ color:var(--ink-4); font-size:14px; }
+
+/* HCPs layout */
+.hcps-row{ grid-template-columns: 2fr 1fr 1fr 1fr 1fr 36px; }
+.hcp-ident{ display:flex; align-items:center; gap:12px; }
+.hcp-avatar{ width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:#fff; flex-shrink:0; }
+.hcp-ident-text{ display:flex; flex-direction:column; }
+.hcp-name{ font-size:14px; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:6px; }
+.hcp-name-badge{ font-size:9px; font-weight:700; letter-spacing:0.1em; padding:2px 6px; border-radius:99px; background:linear-gradient(135deg,#6B8460,#A8B89A); color:#fff; text-transform:uppercase; }
+.hcp-meta{ font-size:12px; color:var(--ink-3); }
+.hcp-tier{ display:inline-flex; padding:4px 10px; border-radius:99px; font-size:11px; font-weight:600; background:rgba(46,58,86,0.1); color:var(--ink-2); font-variant-numeric:tabular-nums; }
+.hcp-tier.a{ background:rgba(107,132,96,0.18); color:#4A5F40; }
+.hcp-engage-dots{ display:flex; gap:3px; }
+.hcp-engage-dot{ width:14px; height:6px; border-radius:99px; background:rgba(46,58,86,0.12); }
+.hcp-engage-dot.on{ background: linear-gradient(90deg,#4E5B7A,#6B8460); }
+
+/* Library layout */
+.lib-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+.lib-card{
+  background: rgba(255,255,255,0.85); backdrop-filter:blur(8px);
+  border:1px solid var(--line); border-radius:var(--r-lg);
+  box-shadow: var(--lift-1); overflow:hidden;
+  display:flex; flex-direction:column;
+  transition: all 0.2s ease; cursor:pointer;
+}
+.lib-card:hover{ transform:translateY(-3px); box-shadow: var(--lift-2); }
+.lib-thumb{
+  aspect-ratio: 16/10;
+  background: linear-gradient(135deg, var(--t1,#4E5B7A) 0%, var(--t2,#6E7C9A) 100%);
+  position:relative; display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+.lib-thumb::before{
+  content:''; position:absolute; top:-40px; right:-40px;
+  width:160px; height:160px; border-radius:50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.5), transparent 60%);
+  filter: blur(6px);
+}
+.lib-thumb svg{ color:#fff; opacity:0.85; position:relative; z-index:1; width:44px; height:44px; }
+.lib-thumb-badge{
+  position:absolute; top:12px; left:12px; z-index:2;
+  padding:4px 10px; border-radius:99px; background:rgba(255,255,255,0.9); backdrop-filter:blur(6px);
+  font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink);
+}
+.lib-body{ padding:18px; flex:1; display:flex; flex-direction:column; gap:8px; }
+.lib-title{ font-size:15px; font-weight:600; color:var(--ink); line-height:1.35; }
+.lib-meta{ font-size:12px; color:var(--ink-3); display:flex; align-items:center; gap:8px; margin-top:auto; padding-top:12px; border-top:1px solid var(--line-2); }
+.lib-meta-dot{ width:4px; height:4px; border-radius:50%; background:var(--ink-4); }
+.lib-status{ display:inline-flex; font-size:11px; font-weight:600; padding:3px 9px; border-radius:99px; }
+.lib-status.approved{ background:rgba(79,122,74,0.14); color:#3F6138; }
+.lib-status.draft{ background:rgba(46,58,86,0.1); color:var(--ink-2); }
+.lib-status.review{ background:rgba(107,132,96,0.18); color:#4A5F40; }
+
+/* Deadlines list */
+.deadline-row{ grid-template-columns: auto 1fr auto auto 36px; gap:16px; align-items:center; }
+.deadline-clock{ width:40px; height:40px; border-radius:12px; background: linear-gradient(140deg, var(--d-c,#6B8460), var(--d-c2,#A8B89A)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:11px; font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:0.04em; }
+.deadline-body h4{ font-size:14px; font-weight:600; color:var(--ink); margin-bottom:2px; }
+.deadline-body p{ font-size:12px; color:var(--ink-3); }
+.deadline-time{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-2); font-weight:600; }
+.deadline-owner{ display:flex; align-items:center; gap:6px; font-size:12px; color:var(--ink-3); }
+
+/* Countries grid (WEC) */
+.wec-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.wec-card{
+  background: rgba(255,255,255,0.85); backdrop-filter:blur(8px);
+  border:1px solid var(--line); border-radius:var(--r-md);
+  padding:18px; box-shadow: var(--lift-1);
+  display:flex; flex-direction:column; gap:10px;
+  transition: all 0.2s;
+}
+.wec-card:hover{ transform:translateY(-2px); box-shadow:var(--lift-2); }
+.wec-head{ display:flex; align-items:center; justify-content:space-between; }
+.wec-flag{ font-size:26px; }
+.wec-status-dot{ width:8px; height:8px; border-radius:50%; }
+.wec-status-dot.on{ background:#4F7A4A; box-shadow:0 0 10px rgba(79,122,74,0.5); }
+.wec-status-dot.risk{ background:#6B8460; box-shadow:0 0 10px rgba(107,132,96,0.5); }
+.wec-status-dot.paused{ background:#A7B0BE; }
+.wec-name{ font-size:15px; font-weight:700; color:var(--ink); }
+.wec-meta{ font-size:12px; color:var(--ink-3); display:flex; gap:12px; }
+.wec-meta strong{ color:var(--ink); font-variant-numeric:tabular-nums; }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- WELCOME -->
+  <div id="welcome" class="screen">
+    <div class="w-ring w-ring-outer"></div>
+    <div class="w-ring w-ring-main"></div>
+
+    <div class="w-sphere"></div>
+    <div class="w-spark"></div>
+
+    <div class="w-content">
+      <div class="w-chip">
+        <span class="w-chip-dot"></span>
+        <span class="w-chip-text">NovaSphere · v1.0</span>
+      </div>
+
+      <div class="w-headline">
+        <div class="w-eyebrow" id="w-greeting">Good morning,</div>
+        <div class="w-name">Mary.</div>
+      </div>
+
+      <div class="w-tagline">Your agents are ready. <em>Let's make today count.</em></div>
+
+      <div class="w-loader"><div class="w-loader-fill"></div></div>
+      <div class="w-loader-text">Initializing cluster intelligence…</div>
+    </div>
+
+    <div class="w-cobrand">
+      <span>Powered by</span>
+      <span class="w-cobrand-bar"></span>
+      <span class="w-cobrand-novartis">NOVARTIS</span>
+    </div>
+
+    <button class="w-skip" id="skip-welcome">Skip →</button>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main">
+
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="ns-logo" style="cursor:pointer;" id="home-btn">
+          <div class="ns-logo-mark">
+            <svg viewBox="0 0 48 48" fill="none">
+              <defs>
+                <linearGradient id="nsAurora" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#A8B89A"/>
+                  <stop offset="22%" stop-color="#6B8460"/>
+                  <stop offset="58%" stop-color="#5A6A8A"/>
+                  <stop offset="100%" stop-color="#4E5B7A"/>
+                </linearGradient>
+                <radialGradient id="nsCore" cx="35%" cy="30%" r="65%">
+                  <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+                  <stop offset="45%" stop-color="#BFCEAE" stop-opacity="0.6"/>
+                  <stop offset="100%" stop-color="#4E5B7A" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="nsSparkGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5"/>
+                </filter>
+              </defs>
+              <ellipse cx="24" cy="24" rx="22" ry="8" stroke="url(#nsAurora)" stroke-width="1.6" transform="rotate(-22 24 24)" opacity="0.9" fill="none"/>
+              <circle cx="24" cy="24" r="13" fill="url(#nsAurora)"/>
+              <circle cx="24" cy="24" r="11" fill="url(#nsCore)"/>
+              <circle cx="42" cy="17" r="1.8" fill="#A8B89A" filter="url(#nsSparkGlow)"/>
+            </svg>
+          </div>
+          <div class="ns-logo-text">
+            <div class="ns-logo-title">NovaSphere</div>
+            <div class="ns-logo-sub">Powered by Novartis</div>
+          </div>
+        </div>
+
+        <nav class="topbar-nav">
+          <button class="topbar-nav-item active" data-goto="dashboard">Today</button>
+          <button class="topbar-nav-item" data-goto="inbox">Inbox</button>
+          <button class="topbar-nav-item" data-goto="calendar">Calendar</button>
+          <button class="topbar-nav-item" data-goto="campaigns">Campaigns</button>
+          <button class="topbar-nav-item" data-goto="hcps">HCPs</button>
+          <button class="topbar-nav-item" data-goto="library">Library</button>
+        </nav>
+      </div>
+
+      <div class="topbar-right">
+        <div class="topbar-search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+          <span>Ask NovaSphere…</span>
+          <kbd>⌘K</kbd>
+        </div>
+        <div class="topbar-clock" id="clock">07:42:18</div>
+        <div class="topbar-avatar">ML</div>
+      </div>
+    </header>
+
+    <div class="main-content" id="main-content"></div>
+
+  </div>
+</div>
+
+<script>
+/* EMAILS */
+const EMAILS = [
+  { id:'email_001', from:'sophie.vandenberghe@novartis.com', from_name:'Sophie Vandenberghe', role:'Country Manager Belgium',
+    subject:'URGENT: Cosentyx Q1 campaign — email open rates below threshold',
+    received:'07:12', body:"Hi Mary, overnight CRM pull shows our Cosentyx Belgium email campaign dropped to 18% open rate — well below the 28% target. Three accounts in Ghent and Antwerp haven't engaged in 6 weeks. Need a revised channel plan before the team meeting at 10am. Also, regional MLR has flagged one asset for revision. Can we discuss?",
+    priority:'high', tags:['campaign','MLR','Belgium','Cosentyx'],
+    ai:"Sophie needs a revised Belgium channel plan before 10:00. Performance Coach can draft one in 40 seconds using the W14 data — shall I run it now?" },
+  { id:'email_002', from:'lars.nielsen@novartis.com', from_name:'Lars Nielsen', role:'Marketing Lead Nordics',
+    subject:'Entresto webinar — 94 registrations confirmed for Thursday',
+    received:'06:48', body:"Great news Mary: the Entresto heart failure webinar is at 94 registrations vs. a 75 target. We have 4 high-value cardiologists confirmed from Oslo and Stockholm. I'm attaching the latest slide deck for your review — one slide on the PARADIGM-HF data needs your sign-off before we can upload to the platform.",
+    priority:'medium', tags:['webinar','Entresto','Nordics'], attachment:'Entresto_HF_Webinar_v3_DRAFT.pptx',
+    ai:"The PARADIGM-HF slide references a 2014 NEJM figure; Content + MLR can confirm citation format against the approved claims library in under 20 seconds." },
+  { id:'email_003', from:'compliance.alerts@novartis.com', from_name:'Compliance Hub', role:'Automated system',
+    subject:'[ACTION REQUIRED] MLR review cycle closes Friday 17:00 CET',
+    received:'06:00', body:"Automated reminder: you have 2 assets currently in MLR review for Switzerland and Portugal. Deadline for feedback submission is Friday 17:00 CET. Assets pending: (1) Kisqali CH email — sent for review 5 days ago. (2) Cosentyx PT digital banner — 2 days in review. Please ensure local reviewers have responded.",
+    priority:'high', tags:['MLR','compliance','deadline'],
+    ai:"Both assets are stalled on reviewer response. I've drafted nudge emails to the Swiss and Portuguese MLR teams — review and send?" },
+  { id:'email_004', from:'marc.huber@novartis.com', from_name:'Marc Huber', role:'Field Representative, Switzerland',
+    subject:'Dr. Keller (Bern, oncology) — requesting updated data on Kisqali combinations',
+    received:'22:41', body:"Evening Mary, Dr. Keller called just before close. She's treating a complex HR+/HER2- patient and wants the latest real-world data on Kisqali + letrozole. Can someone pull the RWE slides and the ESMO 2024 data pack? I have a follow-up call with her at 14:30 tomorrow. Would be great to have something by 13:00.",
+    priority:'medium', tags:['Kisqali','Switzerland','HCP request'],
+    ai:"Pre-Call Intel has Dr. Keller's profile loaded — RWE + ESMO 2024 pack can be bundled for Marc in 30 seconds. Want me to prep it?" },
+  { id:'email_005', from:'campaign.tracker@novasphere.internal', from_name:'NovaSphere Tracker', role:'System',
+    subject:"Today's campaign deadlines — 3 actions due",
+    received:'07:00', body:"Good morning Mary. Automated briefing for today:\n1. [DUE TODAY] Entresto Netherlands email — final copy approval needed by 12:00\n2. [DUE TODAY] Austria digital banner — translation review by 15:00\n3. [DUE TOMORROW] Cosentyx Belgium revised channel plan submission",
+    priority:'medium', tags:['deadlines','campaign'],
+    ai:"Content + MLR can pre-clear the NL email and AT banner translation in parallel. Estimated clear-time: 4 minutes total." }
+];
+
+const AGENT_COLORS = {
+  sophie:['#6B8460','#A8B89A'], lars:['#A68B55','#C7AE7D'], system:['#4E5B7A','#6E7C9A'],
+  marc:['#5A6A8A','#7A8CAD'], tracker:['#4E5B7A','#6B8460']
+};
+function avatarColor(id){
+  if(id.includes('sophie')) return AGENT_COLORS.sophie;
+  if(id.includes('lars')) return AGENT_COLORS.lars;
+  if(id.includes('compliance')) return AGENT_COLORS.system;
+  if(id.includes('marc')) return AGENT_COLORS.marc;
+  return AGENT_COLORS.tracker;
+}
+function initials(name){ return name.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase(); }
+
+/* AGENTS */
+const AGENTS = {
+  briefing: {
+    id:'briefing', name:'Morning Briefing',
+    tagline:'Synthesizes overnight intel into a 3-minute read.',
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>`,
+    accent:['#4E5B7A','#6E7C9A'], status:'LIVE · TODAY 07:00', live:true,
+    hero:'Your morning in 3 minutes, ranked by impact.',
+    heroDesc:'A concise briefing across overnight emails, Rx trends, and live campaign KPIs — ranked by what moves your day.',
+    pipeline:[
+      {label:'Ingesting overnight emails', detail:'5 messages, 2 flagged high priority', state:'done'},
+      {label:'Pulling Rx trend deltas', detail:'Cosentyx · Entresto · Kisqali · Cluster WEC', state:'done'},
+      {label:'Scoring cluster KPIs', detail:'W14 · 4 active campaigns · 2 on track', state:'done'},
+      {label:"Composing Mary's briefing", detail:'Tuned to her reading style', state:'active'},
+      {label:'Delivering to dashboard', detail:'', state:'pending'}
+    ],
+    output: `<div class="vo-tldr">
+  <div class="vo-tldr-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+  <div>
+    <div class="vo-tldr-label">ACT BEFORE 10:00</div>
+    <div class="vo-tldr-text">Belgium's Cosentyx open rate slipped to <strong>18%</strong> (28% target). Performance Coach has a plan draft ready for Sophie.</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">1</div><div class="vo-section-title">Overnight signal</div><div class="vo-section-rule"></div></div>
+<div class="vo-signals">
+  <div class="vo-signal info">
+    <div class="vo-signal-mark">5</div>
+    <div class="vo-signal-text"><strong>New emails</strong> — 2 high priority from Sophie (Belgium Cosentyx) and Compliance (MLR deadline Friday).</div>
+    <div class="vo-signal-meta">INBOX</div>
+  </div>
+  <div class="vo-signal warn">
+    <div class="vo-signal-mark">!</div>
+    <div class="vo-signal-text"><strong>Marc Huber</strong> needs RWE + ESMO 2024 pack for Dr. Keller by 13:00. Pre-Call Intel is ready.</div>
+    <div class="vo-signal-meta">13:00</div>
+  </div>
+  <div class="vo-signal ok">
+    <div class="vo-signal-mark">✓</div>
+    <div class="vo-signal-text"><strong>Nordics webinar</strong> at 125% of registration target — 4 high-value cardiologists confirmed.</div>
+    <div class="vo-signal-meta">WIN</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">2</div><div class="vo-section-title">Cluster performance · W14</div><div class="vo-section-rule"></div></div>
+<div class="vo-stats">
+  <div class="vo-stat ok">
+    <div class="vo-stat-label">Entresto CH/DE/FR</div>
+    <div class="vo-stat-value">+6%</div>
+    <div class="vo-stat-delta up">▲ on track · Rx MoM</div>
+  </div>
+  <div class="vo-stat warn">
+    <div class="vo-stat-label">Cosentyx BE</div>
+    <div class="vo-stat-value">18%</div>
+    <div class="vo-stat-delta down">▼ vs 28% target · open rate</div>
+  </div>
+  <div class="vo-stat paused">
+    <div class="vo-stat-label">Kisqali PT</div>
+    <div class="vo-stat-value">⏸</div>
+    <div class="vo-stat-delta flat">paused · MLR review</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">3</div><div class="vo-section-title">Where to spend your next hour</div><div class="vo-section-rule"></div></div>
+<div class="vo-actions">
+  <button class="vo-action" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Belgium plan opened — ready to send to Sophie.'}))">
+    <div class="vo-action-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+    <div class="vo-action-body">
+      <div class="vo-action-label">08:30 — Review Belgium plan and send to Sophie</div>
+      <div class="vo-action-detail">Coach draft ready · 2 min read · send before 10:00</div>
+    </div>
+    <span class="vo-action-cta">Open plan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+  </button>
+  <button class="vo-action" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Pre-call brief approved — sent to Marc.'}))">
+    <div class="vo-action-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+    <div class="vo-action-body">
+      <div class="vo-action-label">09:30 — Approve Pre-Call Intel brief for Dr. Keller</div>
+      <div class="vo-action-detail">Marc's 14:30 · ESMO 2024 pack + RWE attached</div>
+    </div>
+    <span class="vo-action-cta">Approve <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+  </button>
+  <button class="vo-action" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Added to 10:00 agenda — Belgium first, Nordics close.'}))">
+    <div class="vo-action-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+    <div class="vo-action-body">
+      <div class="vo-action-label">10:00 — Team meeting agenda</div>
+      <div class="vo-action-detail">Lead with Belgium · close with Nordics webinar as the win</div>
+    </div>
+    <span class="vo-action-cta">Pin agenda <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+  </button>
+</div>
+
+<div class="vo-quote">
+  <div class="vo-quote-mark">"</div>
+  <div class="vo-quote-text">Two wins sitting on your desk: Belgium has a fix, Nordics has a story. That's a good Thursday.</div>
+</div>`
+  },
+  precall: {
+    id:'precall', name:'Pre-Call Intel',
+    tagline:'HCP-ready briefing in under 30 seconds.',
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+    accent:['#6B8460','#A8B89A'], status:'2 HCPS TODAY', live:false,
+    hero:'HCP-ready briefing in under 30 seconds.',
+    heroDesc:'CRM history + digital engagement + Rx trend, synthesized into three talking points and a clear "what not to say."',
+    pipeline:[
+      {label:'Loading HCP profile', detail:'Dr. Anna Keller · Inselspital Bern', state:'done'},
+      {label:'Pulling CRM history', detail:'6 interactions, last visit 2026-04-12', state:'done'},
+      {label:'Checking digital engagement', detail:'3 touchpoints, 142s on RWE asset', state:'done'},
+      {label:'Analyzing Rx trend', detail:'Kisqali 5-month trend', state:'done'},
+      {label:'Generating pre-call brief', detail:'', state:'active'}
+    ],
+    output: `<div class="vo-profile">
+  <div class="vo-profile-avatar">AK</div>
+  <div>
+    <div class="vo-profile-name">Dr. Anna Keller</div>
+    <div class="vo-profile-role">Senior Consultant · Oncology · Inselspital Bern</div>
+    <div class="vo-profile-tags">
+      <span class="vo-profile-tag decile">High decile · HR+/HER2- mBC</span>
+      <span class="vo-profile-tag">Data-led</span>
+      <span class="vo-profile-tag">RWE over promo</span>
+    </div>
+  </div>
+</div>
+
+<div class="vo-tldr">
+  <div class="vo-tldr-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+  <div>
+    <div class="vo-tldr-label">TODAY · 14:30 · IN-PERSON</div>
+    <div class="vo-tldr-text">She's warmed up. <strong>Lead with the ESMO 2024 pack</strong> — she specifically asked Marc for it last night.</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">1</div><div class="vo-section-title">Known to Mary</div><div class="vo-section-rule"></div></div>
+<div class="vo-quote">
+  <div class="vo-quote-mark">"</div>
+  <div class="vo-quote-text">You met Dr. Keller at ESMO 2024 — she remembered your point about the Kaplan-Meier inflection. Reference that if the call needs warming up.</div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">2</div><div class="vo-section-title">What's happened since last visit (Apr 12)</div><div class="vo-section-rule"></div></div>
+<div class="vo-signals">
+  <div class="vo-signal info">
+    <div class="vo-signal-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+    <div class="vo-signal-text">Opened <strong>Kisqali + letrozole RWE asset</strong> — spent 142s on the Kaplan-Meier section.</div>
+    <div class="vo-signal-meta">142s</div>
+  </div>
+  <div class="vo-signal info">
+    <div class="vo-signal-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+    <div class="vo-signal-text">Requested <strong>ESMO 2024 data pack</strong> via Marc last night.</div>
+    <div class="vo-signal-meta">11PM</div>
+  </div>
+  <div class="vo-signal pause">
+    <div class="vo-signal-mark">—</div>
+    <div class="vo-signal-text">No campaign touchpoints in 3 weeks (intentional quiet window).</div>
+    <div class="vo-signal-meta">3W</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">3</div><div class="vo-section-title">Prescribing trend · Kisqali</div><div class="vo-section-rule"></div></div>
+<div class="vo-trend">
+  <div>
+    <div class="vo-trend-label">LAST 5 MONTHS · Rx</div>
+    <div class="vo-trend-values">
+      <div class="vo-trend-current">10</div>
+      <div class="vo-stat-delta up">▲ warming · +43% vs Dec</div>
+    </div>
+    <div class="vo-trend-caption">7 → 9 → 8 → 11 → 10. Today is the right moment for a specific clinical conversation.</div>
+  </div>
+  <div class="vo-trend-chart">
+    <svg viewBox="0 0 120 42" preserveAspectRatio="none">
+      <defs><linearGradient id="trend-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#6B8460" stop-opacity="0.3"/><stop offset="1" stop-color="#6B8460" stop-opacity="0"/></linearGradient></defs>
+      <path d="M0,28 L30,20 L60,24 L90,6 L120,10 L120,42 L0,42 Z" fill="url(#trend-fill)"/>
+      <path d="M0,28 L30,20 L60,24 L90,6 L120,10" fill="none" stroke="#6B8460" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="120" cy="10" r="3" fill="#6B8460"/>
+      <circle cx="120" cy="10" r="6" fill="#6B8460" opacity="0.25"/>
+    </svg>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">4</div><div class="vo-section-title">Recommended talking points</div><div class="vo-section-rule"></div></div>
+<div class="vo-points">
+  <div class="vo-point">
+    <div class="vo-point-num">1</div>
+    <div>
+      <div class="vo-point-title">Lead with the ESMO 2024 pack</div>
+      <div class="vo-point-detail">She specifically asked. Open with the real-world subgroup data for visceral metastases.</div>
+    </div>
+  </div>
+  <div class="vo-point">
+    <div class="vo-point-num">2</div>
+    <div>
+      <div class="vo-point-title">Address the HR+/HER2- complex case she mentioned</div>
+      <div class="vo-point-detail">Reference the combination data without overselling.</div>
+    </div>
+  </div>
+  <div class="vo-point">
+    <div class="vo-point-num">3</div>
+    <div>
+      <div class="vo-point-title">Close with safety — neutropenia management</div>
+      <div class="vo-point-detail">She's asked about it twice this year. Have the monitoring protocol ready.</div>
+    </div>
+  </div>
+</div>
+
+<div class="vo-dont">
+  <div class="vo-dont-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg> What NOT to do</div>
+  <div class="vo-dont-item"><div>Don't bring up competitor comparisons — she flagged this as "promotional" in Q4.</div></div>
+  <div class="vo-dont-item"><div>Don't mention the symposium invite yet — let the clinical data land first.</div></div>
+</div>`
+  },
+  content: {
+    id:'content', name:'Content + MLR',
+    tagline:'Compliant copy on the first draft. MLR built in.',
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>`,
+    accent:['#5A6A8A','#7A8CAD'], status:'3 IN QUEUE', live:false,
+    hero:'Compliant copy on the first draft.',
+    heroDesc:'Generates HCP email drafts, runs them through a 7-rule MLR gate, auto-revises, and mirrors Mary\'s sign-off voice.',
+    pipeline:[
+      {label:'Reading campaign brief', detail:'Entresto NL · HCP · cardiologists', state:'done'},
+      {label:"Loading Mary's voice profile", detail:'9 approved sends as style reference', state:'done'},
+      {label:'Generating first draft', detail:'Subject + body · 200 words max', state:'done'},
+      {label:'Running MLR compliance check', detail:'7 regulatory rules', state:'done'},
+      {label:'Auto-revising on feedback', detail:'2 issues flagged, revising', state:'active'}
+    ],
+    output: `<div class="vo-tldr">
+  <div class="vo-tldr-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+  <div>
+    <div class="vo-tldr-label">ENTRESTO NL · HCP EMAIL</div>
+    <div class="vo-tldr-text">First draft failed MLR on <strong>2 issues</strong>. Auto-revised. <strong>Second pass: PASS</strong> — cleared for country sign-off.</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">1</div><div class="vo-section-title">Draft v1 · in Mary's voice</div><div class="vo-section-rule"></div></div>
+<div class="vo-email">
+  <div class="vo-email-head">
+    <div class="vo-email-meta"><div class="vo-email-avatar">MK</div><span class="vo-email-from">Mary Kim</span><span>→ cardiologists</span></div>
+    <span class="vo-email-badge alt">V1 · DRAFT</span>
+  </div>
+  <div class="vo-email-subject">New real-world evidence for heart failure patients on Entresto</div>
+  <div class="vo-email-body">Dear Dr. [Name],
+
+The latest real-world data from the PARADIGM-HF follow-up analysis <strong>reinforces the mortality reduction</strong> observed in the original pivotal trial for chronic heart failure with reduced ejection fraction.
+
+We'd like to invite you to a 30-minute webinar on Thursday where Professor van Dijk will <strong>walk through</strong> the subgroup findings for patients with NYHA Class II-III.</div>
+</div>
+
+<div class="vo-verdict fail">
+  <span class="vo-verdict-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> FAIL · 2</span>
+  <div class="vo-verdict-text"><strong>"Reinforces the mortality reduction"</strong> is an unsupported efficacy claim. <strong>"Walk through"</strong> reads promotional — prefer "present and discuss."</div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">2</div><div class="vo-section-title">Revised draft · auto-corrected</div><div class="vo-section-rule"></div></div>
+<div class="vo-email">
+  <div class="vo-email-head">
+    <div class="vo-email-meta"><div class="vo-email-avatar">MK</div><span class="vo-email-from">Mary Kim</span><span>→ cardiologists</span></div>
+    <span class="vo-email-badge recommended">V2 · CLEARED</span>
+  </div>
+  <div class="vo-email-subject">PARADIGM-HF subgroup analysis — clinical webinar Thursday</div>
+  <div class="vo-email-body">Dear Dr. [Name],
+
+Recent real-world evidence from the <strong>PARADIGM-HF extended analysis</strong> (McMurray et al., NEJM 2014; follow-up data 2023) examines outcomes in chronic heart failure with reduced ejection fraction.
+
+Professor van Dijk will <strong>present and discuss</strong> the NYHA Class II-III subgroup data in a 30-minute clinical webinar on Thursday at 17:00 CET.</div>
+  <div class="vo-email-foot">
+    <button class="vo-email-btn primary" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Draft sent to country MLR for sign-off.'}))">Send to country MLR</button>
+    <button class="vo-email-btn" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Draft saved to campaign inbox.'}))">Save as template</button>
+    <button class="vo-email-btn">Edit</button>
+  </div>
+</div>
+
+<div class="vo-verdict pass">
+  <span class="vo-verdict-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> PASS · 0</span>
+  <div class="vo-verdict-text">All 7 MLR rules cleared. Fair balance · substantiation · ISI formatting · claim language · disclaimer · contraindications · referencing. Ready for country sign-off.</div>
+</div>`
+  },
+  coaching: {
+    id:'coaching', name:'Performance Coach',
+    tagline:'Weekly cluster KPI diagnosis + next-week plan.',
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+    accent:['#A68B55','#C7AE7D'], status:'W14 READY', live:false,
+    hero:"The coach that reads the numbers so you don't have to.",
+    heroDesc:"Diagnoses what's working, what's not, and what to change next week — with specific numbers, not platitudes.",
+    pipeline:[
+      {label:'Pulling campaign KPIs', detail:'4 campaigns · W14', state:'done'},
+      {label:'Scoring channel performance', detail:'Email · webinar · field · digital', state:'done'},
+      {label:'Diagnosing underperformers', detail:'Cosentyx BE flagged', state:'done'},
+      {label:'Writing coaching note', detail:'For Sophie Vandenberghe', state:'active'},
+      {label:'Drafting W15 plan', detail:'', state:'pending'}
+    ],
+    output: `<div class="vo-tldr">
+  <div class="vo-tldr-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+  <div>
+    <div class="vo-tldr-label">W14 · DIAGNOSIS</div>
+    <div class="vo-tldr-text">Cosentyx BE is a <strong>timing problem, not a content problem</strong>. Move the send window, don't touch the creative.</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">1</div><div class="vo-section-title">This week's scorecard</div><div class="vo-section-rule"></div></div>
+<div class="vo-stats">
+  <div class="vo-stat ok">
+    <div class="vo-stat-label">Nordics webinar</div>
+    <div class="vo-stat-value">125%</div>
+    <div class="vo-stat-delta up">▲ of registration target</div>
+  </div>
+  <div class="vo-stat ok">
+    <div class="vo-stat-label">Entresto CH email</div>
+    <div class="vo-stat-value">34%</div>
+    <div class="vo-stat-delta up">▲ open · 28% target</div>
+  </div>
+  <div class="vo-stat warn">
+    <div class="vo-stat-label">Cosentyx BE email</div>
+    <div class="vo-stat-value">18%</div>
+    <div class="vo-stat-delta down">▼ 10pp below target</div>
+  </div>
+  <div class="vo-stat">
+    <div class="vo-stat-label">Click-to-meet</div>
+    <div class="vo-stat-value">4.2%</div>
+    <div class="vo-stat-delta flat">— steady · CH</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">2</div><div class="vo-section-title">Root cause — Cosentyx Belgium</div><div class="vo-section-rule"></div></div>
+<div class="vo-signals">
+  <div class="vo-signal warn">
+    <div class="vo-signal-mark">1</div>
+    <div class="vo-signal-text"><strong>Subject-line fatigue</strong> — last 4 emails all led with "new data."</div>
+    <div class="vo-signal-meta">CONTENT</div>
+  </div>
+  <div class="vo-signal warn">
+    <div class="vo-signal-mark">2</div>
+    <div class="vo-signal-text"><strong>Send window moved to Tue 08:00</strong> in W12 — exactly when BE dermatologists run clinic. W13 data shows 72% of opens happen after 18:00.</div>
+    <div class="vo-signal-meta">TIMING</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">3</div><div class="vo-section-title">Coaching note to Sophie</div><div class="vo-section-rule"></div></div>
+<div class="vo-email">
+  <div class="vo-email-head">
+    <div class="vo-email-meta"><div class="vo-email-avatar">MK</div><span class="vo-email-from">Mary Kim</span><span>→ Sophie Vandenberghe</span></div>
+    <span class="vo-email-badge recommended">READY TO SEND</span>
+  </div>
+  <div class="vo-email-body" style="padding-top:14px;">Sophie — the Cosentyx BE drop is a <strong>timing problem, not a content problem</strong>. Before any creative refresh, move the send window to <strong>Wednesday 07:00</strong> or <strong>Thursday 18:30</strong> for the next two sends. Don't touch both levers at once.</div>
+  <div class="vo-email-foot">
+    <button class="vo-email-btn primary" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Coaching note sent to Sophie.'}))">Send to Sophie</button>
+    <button class="vo-email-btn">Edit tone</button>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">4</div><div class="vo-section-title">W15 adjusted plan</div><div class="vo-section-rule"></div></div>
+<div class="vo-actions">
+  <button class="vo-action" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Nordics cadence cloned to DE and FR.'}))">
+    <div class="vo-action-mark done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+    <div class="vo-action-body">
+      <div class="vo-action-label">Boost — Nordics webinar cadence to DE/FR</div>
+      <div class="vo-action-detail">Same pre-event sequence · clone with locale variants</div>
+    </div>
+    <span class="vo-action-cta">Clone <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+  </button>
+  <button class="vo-action" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ W15 send window test scheduled.'}))">
+    <div class="vo-action-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+    <div class="vo-action-body">
+      <div class="vo-action-label">Test — Wed 07:00 and Thu 18:30 BE sends</div>
+      <div class="vo-action-detail">Same creative · isolate the timing variable</div>
+    </div>
+    <span class="vo-action-cta">Schedule <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+  </button>
+  <button class="vo-action" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Target set — W15 close checkpoint.'}))">
+    <div class="vo-action-mark warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+    <div class="vo-action-body">
+      <div class="vo-action-label">Target — Cosentyx BE open rate ≥ 24% by W15</div>
+      <div class="vo-action-detail">If not met, creative refresh unlocks automatically</div>
+    </div>
+    <span class="vo-action-cta">Set target <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+  </button>
+</div>`
+  },
+  scheduler: {
+    id:'scheduler', name:'Scheduler',
+    tagline:'Runs your calendar. Re-books, notifies, finds the slot.',
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 3v4M16 3v4"/><path d="M8 14h3M13 14h3M8 17h3"/></svg>`,
+    accent:['#6B8460','#4E5B7A'], status:'LIVE · 2 ACTIONS', live:true,
+    hero:'Runs your calendar so you run your day.',
+    heroDesc:'Finds slots, reschedules when you slip, notifies attendees in your voice, and holds your focus blocks — one click, no friction.',
+    pipeline:[
+      {label:'Watching today\'s calendar', detail:'6 events · 2 protected focus blocks', state:'done'},
+      {label:'Scanning attendee availability', detail:'Sophie · Marc · Elena · Raj', state:'done'},
+      {label:'Detecting slippage risk', detail:"10:00 WEC sync likely to run over", state:'active'},
+      {label:'Drafting one-click notifications', detail:'"Running 5 min late" ready for Elena', state:'pending'},
+      {label:'Holding 60-min focus block', detail:'11:30–12:30 · Belgium plan writing', state:'pending'}
+    ],
+    output: `<div class="vo-tldr">
+  <div class="vo-tldr-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+  <div>
+    <div class="vo-tldr-label">SLIPPAGE RISK · 10:00 WEC</div>
+    <div class="vo-tldr-text">The 10:00 will run over. A <strong>"running 5 min late"</strong> message is drafted for Elena — one click to send.</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">1</div><div class="vo-section-title">Actions ready for you</div><div class="vo-section-rule"></div></div>
+<div class="vo-actions">
+  <button class="vo-action" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Sent to Elena — she\\'ll reschedule or wait.'}))">
+    <div class="vo-action-mark warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+    <div class="vo-action-body">
+      <div class="vo-action-label">Send "running 5 min late" to Elena</div>
+      <div class="vo-action-detail">11:00 MLR sync · Mary's voice · reschedule link as fallback</div>
+    </div>
+    <span class="vo-action-cta">Send <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+  </button>
+  <button class="vo-action" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ 14:30 confirmed. Marc holds 14:00–14:25 for walkthrough.'}))">
+    <div class="vo-action-mark done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+    <div class="vo-action-body">
+      <div class="vo-action-label">Confirm 14:30 Keller prep with Marc</div>
+      <div class="vo-action-detail">Marc is blocking 14:00–14:25 for walkthrough</div>
+    </div>
+    <span class="vo-action-cta">Confirm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+  </button>
+  <button class="vo-action" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ 11:30–12:30 held. Scheduler will defend the block.'}))">
+    <div class="vo-action-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+    <div class="vo-action-body">
+      <div class="vo-action-label">Hold 60-min focus block · 11:30–12:30</div>
+      <div class="vo-action-detail">Belgium plan writing · I'll decline non-urgent overlaps</div>
+    </div>
+    <span class="vo-action-cta">Hold <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+  </button>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">2</div><div class="vo-section-title">This week's load</div><div class="vo-section-rule"></div></div>
+<div class="vo-stats">
+  <div class="vo-stat">
+    <div class="vo-stat-label">Meetings</div>
+    <div class="vo-stat-value">28</div>
+    <div class="vo-stat-delta flat">across 4 days</div>
+  </div>
+  <div class="vo-stat">
+    <div class="vo-stat-label">Hours in calls</div>
+    <div class="vo-stat-value">14.5</div>
+    <div class="vo-stat-delta flat">— 52% of work time</div>
+  </div>
+  <div class="vo-stat ok">
+    <div class="vo-stat-label">Focus blocks held</div>
+    <div class="vo-stat-value">3</div>
+    <div class="vo-stat-delta up">▲ 2 defended</div>
+  </div>
+  <div class="vo-stat ok">
+    <div class="vo-stat-label">HCP visits prepped</div>
+    <div class="vo-stat-value">2</div>
+    <div class="vo-stat-delta up">▲ Keller · Janssens</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">3</div><div class="vo-section-title">What I handled overnight</div><div class="vo-section-rule"></div></div>
+<div class="vo-signals">
+  <div class="vo-signal ok">
+    <div class="vo-signal-mark">✓</div>
+    <div class="vo-signal-text"><strong>Marc's reschedule request</strong> — asked to move 14:30 to 15:00. Checked Keller's window, declined, proposed 14:00 walkthrough instead. Marc accepted.</div>
+    <div class="vo-signal-meta">03:14</div>
+  </div>
+  <div class="vo-signal ok">
+    <div class="vo-signal-mark">✓</div>
+    <div class="vo-signal-text"><strong>Nordics webinar follow-up</strong> — 4 cardiologists confirmed. Sent calendar holds with the deck pre-attached.</div>
+    <div class="vo-signal-meta">05:02</div>
+  </div>
+  <div class="vo-signal ok">
+    <div class="vo-signal-mark">✓</div>
+    <div class="vo-signal-text"><strong>Declined 2 non-urgent meetings</strong> — US content review moved to async, social catch-up rebooked Friday.</div>
+    <div class="vo-signal-meta">06:48</div>
+  </div>
+</div>
+
+<div class="vo-quote">
+  <div class="vo-quote-mark">"</div>
+  <div class="vo-quote-text">You have 4.5 hours of unscheduled time today — two 60-min blocks and one 2.5-hour afternoon stretch. Enough for the Belgium plan and the Kisqali deck review.</div>
+</div>`
+  },
+  reply: {
+    id:'reply', name:'Reply Draft',
+    tagline:"Drafts responses in Mary's voice. One-click send.",
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 17 4 12 9 7"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></svg>`,
+    accent:['#4E5B7A','#A68B55'], status:'3 DRAFTS READY', live:false,
+    hero:"Reply to every email without losing your voice.",
+    heroDesc:"Reads the thread, pulls context from CRM + Rx + calendar, drafts a response in Mary's tone, and flags any compliance risk before she hits send.",
+    pipeline:[
+      {label:'Reading thread context', detail:"Sophie's email + last 4 Belgium threads", state:'done'},
+      {label:'Pulling supporting data', detail:'W14 Cosentyx BE + send-window analysis', state:'done'},
+      {label:"Matching Mary's voice", detail:'Based on 9 approved past replies', state:'done'},
+      {label:'Drafting 3 response options', detail:'Decisive · collaborative · brief', state:'active'},
+      {label:'Compliance pre-check', detail:'', state:'pending'}
+    ],
+    output: `<div class="vo-tldr">
+  <div class="vo-tldr-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 17 4 12 9 7"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></svg></div>
+  <div>
+    <div class="vo-tldr-label">REPLY TO SOPHIE · COSENTYX BE</div>
+    <div class="vo-tldr-text">3 drafts in Mary's voice. <strong>Option 1 recommended</strong> — decisive, data-backed, closes with a clear next step.</div>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">1</div><div class="vo-section-title">Decisive · recommended</div><div class="vo-section-rule"></div></div>
+<div class="vo-email">
+  <div class="vo-email-head">
+    <div class="vo-email-meta"><div class="vo-email-avatar">MK</div><span class="vo-email-from">Mary Kim</span><span>→ Sophie Vandenberghe</span></div>
+    <span class="vo-email-badge recommended">RECOMMENDED</span>
+  </div>
+  <div class="vo-email-subject">Re: URGENT: Cosentyx Q1 campaign</div>
+  <div class="vo-email-body">Sophie,
+
+Thanks for the fast heads-up. Performance Coach ran the W14 numbers overnight — the <strong>18% isn't a creative problem, it's a send-window problem</strong>. Your Tuesday 08:00 window lands exactly when BE dermatologists run clinic. 72% of last month's opens came after 18:00.
+
+For the next two sends, let's test <strong>Wednesday 07:00</strong> and <strong>Thursday 18:30</strong>, same creative. If we don't see ≥24% by W15 close, we'll refresh.
+
+I'll bring the full plan to the 10:00 — you'll have the draft in your inbox at 09:30. For the MLR-flagged asset, let's address it separately; I'll loop Elena in.
+
+— Mary</div>
+  <div class="vo-email-foot">
+    <button class="vo-email-btn primary" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Reply sent to Sophie.'}))">Send</button>
+    <button class="vo-email-btn" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Saved as draft.'}))">Save draft</button>
+    <button class="vo-email-btn">Edit</button>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">2</div><div class="vo-section-title">Collaborative · pair before the 10:00</div><div class="vo-section-rule"></div></div>
+<div class="vo-email">
+  <div class="vo-email-head">
+    <div class="vo-email-meta"><div class="vo-email-avatar">MK</div><span class="vo-email-from">Mary Kim</span><span>→ Sophie Vandenberghe</span></div>
+    <span class="vo-email-badge alt">ALT · SOFTER</span>
+  </div>
+  <div class="vo-email-body" style="padding-top:14px;">Sophie, appreciate you flagging this overnight. Before we touch creative, can we test a send-window change? W13 data shows 72% of BE opens happening after 18:00 — Tuesday 08:00 seems to be working against us. Happy to pair on this before 10:00 if helpful. — Mary</div>
+  <div class="vo-email-foot">
+    <button class="vo-email-btn primary" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Reply sent to Sophie.'}))">Send</button>
+    <button class="vo-email-btn">Edit</button>
+  </div>
+</div>
+
+<div class="vo-section"><div class="vo-section-num">3</div><div class="vo-section-title">Brief · for the record</div><div class="vo-section-rule"></div></div>
+<div class="vo-email">
+  <div class="vo-email-head">
+    <div class="vo-email-meta"><div class="vo-email-avatar">MK</div><span class="vo-email-from">Mary Kim</span><span>→ Sophie Vandenberghe</span></div>
+    <span class="vo-email-badge alt">ALT · BRIEF</span>
+  </div>
+  <div class="vo-email-body" style="padding-top:14px;">Sophie — timing, not content. Switching window to Thursday 18:30 for W15. Plan in your inbox at 09:30. — M</div>
+  <div class="vo-email-foot">
+    <button class="vo-email-btn primary" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Reply sent to Sophie.'}))">Send</button>
+    <button class="vo-email-btn">Edit</button>
+  </div>
+</div>
+
+<div class="vo-verdict pass">
+  <span class="vo-verdict-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> PASS · 0</span>
+  <div class="vo-verdict-text">Compliance pre-check clean across all 3 options. No claim language · internal comms only.</div>
+</div>`
+  }
+};
+
+const STATS = [
+  {
+    id:'emails', label:'Overnight emails', value:5,
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>`,
+    viz:`<div class="viz-dots" title="2 high · 2 medium · 1 low priority">
+      <span class="risk"></span><span class="risk"></span><span></span><span></span><span class="muted"></span>
+    </div>`,
+    delta:'2 high priority', deltaKind:'warn',
+    meta:'Open inbox',
+    glow:'rgba(107,132,96,0.32)', glowLine:'rgba(107,132,96,0.65)', goto:'inbox'
+  },
+  {
+    id:'campaigns', label:'Active campaigns', value:4,
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>`,
+    viz:`<svg class="viz-spark" viewBox="0 0 82 26" preserveAspectRatio="none">
+      <defs><linearGradient id="spark1" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="rgba(90,106,138,0.25)"/>
+        <stop offset="100%" stop-color="rgba(90,106,138,0)"/>
+      </linearGradient></defs>
+      <path d="M0 19 L10 17 L20 18 L30 13 L42 14 L52 9 L62 11 L72 6 L82 3 L82 26 L0 26 Z" fill="url(#spark1)"/>
+      <path d="M0 19 L10 17 L20 18 L30 13 L42 14 L52 9 L62 11 L72 6 L82 3" fill="none" stroke="rgba(90,106,138,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="82" cy="3" r="2.2" fill="#fff" stroke="rgba(90,106,138,0.9)" stroke-width="1.4"/>
+    </svg>`,
+    delta:'Rx +6% vs W13', deltaKind:'up',
+    meta:'View campaigns',
+    glow:'rgba(90,106,138,0.32)', glowLine:'rgba(90,106,138,0.7)', goto:'campaigns'
+  },
+  {
+    id:'deadlines', label:'Deadlines today', value:3,
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>`,
+    viz:`<div class="viz-clock">
+      <span class="hot">12:00</span>
+      <span>14:30</span>
+      <span>17:00</span>
+    </div>`,
+    delta:'next in 2h 14m', deltaKind:'warn',
+    meta:'Review all',
+    glow:'rgba(166,139,85,0.32)', glowLine:'rgba(166,139,85,0.7)', goto:'deadlines'
+  },
+  {
+    id:'wec', label:'WEC countries', value:7,
+    icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a13 13 0 0 1 0 18"/><path d="M12 3a13 13 0 0 0 0 18"/></svg>`,
+    viz:`<div class="viz-dots" title="5 on track · 1 at risk · 1 paused">
+      <span></span><span></span><span></span><span></span><span></span><span class="risk"></span><span class="paused"></span>
+    </div>`,
+    delta:'5 on · 1 risk · 1 paused', deltaKind:'',
+    meta:'Open cluster',
+    glow:'rgba(78,91,122,0.32)', glowLine:'rgba(78,91,122,0.7)', goto:'countries'
+  }
+];
+
+/* CALENDAR */
+const CAL_WEEK = [
+  { dow:'Mon', num:21, count:6, chips:['hcp','focus'], state:'past' },
+  { dow:'Tue', num:22, count:7, chips:['hcp','focus','risk'], state:'past' },
+  { dow:'Wed', num:23, count:5, chips:['focus'], state:'past' },
+  { dow:'Thu', num:24, count:6, chips:['hcp','focus','risk'], state:'today' },
+  { dow:'Fri', num:25, count:4, chips:['hcp','focus'], state:'future' },
+  { dow:'Sat', num:26, count:0, chips:[], state:'future' },
+  { dow:'Sun', num:27, count:0, chips:[], state:'future' }
+];
+
+const CAL_EVENTS = [
+  { id:'e1', hour:'08:00', start:'08:00', end:'08:30', dur:'30m', title:'Morning briefing review',
+    sub:'Solo · review briefing + reply to Sophie', kind:'focus', badge:null,
+    accent:'#4E5B7A', attendees:[], state:'done',
+    where:'No room · desk',
+    prep:"Morning Briefing is ready. Reply Draft has 3 options for Sophie — the Decisive option is recommended." },
+  { id:'e2', hour:'10:00', start:'10:00', end:'10:45', dur:'45m', title:'WEC weekly sync',
+    sub:'Cluster team · bring Belgium plan', kind:'meeting', badge:'TEAM',
+    accent:'#4E5B7A', current:true,
+    attendees:[
+      {name:'Sophie Vandenberghe', role:'Belgium lead', status:'accepted', color:'#A68B55', init:'SV'},
+      {name:'Raj Patel', role:'Nordics lead', status:'accepted', color:'#6B8460', init:'RP'},
+      {name:'Elena Cortez', role:'MLR · compliance', status:'accepted', color:'#5A6A8A', init:'EC'},
+      {name:'Marc Huber', role:'Field · DACH', status:'tentative', color:'#4E5B7A', init:'MH'}
+    ],
+    where:'Teams · WEC-Weekly · recurring',
+    prep:"Performance Coach diagnosed Belgium: timing, not content. Plan is ready to share — 3 specific changes for Sophie.",
+    risk:'running-over'
+  },
+  { id:'e3', hour:'11:00', start:'11:00', end:'11:30', dur:'30m', title:'MLR sync · Elena',
+    sub:'Kisqali PT unblock · 15-min if on time', kind:'meeting', badge:null,
+    accent:'#5A6A8A',
+    attendees:[ {name:'Elena Cortez', role:'MLR', status:'accepted', color:'#5A6A8A', init:'EC'} ],
+    where:'Teams · 1:1',
+    prep:"Content + MLR flagged 2 issues in the Kisqali deck. Revised copy is in the Library — she needs 5 min to sign off.",
+    risk:'late'
+  },
+  { id:'e4', hour:'11:30', start:'11:30', end:'12:30', dur:'60m', title:'Focus block · Belgium plan',
+    sub:'Held by Scheduler · declines non-urgent', kind:'focus-block', badge:'FOCUS',
+    accent:'#A68B55',
+    attendees:[],
+    where:'Private · no disturbances',
+    prep:"Scheduler will hold this block. 1 attempt to book over it was declined (US content review — moved to async)." },
+  { id:'e5', hour:'12:30', start:'12:30', end:'13:00', dur:'30m', title:'Lunch · desk',
+    sub:'Informal · read overnight PubMed digest', kind:'personal', badge:null,
+    accent:'#6B8460',
+    attendees:[], where:'No calendar invites · protected' },
+  { id:'e6', hour:'14:00', start:'14:00', end:'14:25', dur:'25m', title:'Pre-call walkthrough · Marc',
+    sub:'Prep for Dr. Keller · review brief together', kind:'meeting', badge:'HCP PREP',
+    accent:'#6B8460',
+    attendees:[ {name:'Marc Huber', role:'Field rep · DACH', status:'accepted', color:'#4E5B7A', init:'MH'} ],
+    where:'Teams · 1:1',
+    prep:"Pre-Call Intel has Dr. Keller's profile loaded — ESMO 2024 pack + Kisqali RWE ready. Marc needs 10 min." },
+  { id:'e7', hour:'14:30', start:'14:30', end:'15:15', dur:'45m', title:'Dr. Anna Keller · Kisqali follow-up',
+    sub:'Inselspital Bern · Oncology · HCP visit', kind:'hcp', badge:'HCP',
+    accent:'#6B8460',
+    attendees:[
+      {name:'Dr. Anna Keller', role:'Oncology · Inselspital Bern', status:'accepted', color:'#6B8460', init:'AK'},
+      {name:'Marc Huber', role:'Field · DACH', status:'accepted', color:'#4E5B7A', init:'MH'}
+    ],
+    where:'Inselspital Bern · Dr. Keller\'s office',
+    prep:"Pre-Call Intel brief is ready. Lead with ESMO 2024 pack (she asked). Don't bring up competitor comparisons — she flagged as 'promotional' in Q4." },
+  { id:'e8', hour:'16:00', start:'16:00', end:'16:30', dur:'30m', title:'Nordics webinar check-in',
+    sub:'Raj · 125% of reg target · what\'s next', kind:'meeting', badge:null,
+    accent:'#4E5B7A',
+    attendees:[ {name:'Raj Patel', role:'Nordics lead', status:'accepted', color:'#6B8460', init:'RP'} ],
+    where:'Teams · 1:1',
+    prep:"Performance Coach recommends scaling the pre-event sequence to DE and FR. Slides ready in the Library." },
+  { id:'e9', hour:'17:00', start:'17:00', end:'17:30', dur:'30m', title:'End-of-day · wrap + tomorrow',
+    sub:'Solo · sign off replies, review tomorrow', kind:'focus', badge:null,
+    accent:'#4E5B7A',
+    attendees:[], where:'No room · desk' }
+];
+
+/* CAMPAIGNS */
+const CAMPAIGNS = [
+  { name:'Entresto · Nordics webinar push', sub:'Heart failure · cardiologists', flag:'🇳🇴 🇸🇪', status:'on', progress:92, kpi:'94/75', kpiLabel:'regs' },
+  { name:'Entresto · CH email nurture', sub:'HF maintenance · primary care', flag:'🇨🇭', status:'on', progress:74, kpi:'34%', kpiLabel:'open' },
+  { name:'Cosentyx · BE acquisition', sub:'Psoriasis · dermatologists', flag:'🇧🇪', status:'risk', progress:32, kpi:'18%', kpiLabel:'open' },
+  { name:'Entresto · DE awareness', sub:'HF awareness · GPs', flag:'🇩🇪', status:'on', progress:68, kpi:'2.9%', kpiLabel:'CTR' },
+  { name:'Kisqali · PT launch wave 2', sub:'Oncology · mBC specialists', flag:'🇵🇹', status:'paused', progress:22, kpi:'—', kpiLabel:'MLR' },
+  { name:'Cosentyx · AT retention', sub:'Psoriasis · retention', flag:'🇦🇹', status:'on', progress:81, kpi:'3.4%', kpiLabel:'CTR' }
+];
+
+/* HCPs */
+const HCPS = [
+  { name:'Dr. Anna Keller', known:true, inst:'Inselspital Bern · Oncology', country:'🇨🇭 Switzerland', tier:'A', engage:5, lastLabel:'Today 14:30', lastKind:'upcoming' },
+  { name:'Prof. Jan van Dijk', known:true, inst:'Erasmus MC · Cardiology', country:'🇳🇱 Netherlands', tier:'A', engage:4, lastLabel:'4 days ago', lastKind:'past' },
+  { name:'Dr. Camille Laurent', known:false, inst:'Hôpital Cochin · Dermatology', country:'🇫🇷 France', tier:'B', engage:3, lastLabel:'12 days ago', lastKind:'past' },
+  { name:'Dr. Ingrid Holmberg', known:true, inst:'Karolinska · Cardiology', country:'🇸🇪 Sweden', tier:'A', engage:5, lastLabel:'Yesterday', lastKind:'past' },
+  { name:'Dr. Pieter Janssens', known:false, inst:'UZ Ghent · Dermatology', country:'🇧🇪 Belgium', tier:'B', engage:1, lastLabel:'6 weeks ago', lastKind:'stale' },
+  { name:'Dr. Filipe Correia', known:false, inst:'IPO Porto · Oncology', country:'🇵🇹 Portugal', tier:'B', engage:2, lastLabel:'3 weeks ago', lastKind:'past' }
+];
+
+/* LIBRARY */
+const LIBRARY = [
+  { title:'Entresto PARADIGM-HF clinical webinar deck', type:'Presentation', updated:'Today', status:'review', t1:'#4E5B7A', t2:'#6E7C9A' },
+  { title:'Kisqali + letrozole RWE summary', type:'PDF · 12 pages', updated:'2 days ago', status:'approved', t1:'#6B8460', t2:'#A8B89A' },
+  { title:'Cosentyx BE — Q2 HCP email sequence', type:'Email · 4 sends', updated:'4 days ago', status:'draft', t1:'#A68B55', t2:'#C7AE7D' },
+  { title:'ESMO 2024 — data pack for oncology visits', type:'PDF · 38 pages', updated:'1 week ago', status:'approved', t1:'#5A6A8A', t2:'#7A8CAD' },
+  { title:'Entresto HF · NYHA II–III subgroup one-pager', type:'PDF · 2 pages', updated:'Today', status:'review', t1:'#4E5B7A', t2:'#7A8CAD' },
+  { title:'Cluster WEC — quarterly talk track', type:'Slides · 18', updated:'2 weeks ago', status:'approved', t1:'#4E5B7A', t2:'#6B8460' }
+];
+
+/* DEADLINES */
+const DEADLINES = [
+  { time:'12:00', title:'Entresto NL — final copy approval', country:'🇳🇱 Netherlands', owner:'Mary · you', urgency:'today' },
+  { time:'15:00', title:'Austria digital banner — translation review', country:'🇦🇹 Austria', owner:'Translation team', urgency:'today' },
+  { time:'17:00', title:'MLR review cycle closes', country:'🇨🇭 🇵🇹', owner:'MLR regional', urgency:'friday' },
+  { time:'EOD', title:'Cosentyx BE revised channel plan submission', country:'🇧🇪 Belgium', owner:'Sophie · Mary', urgency:'tomorrow' }
+];
+
+/* COUNTRIES */
+const COUNTRIES = [
+  { flag:'🇨🇭', name:'Switzerland', status:'on', rx:'+6%', campaigns:2 },
+  { flag:'🇩🇪', name:'Germany', status:'on', rx:'+4%', campaigns:1 },
+  { flag:'🇫🇷', name:'France', status:'on', rx:'+3%', campaigns:1 },
+  { flag:'🇳🇱', name:'Netherlands', status:'on', rx:'+8%', campaigns:1 },
+  { flag:'🇸🇪', name:'Sweden', status:'on', rx:'+5%', campaigns:1 },
+  { flag:'🇦🇹', name:'Austria', status:'on', rx:'+2%', campaigns:1 },
+  { flag:'🇧🇪', name:'Belgium', status:'risk', rx:'−3%', campaigns:1 },
+  { flag:'🇵🇹', name:'Portugal', status:'paused', rx:'—', campaigns:1 }
+];
+
+/* RENDER */
+const main = document.getElementById('main');
+const mainContent = document.getElementById('main-content');
+let currentScreen = 'dashboard';
+let selectedEmail = EMAILS[0];
+
+function setActiveNav(screen){
+  document.querySelectorAll('.topbar-nav-item').forEach(b=>{
+    b.classList.toggle('active', b.dataset.goto === screen);
+  });
+}
+
+function renderDashboard(){
+  setActiveNav('dashboard');
+  mainContent.innerHTML = `
+    <section class="dashboard">
+      <div class="dash-hero">
+        <div>
+          <div class="dash-eyebrow" id="dash-eyebrow">Thursday · 24 April 2026 · WEC Cluster</div>
+          <h1 class="dash-greeting"><span id="dash-greeting-word">Good morning</span>, <em>Mary.</em></h1>
+          <p class="dash-sub" id="dash-sub">Your overnight briefing is ready. Two wins, one at-risk campaign, and Dr. Keller's 14:30 is waiting on Pre-Call Intel.</p>
+        </div>
+        <button class="rhythm" data-goto="calendar" aria-label="Open Calendar">
+          <div class="rhythm-head">Mary's rhythm today</div>
+          <div class="rhythm-now">🗓 10:00 · WEC sync — bring Belgium plan</div>
+          <div class="rhythm-next">Then <strong>14:30</strong> · brief Marc for Dr. Keller</div>
+          <div class="rhythm-streak">
+            <span>Focus streak</span>
+            <span class="rhythm-streak-value">9<span>days</span></span>
+          </div>
+          <div class="rhythm-hint">Open calendar <span>→</span></div>
+        </button>
+      </div>
+
+      <div class="stat-strip">
+        ${STATS.map(s=>`
+          <button class="stat-card" data-goto="${s.goto}" style="--glow:${s.glow};--glow-line:${s.glowLine}">
+            <div class="stat-head">
+              <div class="stat-label">${s.label}</div>
+              <div class="stat-icon-wrap">${s.icon}</div>
+            </div>
+            <div class="stat-mid">
+              <div class="stat-value">${s.value}</div>
+              <div class="stat-viz">${s.viz}</div>
+            </div>
+            <div class="stat-foot">
+              <span class="stat-delta ${s.deltaKind}">${s.delta}</span>
+              <span class="stat-jump">${s.meta} →</span>
+            </div>
+          </button>
+        `).join('')}
+      </div>
+
+      <div class="section-header">
+        <div>
+          <div class="section-title">Your agents</div>
+        </div>
+        <a class="section-link" href="#">Manage →</a>
+      </div>
+
+      <div class="agent-grid">
+        ${Object.values(AGENTS).map(a=>`
+          <button class="agent-card ${a.live?'live':''}" data-goto="agent:${a.id}" style="--accent:${a.accent[0]};--accent2:${a.accent[1]}">
+            <div class="agent-shimmer"></div>
+            <div class="agent-top">
+              <div class="agent-mark">${a.icon}</div>
+              <span class="agent-pill ${a.live?'live':''}">${a.live?'Running':'Ready'}</span>
+            </div>
+            <div class="agent-body">
+              <div class="agent-name">${a.name}</div>
+              <div class="agent-desc">${a.tagline}</div>
+            </div>
+            <div class="agent-bottom">
+              <div class="agent-status">${a.status}</div>
+              <span class="agent-enter">Open →</span>
+            </div>
+          </button>
+        `).join('')}
+      </div>
+
+      <div class="pulse">
+        <div class="pulse-head">
+          <div>
+            <div class="pulse-title">Cluster pulse · live</div>
+            <div class="pulse-sub">Seven countries, updated every 30 seconds from CRM + Rx feeds.</div>
+          </div>
+          <div class="pulse-legend">
+            <span class="pulse-legend-item"><span class="pulse-legend-dot on"></span>On track</span>
+            <span class="pulse-legend-item"><span class="pulse-legend-dot risk"></span>At risk</span>
+            <span class="pulse-legend-item"><span class="pulse-legend-dot paused"></span>Paused</span>
+          </div>
+        </div>
+        <div class="pulse-body">
+          <div class="pulse-map">
+            <svg viewBox="0 0 500 345" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+              <!-- Very stylized Western Europe silhouettes. Not geographically exact — atmospheric. -->
+              <!-- Portugal -->
+              <path class="pulse-country-path paused" d="M48 210 L58 195 L72 198 L78 215 L85 240 L78 270 L60 275 L50 255 Z"/>
+              <!-- Spain (neutral, not in cluster) -->
+              <path class="pulse-country-path" d="M78 215 L120 200 L175 195 L200 210 L210 245 L195 270 L150 280 L105 278 L78 270 L85 240 Z"/>
+              <!-- France -->
+              <path class="pulse-country-path on" d="M175 195 L195 160 L215 140 L240 135 L265 155 L285 175 L280 215 L245 240 L210 245 L200 210 Z"/>
+              <!-- Belgium -->
+              <path class="pulse-country-path risk" d="M255 135 L278 130 L290 140 L288 155 L268 158 L258 148 Z"/>
+              <!-- Netherlands -->
+              <path class="pulse-country-path on" d="M278 105 L300 100 L310 118 L305 135 L290 140 L278 130 L275 115 Z"/>
+              <!-- Germany -->
+              <path class="pulse-country-path on" d="M290 140 L310 118 L332 112 L355 125 L365 150 L360 180 L340 195 L315 190 L295 175 L285 155 Z"/>
+              <!-- Austria -->
+              <path class="pulse-country-path on" d="M340 195 L365 180 L388 178 L405 188 L400 210 L375 215 L350 212 Z"/>
+              <!-- Switzerland -->
+              <path class="pulse-country-path on" d="M295 175 L315 175 L340 190 L335 210 L315 218 L295 210 L285 195 Z"/>
+              <!-- Italy (neutral) -->
+              <path class="pulse-country-path" d="M315 218 L340 215 L370 225 L380 260 L360 290 L330 295 L320 270 L310 245 Z"/>
+              <!-- UK (neutral) -->
+              <path class="pulse-country-path" d="M215 80 L240 70 L255 85 L250 115 L235 125 L218 118 L210 100 Z"/>
+              <!-- Denmark (neutral) -->
+              <path class="pulse-country-path" d="M318 80 L340 72 L348 90 L338 100 L322 96 Z"/>
+              <!-- Norway -->
+              <path class="pulse-country-path on" d="M325 40 L360 25 L380 35 L385 70 L368 90 L345 85 L330 65 Z"/>
+              <!-- Sweden -->
+              <path class="pulse-country-path on" d="M380 35 L405 28 L418 55 L415 90 L400 110 L380 105 L368 90 L385 70 Z"/>
+              <!-- Finland (neutral) -->
+              <path class="pulse-country-path" d="M418 55 L445 45 L458 70 L452 100 L438 115 L418 110 L415 90 Z"/>
+
+              <!-- Ambient grid -->
+              <defs>
+                <pattern id="pulseGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(46,58,86,0.04)" stroke-width="0.5"/>
+                </pattern>
+              </defs>
+              <rect width="500" height="345" fill="url(#pulseGrid)" pointer-events="none"/>
+            </svg>
+            <!-- Pulsing dots positioned over the SVG (percent-based) -->
+            <div class="pulse-dot"        style="left:26.5%; top:33%;">      <span class="pulse-dot-label">🇳🇱 Netherlands · Rx +8%</span></div>
+            <div class="pulse-dot risk"   style="left:27%; top:42%;">        <span class="pulse-dot-label">🇧🇪 Belgium · Rx −3%</span></div>
+            <div class="pulse-dot"        style="left:46%; top:57%;">        <span class="pulse-dot-label">🇫🇷 France · Rx +3%</span></div>
+            <div class="pulse-dot"        style="left:64%; top:47%;">        <span class="pulse-dot-label">🇩🇪 Germany · Rx +4%</span></div>
+            <div class="pulse-dot"        style="left:60%; top:57%;">        <span class="pulse-dot-label">🇨🇭 Switzerland · Rx +6%</span></div>
+            <div class="pulse-dot"        style="left:75%; top:58%;">        <span class="pulse-dot-label">🇦🇹 Austria · Rx +2%</span></div>
+            <div class="pulse-dot paused" style="left:13%; top:69%;">        <span class="pulse-dot-label">🇵🇹 Portugal · paused</span></div>
+            <div class="pulse-dot"        style="left:73%; top:20%;">        <span class="pulse-dot-label">🇸🇪 Sweden · Rx +5%</span></div>
+            <div class="pulse-dot"        style="left:69%; top:13%;">        <span class="pulse-dot-label">🇳🇴 Norway · Rx +7%</span></div>
+          </div>
+          <div class="pulse-list">
+            ${COUNTRIES.map(c=>{
+              const rxClass = c.rx.startsWith('+')?'up':(c.rx==='—'?'flat':'down');
+              return `
+              <div class="pulse-row" data-goto="countries">
+                <div class="pulse-row-flag">${c.flag}</div>
+                <div>
+                  <div class="pulse-row-name">${c.name}</div>
+                  <div class="pulse-row-sub">${c.campaigns} campaign${c.campaigns===1?'':'s'} · W14</div>
+                </div>
+                <div class="pulse-row-rx ${rxClass}">${c.rx}</div>
+                <div class="pulse-row-status ${c.status}"></div>
+              </div>`;
+            }).join('')}
+          </div>
+        </div>
+        <div class="pulse-foot">
+          <div>One country needs your attention today: <strong>Belgium</strong> — Cosentyx open rate is 18% vs 28% target.</div>
+          <button class="pulse-foot-cta" data-goto="agent:coaching">See the fix →</button>
+        </div>
+      </div>
+
+    </section>
+  `;
+  mainContent.scrollTop = 0;
+  applyGreeting();
+  wireScreen();
+}
+
+function applyGreeting(){
+  const h = new Date().getHours();
+  let greet = 'Good morning', note = "Your overnight briefing is ready. Two wins, one at-risk campaign, and Dr. Keller's 14:30 is waiting on Pre-Call Intel.";
+  if(h >= 12 && h < 18){ greet = 'Good afternoon'; note = "Four agents working in the background. Dr. Keller's 14:30 is prepped and the Belgium plan is on Sophie's desk."; }
+  else if(h >= 18 || h < 5){ greet = 'Good evening'; note = "Today's cluster is quiet. Tomorrow's briefing will be ready by 07:00."; }
+  const w = document.getElementById('dash-greeting-word'); if(w) w.textContent = greet;
+  const s = document.getElementById('dash-sub'); if(s) s.textContent = note;
+  const we = document.getElementById('w-greeting'); if(we) we.textContent = greet + ',';
+  const de = document.getElementById('dash-eyebrow');
+  if(de){
+    const d = new Date();
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    de.textContent = `${days[d.getDay()]} · ${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()} · WEC Cluster`;
+  }
+}
+
+let selectedCalEvent = 'e7';
+
+function renderCalendar(){
+  setActiveNav('calendar');
+  const sel = CAL_EVENTS.find(e=>e.id===selectedCalEvent) || CAL_EVENTS[0];
+  const hours = ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00'];
+  const nowTop = ((10 - 8) + 12/60) * 56 + 14;
+
+  mainContent.innerHTML = `
+    <section class="cal">
+      <div class="cal-header">
+        <div>
+          <div class="cal-eyebrow">Thursday · 24 April 2026 · Week 14</div>
+          <div class="cal-title-wrap">
+            <h1 class="cal-title">Your <em>calendar,</em> handled.</h1>
+          </div>
+          <div class="cal-today" style="margin-top:10px;">Scheduler is watching <strong>6 events</strong>, holding <strong>2 focus blocks</strong>, and has <strong>2 one-click actions</strong> ready.</div>
+        </div>
+        <div class="cal-toolbar">
+          <div class="cal-view-toggle">
+            <button class="cal-view-btn">Day</button>
+            <button class="cal-view-btn active">Week</button>
+            <button class="cal-view-btn">Month</button>
+          </div>
+          <button class="cal-new">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+            New meeting
+          </button>
+        </div>
+      </div>
+
+      <div class="cal-weekstrip">
+        ${CAL_WEEK.map(d=>`
+          <button class="cal-day ${d.state}">
+            <div class="cal-day-top">
+              <div class="cal-dow">${d.dow}</div>
+              <div class="cal-dnum">${d.num}</div>
+            </div>
+            <div class="cal-day-chips">
+              ${d.chips.map(c=>`<span class="cal-chip-pip ${c}"></span>`).join('')}
+            </div>
+            <div class="cal-day-count">${d.count?d.count+' events':'clear'}</div>
+          </button>
+        `).join('')}
+      </div>
+
+      <div class="cal-day-view">
+        <div class="cal-day-head">
+          <div class="cal-day-head-left">
+            <h2>Thursday, 24 April</h2>
+            <div class="cal-day-head-sub">6 EVENTS · 10:12 NOW</div>
+          </div>
+          <div class="cal-nav">
+            <button class="cal-nav-btn" title="Previous day">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="cal-nav-btn" title="Next day">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="cal-timeline">
+          <div class="cal-now-line" style="top:${nowTop}px;"></div>
+          ${hours.map(h=>{
+            const events = CAL_EVENTS.filter(e=>e.hour===h);
+            return `
+              <div class="cal-row">
+                <div class="cal-hour">${h}</div>
+                <div class="cal-slots">
+                  ${events.map(e=>{
+                    const cls = ['cal-event', e.kind==='focus-block'?'focus-block':'', e.current?'current':'', e.id===selectedCalEvent?'selected':''].filter(Boolean).join(' ');
+                    const bCls = e.badge==='FOCUS'?'focus':(e.badge==='HCP'||e.badge==='HCP PREP'?'hcp':'');
+                    return `
+                      <button class="${cls}" data-cal-event="${e.id}" style="--e-accent:${e.accent}">
+                        <div class="cal-event-top">
+                          <div>
+                            <span class="cal-event-time">${e.start} – ${e.end}</span>
+                            <span class="cal-event-dur"> · ${e.dur}</span>
+                          </div>
+                          ${e.badge?`<span class="cal-event-badge ${bCls}">${e.badge}</span>`:''}
+                        </div>
+                        <div class="cal-event-title">${e.title}</div>
+                        <div class="cal-event-sub">
+                          <span>${e.sub}</span>
+                          ${e.attendees.length?`
+                            <div class="cal-event-attendees">
+                              ${e.attendees.slice(0,3).map(a=>`<span class="cal-att" style="background:${a.color}">${a.init}</span>`).join('')}
+                              ${e.attendees.length>3?`<span class="cal-att" style="background:var(--ink-3)">+${e.attendees.length-3}</span>`:''}
+                            </div>`:''}
+                        </div>
+                      </button>`;
+                  }).join('')}
+                </div>
+              </div>`;
+          }).join('')}
+        </div>
+      </div>
+
+      <aside class="cal-rail">
+        <div class="cal-agent-card">
+          <div class="cal-agent-label">Scheduler · working now</div>
+          <div class="cal-agent-hero">The 10:00 is <em>running over.</em> I've drafted a note for Elena — one click to send.</div>
+          <div class="cal-actions">
+            <button class="cal-action" id="cal-act-late">
+              <span class="cal-action-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <span class="cal-action-body">
+                <span class="cal-action-label">Tell Elena you're 5 min late</span>
+                <span class="cal-action-detail">11:00 MLR sync · message drafted in your voice</span>
+              </span>
+              <svg class="cal-action-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button class="cal-action" id="cal-act-focus">
+              <span class="cal-action-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+              <span class="cal-action-body">
+                <span class="cal-action-label">Hold 11:30–12:30 for Belgium plan</span>
+                <span class="cal-action-detail">Focus block · Scheduler will decline overlaps</span>
+              </span>
+              <svg class="cal-action-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <button class="cal-action" id="cal-act-new">
+              <span class="cal-action-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+              <span class="cal-action-body">
+                <span class="cal-action-label">Find time with Sophie this week</span>
+                <span class="cal-action-detail">Avoids focus blocks · 3 slots proposed</span>
+              </span>
+              <svg class="cal-action-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="cal-agent-foot">
+            <span>28 meetings · 4 days · 14.5 hrs</span>
+            <button class="cal-agent-open" data-goto="agent:scheduler">Open agent <span>→</span></button>
+          </div>
+        </div>
+
+        ${renderCalDetail(sel)}
+      </aside>
+    </section>
+  `;
+  wireScreen();
+  document.querySelectorAll('[data-cal-event]').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      selectedCalEvent = el.dataset.calEvent;
+      renderCalendar();
+    });
+  });
+  const bind = (id,msg)=>{ const el=document.getElementById(id); if(el) el.addEventListener('click',()=>calToast(msg)); };
+  bind('cal-act-late',"✓ Sent to Elena — she'll reschedule or wait. Reply will land in your inbox.");
+  bind('cal-act-focus',"✓ 11:30–12:30 held. Scheduler will defend the block.");
+  bind('cal-act-new',"✓ 3 slots proposed to Sophie. Reply will land in your inbox.");
+}
+
+function calToast(msg){
+  const existing = document.querySelector('.cal-toast'); if(existing) existing.remove();
+  const t = document.createElement('div');
+  t.className = 'cal-toast';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  requestAnimationFrame(()=>t.classList.add('in'));
+  setTimeout(()=>{ t.classList.remove('in'); setTimeout(()=>t.remove(),300); }, 2800);
+}
+document.addEventListener('cal-toast', e=>calToast(e.detail));
+
+function renderCalDetail(e){
+  if(!e) return '';
+  const bCls = e.badge==='FOCUS'?'focus':(e.badge==='HCP'||e.badge==='HCP PREP'?'hcp':'');
+  return `
+    <div class="cal-detail">
+      <div class="cal-detail-head">
+        <div>
+          <div class="cal-detail-time">${e.start} – ${e.end} · ${e.dur}</div>
+          <div class="cal-detail-title">${e.title}</div>
+          ${e.where?`<div class="cal-detail-where">${e.where}</div>`:''}
+        </div>
+        ${e.badge?`<span class="cal-event-badge ${bCls}">${e.badge}</span>`:''}
+      </div>
+
+      ${e.attendees && e.attendees.length ? `
+        <div class="cal-detail-section">
+          <div class="cal-detail-sec-label">Attendees · ${e.attendees.length}</div>
+          <div class="cal-attendees">
+            ${e.attendees.map(a=>`
+              <div class="cal-attendee">
+                <div class="cal-attendee-av" style="background:${a.color}">${a.init}</div>
+                <div class="cal-attendee-body">
+                  <div class="cal-attendee-name">${a.name}</div>
+                  <div class="cal-attendee-role">${a.role}</div>
+                </div>
+                <span class="cal-attendee-status ${a.status}">${a.status}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>` : ''}
+
+      ${e.prep ? `
+        <div class="cal-prep" style="margin-top:14px;">
+          <div class="cal-prep-label">Scheduler · prep note</div>
+          <div>${e.prep}</div>
+        </div>` : ''}
+
+      <div class="cal-detail-ctas">
+        ${e.kind==='hcp' || e.kind==='meeting' ? `
+          <button class="cal-cta warn" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ \\'Running 5 min late\\' sent to attendees.'}))">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            I'm running late
+          </button>
+          <button class="cal-cta ghost" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Message drafted — opens in your voice.'}))">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Message attendees
+          </button>
+          <button class="cal-cta ghost full" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Reschedule options proposed.'}))">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.8 1 6.5 2.6L21 8"/><path d="M21 3v5h-5"/></svg>
+            Reschedule — find 3 slots
+          </button>` : e.kind==='focus-block' ? `
+          <button class="cal-cta primary full" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Focus block held. Scheduler will defend it.'}))">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Hold block · decline overlaps
+          </button>
+          <button class="cal-cta ghost full" onclick="document.dispatchEvent(new CustomEvent('cal-toast',{detail:'✓ Block released.'}))">
+            Release block
+          </button>` : `
+          <button class="cal-cta ghost full">No actions — personal time.</button>`}
+      </div>
+    </div>
+  `;
+}
+
+function renderInbox(){
+  setActiveNav('inbox');
+  mainContent.innerHTML = `
+    <section class="inbox">
+      <div class="inbox-header">
+        <div class="inbox-title-wrap">
+          <button class="inbox-back" data-goto="dashboard">← Dashboard</button>
+          <h1 class="inbox-title">Overnight emails</h1>
+          <span style="font-size:13px;color:var(--ink-3);font-family:'JetBrains Mono',monospace;">5 new</span>
+        </div>
+        <div class="inbox-filters">
+          <button class="inbox-filter active">All</button>
+          <button class="inbox-filter">High priority</button>
+          <button class="inbox-filter">Action needed</button>
+        </div>
+      </div>
+
+      <aside class="inbox-list">
+        ${EMAILS.map(e=>{
+          const [c1,c2] = avatarColor(e.id);
+          return `
+          <button class="inbox-item ${e.id===selectedEmail.id?'selected':''} unread" data-email="${e.id}">
+            <div class="inbox-item-top">
+              <div class="inbox-from">
+                <div class="inbox-avatar" style="background:linear-gradient(135deg,${c1},${c2});">${initials(e.from_name)}</div>
+                ${e.from_name}
+              </div>
+              <div class="inbox-time">${e.received}</div>
+            </div>
+            <div class="inbox-subject">${e.subject}</div>
+            <div class="inbox-preview">${e.body.slice(0,80)}…</div>
+            <div class="inbox-tags">
+              ${e.priority==='high'?`<span class="inbox-priority-high">HIGH</span>`:''}
+              ${e.tags.slice(0,3).map(t=>`<span class="inbox-tag">${t}</span>`).join('')}
+            </div>
+          </button>`;}).join('')}
+      </aside>
+
+      <main class="inbox-detail">
+        <div class="id-header">
+          <div style="flex:1;min-width:0;">
+            <h2 class="id-subject">${selectedEmail.subject}</h2>
+            <div class="id-from-row">
+              <div class="inbox-avatar" style="width:40px;height:40px;font-size:13px;background:linear-gradient(135deg,${avatarColor(selectedEmail.id)[0]},${avatarColor(selectedEmail.id)[1]});">${initials(selectedEmail.from_name)}</div>
+              <div class="id-from-info">
+                <div class="id-from-name">${selectedEmail.from_name}</div>
+                <div class="id-from-meta">${selectedEmail.role} · ${selectedEmail.from}</div>
+              </div>
+            </div>
+          </div>
+          <div class="id-time-row">
+            <div>${selectedEmail.received} · Today</div>
+            ${selectedEmail.priority==='high'?`<span class="inbox-priority-high">HIGH PRIORITY</span>`:''}
+          </div>
+        </div>
+        <div class="id-body">${selectedEmail.body}</div>
+        ${selectedEmail.attachment?`<div class="id-attachment"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.44 11.05 12.25 20.24a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg><span><strong>${selectedEmail.attachment}</strong> · 2.4 MB · PowerPoint</span></div>`:''}
+        ${selectedEmail.ai?`<div class="id-ai">
+          <div class="id-ai-label">NovaSphere suggestion</div>
+          <div class="id-ai-text">${selectedEmail.ai}</div>
+          <div class="id-ai-actions">
+            <button class="id-ai-btn primary">Run agent</button>
+            <button class="id-ai-btn">Draft reply in Mary's voice</button>
+            <button class="id-ai-btn">Snooze</button>
+          </div>
+        </div>`:''}
+      </main>
+    </section>
+  `;
+  mainContent.scrollTop = 0;
+  wireScreen();
+}
+
+function renderAgent(id){
+  setActiveNav(null);
+  const a = AGENTS[id];
+  mainContent.innerHTML = `
+    <section class="agent-page">
+      <div class="ap-crumbs">
+        <button data-goto="dashboard">Today</button>
+        <span class="ap-crumbs-sep">/</span>
+        <span>Agents</span>
+        <span class="ap-crumbs-sep">/</span>
+        <span style="color:var(--ink);font-weight:600;">${a.name}</span>
+      </div>
+      <div class="ap-hero" style="--accent:${a.accent[0]};--accent2:${a.accent[1]}">
+        <div class="ap-hero-inner">
+          <div class="ap-hero-mark">${a.icon}</div>
+          <div class="ap-hero-text">
+            <h1>${a.hero}</h1>
+            <p>${a.heroDesc}</p>
+          </div>
+          <button class="ap-hero-action">Re-run
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.8 1 6.5 2.6L21 8"/><path d="M21 3v5h-5"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="ap-grid">
+        <aside class="pipeline" style="--accent:${a.accent[0]}">
+          <div class="pipeline-title">Execution pipeline</div>
+          <div class="pipeline-list">
+            ${a.pipeline.map((p,i)=>`
+              <div class="pipe-item ${p.state}">
+                <div class="pipe-dot">${p.state==='done'?'✓':(i+1)}</div>
+                <div class="pipe-body">
+                  <div class="pipe-label">${p.label}</div>
+                  ${p.detail?`<div class="pipe-detail">${p.detail}</div>`:''}
+                </div>
+              </div>`).join('')}
+          </div>
+        </aside>
+        <div class="stream" style="--accent:${a.accent[0]}">
+          <div class="stream-header">
+            <div class="stream-title">Streaming output</div>
+            <div class="stream-actions">
+              <button class="stream-btn">Copy</button>
+              <button class="stream-btn">Save to CRM</button>
+              <button class="stream-btn primary">Share with Mary's note</button>
+            </div>
+          </div>
+          <div class="stream-body" id="stream-body"></div>
+        </div>
+      </div>
+    </section>
+  `;
+  mainContent.scrollTop = 0;
+  streamInto('stream-body', a.output);
+  wireScreen();
+}
+
+function renderCampaigns(){
+  setActiveNav('campaigns');
+  mainContent.innerHTML = `
+    <section class="page">
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Campaigns in <em>Mary's</em> cluster</h1>
+          <p class="page-sub">Six live campaigns across WEC. One at risk, one paused, four on track.</p>
+        </div>
+        <div class="page-actions">
+          <button class="page-cta ghost">Export W14 report</button>
+          <button class="page-cta">+ New campaign</button>
+        </div>
+      </div>
+      <div class="quick-kpis">
+        <div class="kpi-chip" style="--k-accent:#4E5B7A;--k-accent2:#6E7C9A"><div class="kpi-chip-label">Cluster open rate</div><div class="kpi-chip-value">27.4%</div><div class="kpi-chip-delta up">+1.8 pts vs W13</div></div>
+        <div class="kpi-chip" style="--k-accent:#6B8460;--k-accent2:#A8B89A"><div class="kpi-chip-label">Click-through</div><div class="kpi-chip-value">2.9%</div><div class="kpi-chip-delta up">+0.3 pts</div></div>
+        <div class="kpi-chip" style="--k-accent:#A68B55;--k-accent2:#C7AE7D"><div class="kpi-chip-label">Rx trend · 4-wk</div><div class="kpi-chip-value">+6%</div><div class="kpi-chip-delta up">2 of 3 brands</div></div>
+        <div class="kpi-chip" style="--k-accent:#5A6A8A;--k-accent2:#7A8CAD"><div class="kpi-chip-label">Budget used</div><div class="kpi-chip-value">63%</div><div class="kpi-chip-delta">Q2 · on pace</div></div>
+      </div>
+      <div class="page-tabs">
+        <button class="page-tab active">All 6</button>
+        <button class="page-tab">On track · 4</button>
+        <button class="page-tab">At risk · 1</button>
+        <button class="page-tab">Paused · 1</button>
+      </div>
+      <div class="data-card">
+        <div class="data-row data-head campaigns-row">
+          <div>Campaign</div><div>Country</div><div>Status</div><div>Progress</div><div>Top KPI</div><div></div>
+        </div>
+        ${CAMPAIGNS.map(c=>`
+          <div class="data-row campaigns-row">
+            <div class="camp-name">
+              <div class="camp-name-title">${c.name}</div>
+              <div class="camp-name-sub">${c.sub}</div>
+            </div>
+            <div class="camp-flag">${c.flag}</div>
+            <div><span class="camp-status ${c.status}">${c.status==='on'?'On track':c.status==='risk'?'At risk':'Paused'}</span></div>
+            <div class="camp-bar" style="--k-accent:#4E5B7A;--k-accent2:${c.status==='risk'?'#6B8460':'#6E7C9A'}"><div class="camp-bar-fill" style="width:${c.progress}%"></div></div>
+            <div class="camp-num">${c.kpi} <span style="font-size:10px;font-weight:500;color:var(--ink-4);text-transform:uppercase;letter-spacing:0.1em;">${c.kpiLabel}</span></div>
+            <div class="camp-chevron">›</div>
+          </div>`).join('')}
+      </div>
+    </section>
+  `;
+  mainContent.scrollTop = 0; wireScreen();
+}
+
+function renderHCPs(){
+  setActiveNav('hcps');
+  mainContent.innerHTML = `
+    <section class="page">
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Healthcare <em>relationships</em></h1>
+          <p class="page-sub">147 HCPs across the cluster. Four marked as <strong>known to Mary</strong> — she's met them in person.</p>
+        </div>
+        <div class="page-actions">
+          <button class="page-cta ghost">Filter</button>
+          <button class="page-cta">+ Add HCP</button>
+        </div>
+      </div>
+      <div class="quick-kpis">
+        <div class="kpi-chip" style="--k-accent:#4E5B7A;--k-accent2:#6E7C9A"><div class="kpi-chip-label">Total HCPs</div><div class="kpi-chip-value">147</div><div class="kpi-chip-delta">Across 7 countries</div></div>
+        <div class="kpi-chip" style="--k-accent:#6B8460;--k-accent2:#A8B89A"><div class="kpi-chip-label">Tier A</div><div class="kpi-chip-value">32</div><div class="kpi-chip-delta up">+3 this quarter</div></div>
+        <div class="kpi-chip" style="--k-accent:#5A6A8A;--k-accent2:#7A8CAD"><div class="kpi-chip-label">Known to Mary</div><div class="kpi-chip-value">4</div><div class="kpi-chip-delta">Met in person</div></div>
+        <div class="kpi-chip" style="--k-accent:#A68B55;--k-accent2:#C7AE7D"><div class="kpi-chip-label">Disengaged</div><div class="kpi-chip-value">3</div><div class="kpi-chip-delta down">No touch 6wk+</div></div>
+      </div>
+      <div class="page-tabs">
+        <button class="page-tab active">All</button>
+        <button class="page-tab">Tier A</button>
+        <button class="page-tab">Known to Mary</button>
+        <button class="page-tab">Needs re-engagement</button>
+      </div>
+      <div class="data-card">
+        <div class="data-row data-head hcps-row">
+          <div>HCP</div><div>Country</div><div>Tier</div><div>Engagement</div><div>Last touch</div><div></div>
+        </div>
+        ${HCPS.map((h,i)=>{
+          const colors = [['#6B8460','#A8B89A'],['#4E5B7A','#6E7C9A'],['#5A6A8A','#7A8CAD'],['#A68B55','#C7AE7D']];
+          const [c1,c2] = colors[i%4];
+          return `
+          <div class="data-row hcps-row">
+            <div class="hcp-ident">
+              <div class="hcp-avatar" style="background:linear-gradient(135deg,${c1},${c2});">${initials(h.name.replace('Dr. ','').replace('Prof. ',''))}</div>
+              <div class="hcp-ident-text">
+                <div class="hcp-name">${h.name}${h.known?'<span class="hcp-name-badge">Known to Mary</span>':''}</div>
+                <div class="hcp-meta">${h.inst}</div>
+              </div>
+            </div>
+            <div style="font-size:13px;color:var(--ink-2);">${h.country}</div>
+            <div><span class="hcp-tier ${h.tier.toLowerCase()==='a'?'a':''}">Tier ${h.tier}</span></div>
+            <div class="hcp-engage-dots">${Array.from({length:5},(_,j)=>`<span class="hcp-engage-dot ${j<h.engage?'on':''}"></span>`).join('')}</div>
+            <div style="font-size:12px;color:${h.lastKind==='stale'?'#4A5F40':'var(--ink-3)'};font-weight:${h.lastKind==='upcoming'?'700':'500'};">${h.lastLabel}</div>
+            <div class="camp-chevron">›</div>
+          </div>`;}).join('')}
+      </div>
+    </section>
+  `;
+  mainContent.scrollTop = 0; wireScreen();
+}
+
+function renderLibrary(){
+  setActiveNav('library');
+  mainContent.innerHTML = `
+    <section class="page">
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Content <em>library</em></h1>
+          <p class="page-sub">Every approved asset across the WEC cluster. Search by brand, country, audience, or reading level.</p>
+        </div>
+        <div class="page-actions">
+          <button class="page-cta ghost">Filter</button>
+          <button class="page-cta">+ Upload asset</button>
+        </div>
+      </div>
+      <div class="quick-kpis">
+        <div class="kpi-chip" style="--k-accent:#4E5B7A;--k-accent2:#6E7C9A"><div class="kpi-chip-label">Total assets</div><div class="kpi-chip-value">284</div><div class="kpi-chip-delta">All brands</div></div>
+        <div class="kpi-chip" style="--k-accent:#4F7A4A;--k-accent2:#6A9A65"><div class="kpi-chip-label">Approved</div><div class="kpi-chip-value">231</div><div class="kpi-chip-delta up">81% of library</div></div>
+        <div class="kpi-chip" style="--k-accent:#6B8460;--k-accent2:#A8B89A"><div class="kpi-chip-label">In review</div><div class="kpi-chip-value">12</div><div class="kpi-chip-delta">Closes Friday</div></div>
+        <div class="kpi-chip" style="--k-accent:#5A6A8A;--k-accent2:#7A8CAD"><div class="kpi-chip-label">Drafts</div><div class="kpi-chip-value">41</div><div class="kpi-chip-delta">Awaiting MLR</div></div>
+      </div>
+      <div class="page-tabs">
+        <button class="page-tab active">All</button>
+        <button class="page-tab">Approved</button>
+        <button class="page-tab">In review</button>
+        <button class="page-tab">Draft</button>
+        <button class="page-tab" style="margin-left:auto;">⭐ Mary's pinned</button>
+      </div>
+      <div class="lib-grid">
+        ${LIBRARY.map(l=>`
+          <div class="lib-card">
+            <div class="lib-thumb" style="--t1:${l.t1};--t2:${l.t2}">
+              <div class="lib-thumb-badge">${l.type.split(' ')[0]}</div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="lib-body">
+              <div class="lib-title">${l.title}</div>
+              <div class="lib-meta">
+                <span>${l.type}</span>
+                <span class="lib-meta-dot"></span>
+                <span>Updated ${l.updated}</span>
+                <span class="lib-meta-dot"></span>
+                <span class="lib-status ${l.status}">${l.status==='approved'?'Approved':l.status==='review'?'In review':'Draft'}</span>
+              </div>
+            </div>
+          </div>`).join('')}
+      </div>
+    </section>
+  `;
+  mainContent.scrollTop = 0; wireScreen();
+}
+
+function renderDeadlines(){
+  setActiveNav(null);
+  mainContent.innerHTML = `
+    <section class="page">
+      <div class="ap-crumbs">
+        <button data-goto="dashboard">Today</button>
+        <span class="ap-crumbs-sep">/</span>
+        <span style="color:var(--ink);font-weight:600;">Deadlines</span>
+      </div>
+      <div class="page-head">
+        <div>
+          <h1 class="page-title"><em>Today's</em> deadlines</h1>
+          <p class="page-sub">Four actions on Mary's desk. The 12:00 Entresto NL copy approval is most time-sensitive.</p>
+        </div>
+        <button class="page-cta ghost" data-goto="dashboard">← Back to Today</button>
+      </div>
+      <div class="data-card">
+        ${DEADLINES.map(d=>{
+          const c = d.urgency==='today'?['#6B8460','#A8B89A']:d.urgency==='tomorrow'?['#4E5B7A','#6E7C9A']:['#A68B55','#C7AE7D'];
+          return `
+          <div class="data-row deadline-row">
+            <div class="deadline-clock" style="--d-c:${c[0]};--d-c2:${c[1]}">${d.time}</div>
+            <div class="deadline-body">
+              <h4>${d.title}</h4>
+              <p>${d.country} · ${d.urgency==='today'?'Due today':d.urgency==='tomorrow'?'Due tomorrow':'Due Friday'}</p>
+            </div>
+            <div class="deadline-owner">👤 ${d.owner}</div>
+            <div><span class="camp-status ${d.urgency==='today'?'risk':d.urgency==='tomorrow'?'on':'paused'}">${d.urgency==='today'?'Urgent':d.urgency==='tomorrow'?'Tomorrow':'Friday'}</span></div>
+            <div class="camp-chevron">›</div>
+          </div>`;}).join('')}
+      </div>
+    </section>
+  `;
+  mainContent.scrollTop = 0; wireScreen();
+}
+
+function renderCountries(){
+  setActiveNav(null);
+  mainContent.innerHTML = `
+    <section class="page">
+      <div class="ap-crumbs">
+        <button data-goto="dashboard">Today</button>
+        <span class="ap-crumbs-sep">/</span>
+        <span style="color:var(--ink);font-weight:600;">WEC countries</span>
+      </div>
+      <div class="page-head">
+        <div>
+          <h1 class="page-title">Your <em>WEC</em> cluster</h1>
+          <p class="page-sub">Seven countries, one paused territory (Portugal, MLR), one at risk (Belgium).</p>
+        </div>
+        <button class="page-cta ghost" data-goto="dashboard">← Back to Today</button>
+      </div>
+      <div class="wec-grid">
+        ${COUNTRIES.map(c=>`
+          <div class="wec-card">
+            <div class="wec-head">
+              <div class="wec-flag">${c.flag}</div>
+              <div class="wec-status-dot ${c.status}"></div>
+            </div>
+            <div class="wec-name">${c.name}</div>
+            <div class="wec-meta">
+              <span>Rx <strong>${c.rx}</strong></span>
+              <span>·</span>
+              <span><strong>${c.campaigns}</strong> campaign${c.campaigns===1?'':'s'}</span>
+            </div>
+          </div>`).join('')}
+      </div>
+    </section>
+  `;
+  mainContent.scrollTop = 0; wireScreen();
+}
+
+function streamInto(id, html){
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.innerHTML = '';
+  const doc = new DOMParser().parseFromString(`<div>${html}</div>`, 'text/html');
+  const wrap = doc.body.firstChild;
+  el.appendChild(wrap.cloneNode(false));
+  const target = el.firstChild;
+  const nodes = Array.from(wrap.childNodes);
+  let ni = 0;
+  function revealNext(){
+    if(ni >= nodes.length){
+      const c = el.querySelector('.stream-cursor'); if(c) c.remove(); return;
+    }
+    target.appendChild(nodes[ni].cloneNode(true));
+    let c = el.querySelector('.stream-cursor'); if(c) c.remove();
+    c = document.createElement('span'); c.className='stream-cursor'; target.appendChild(c);
+    ni++; el.scrollTop = el.scrollHeight;
+    setTimeout(revealNext, 40 + Math.random()*60);
+  }
+  revealNext();
+}
+
+function go(dest){
+  if(dest==='dashboard'){ currentScreen='dashboard'; renderDashboard(); }
+  else if(dest==='inbox'){ currentScreen='inbox'; renderInbox(); }
+  else if(dest==='calendar'){ currentScreen='calendar'; renderCalendar(); }
+  else if(dest==='campaigns'){ currentScreen='campaigns'; renderCampaigns(); }
+  else if(dest==='hcps'){ currentScreen='hcps'; renderHCPs(); }
+  else if(dest==='library'){ currentScreen='library'; renderLibrary(); }
+  else if(dest==='deadlines'){ currentScreen='deadlines'; renderDeadlines(); }
+  else if(dest==='countries'){ currentScreen='countries'; renderCountries(); }
+  else if(dest && dest.startsWith('agent:')){ currentScreen=dest; renderAgent(dest.split(':')[1]); }
+}
+
+function wireScreen(){
+  document.querySelectorAll('[data-goto]').forEach(el=>{
+    el.addEventListener('click', (e)=>{ e.preventDefault(); go(el.dataset.goto); });
+  });
+  document.querySelectorAll('[data-email]').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      const em = EMAILS.find(e=>e.id===el.dataset.email);
+      if(em){ selectedEmail = em; renderInbox(); }
+    });
+  });
+}
+
+function tick(){
+  const d = new Date();
+  const hh = String(d.getHours()).padStart(2,'0');
+  const mm = String(d.getMinutes()).padStart(2,'0');
+  const ss = String(d.getSeconds()).padStart(2,'0');
+  const el = document.getElementById('clock');
+  if(el) el.textContent = `${hh}:${mm}:${ss}`;
+}
+setInterval(tick, 1000); tick();
+
+function applyWelcomeGreeting(){
+  const h = new Date().getHours();
+  let greet = 'Good morning';
+  if(h >= 12 && h < 18) greet = 'Good afternoon';
+  else if(h >= 18 || h < 5) greet = 'Good evening';
+  const we = document.getElementById('w-greeting'); if(we) we.textContent = greet + ',';
+}
+applyWelcomeGreeting();
+
+function bootMain(){
+  const w = document.getElementById('welcome');
+  w.classList.add('hidden');
+  main.classList.add('visible');
+  renderDashboard();
+  setTimeout(()=>{ w.style.display='none'; }, 800);
+}
+document.getElementById('skip-welcome').addEventListener('click', bootMain);
+document.querySelectorAll('.topbar-nav-item[data-goto], #home-btn').forEach(el=>{
+  el.addEventListener('click', (e)=>{ e.preventDefault(); go(el.dataset.goto || 'dashboard'); });
+});
+
+setTimeout(bootMain, 5000);
+</script>
+</body>
+</html>
