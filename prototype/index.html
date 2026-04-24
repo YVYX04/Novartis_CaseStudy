@@ -13,22 +13,46 @@
 <body>
 <div id="app">
 
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- WELCOME SCREEN                              -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="welcome">
+    <div class="w-orb w-orb-1"></div>
+    <div class="w-orb w-orb-2"></div>
+    <div class="w-orb w-orb-3"></div>
+
+    <div class="w-center">
+      <div class="w-brand-chip">
+        <span class="w-n">N</span>
+        <span class="w-brand-label">NovaSphere · by Novartis</span>
+      </div>
+      <p class="w-label">W E L C O M E</p>
+      <div class="w-name-wrap">
+        <h1 class="w-name">Mary.</h1>
+      </div>
+      <p class="w-sub">Senior Marketeer · WEC Cluster · Zürich</p>
+      <p class="w-tagline">Your AI Command Center is ready.</p>
+    </div>
+
+    <div class="w-footer">
+      <div class="w-bar-track"><div class="w-bar-fill"></div></div>
+      <button class="w-skip" id="w-skip">Skip →</button>
+    </div>
+  </div>
+
   <!-- ── Shared top bar ── -->
   <header class="topbar">
     <div class="topbar-left">
-      <div class="brand-mark">
-        <span class="brand-n">N</span>
-      </div>
+      <div class="brand-mark"><span class="brand-n">N</span></div>
       <div class="brand-text">
         <span class="brand-name">NovaSphere</span>
-        <span class="brand-divider">|</span>
+        <span class="brand-div">|</span>
         <span class="brand-suite">by Novartis</span>
       </div>
     </div>
     <div class="topbar-right">
       <div class="status-pill">
-        <span class="status-dot"></span>
-        AI Connected
+        <span class="status-dot"></span>AI Connected
       </div>
       <div class="user-chip">
         <div class="user-avatar">M</div>
@@ -43,10 +67,9 @@
   <!-- ═══════════════════════════════════════════ -->
   <!-- PAGE 1 — DASHBOARD                         -->
   <!-- ═══════════════════════════════════════════ -->
-  <div id="dashboard" class="page active">
-    <div class="dashboard-inner">
+  <div id="dashboard" class="page">
+    <div class="dash-inner">
 
-      <!-- Greeting -->
       <section class="greeting-section">
         <div class="greeting-left">
           <p class="greeting-eyebrow" id="greeting-date">Thursday, 24 April 2026</p>
@@ -59,39 +82,25 @@
         </div>
       </section>
 
-      <!-- Quick stats -->
       <section class="stats-strip">
         <div class="stat-card">
-          <div class="stat-icon amber-icon">📥</div>
-          <div class="stat-body">
-            <div class="stat-value">5</div>
-            <div class="stat-label">Overnight emails</div>
-          </div>
+          <div class="stat-icon s-coral">📥</div>
+          <div><div class="stat-value" data-target="5">5</div><div class="stat-label">Overnight emails</div></div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon sky-icon">📊</div>
-          <div class="stat-body">
-            <div class="stat-value">4</div>
-            <div class="stat-label">Active campaigns</div>
-          </div>
+          <div class="stat-icon s-cyan">📊</div>
+          <div><div class="stat-value" data-target="4">4</div><div class="stat-label">Active campaigns</div></div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon red-icon">⚡</div>
-          <div class="stat-body">
-            <div class="stat-value">3</div>
-            <div class="stat-label">Deadlines today</div>
-          </div>
+          <div class="stat-icon s-red">⚡</div>
+          <div><div class="stat-value" data-target="3">3</div><div class="stat-label">Deadlines today</div></div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon green-icon">🌍</div>
-          <div class="stat-body">
-            <div class="stat-value">7</div>
-            <div class="stat-label">WEC countries</div>
-          </div>
+          <div class="stat-icon s-violet">🌍</div>
+          <div><div class="stat-value" data-target="7">7</div><div class="stat-label">WEC countries</div></div>
         </div>
       </section>
 
-      <!-- Agents grid -->
       <section class="agents-section">
         <div class="agents-header">
           <h2 class="agents-title">Your AI Agents</h2>
@@ -100,94 +109,77 @@
 
         <div class="agents-grid">
 
-          <!-- Agent 1: Morning Briefing -->
           <div class="agent-card" data-agent="briefing">
-            <div class="agent-card-header amber-header">
-              <div class="agent-card-icon">📥</div>
-              <div class="agent-time-badge amber-badge">08:00 AM</div>
+            <div class="ac-head ac-coral">
+              <span class="ac-icon">📥</span>
+              <span class="ac-time ac-time-coral">08:00 AM</span>
             </div>
-            <div class="agent-card-body">
-              <span class="role-chip primary-chip">✦ Your primary agent</span>
-              <h3 class="agent-card-name">Morning Briefing</h3>
-              <p class="agent-card-desc">Synthesizes overnight emails, campaign deadlines, and urgent items into a 60-second briefing — before your first meeting.</p>
-              <div class="agent-tags">
+            <div class="ac-body">
+              <span class="ac-chip ac-chip-coral">✦ Your primary agent</span>
+              <h3 class="ac-name">Morning Briefing</h3>
+              <p class="ac-desc">Synthesizes overnight emails, campaign deadlines, and urgent items into a 60-second briefing before your first meeting.</p>
+              <div class="ac-tags">
                 <span class="atag">5 emails</span>
                 <span class="atag">4 campaigns</span>
                 <span class="atag">3 deadlines</span>
               </div>
             </div>
-            <button class="launch-btn amber-launch">
-              <span class="launch-label">Launch Agent</span>
-              <span class="launch-arrow">→</span>
-            </button>
+            <div class="ac-foot"><span>Launch Agent</span><span class="ac-arr">→</span></div>
           </div>
 
-          <!-- Agent 2: Pre-Call Intel -->
           <div class="agent-card" data-agent="precall">
-            <div class="agent-card-header sky-header">
-              <div class="agent-card-icon">🩺</div>
-              <div class="agent-time-badge sky-badge">09:30 AM</div>
+            <div class="ac-head ac-cyan">
+              <span class="ac-icon">🩺</span>
+              <span class="ac-time ac-time-cyan">09:30 AM</span>
             </div>
-            <div class="agent-card-body">
-              <span class="role-chip field-chip">Field Rep Tool</span>
-              <h3 class="agent-card-name">Pre-Call Intel</h3>
-              <p class="agent-card-desc">Pulls CRM history, digital engagement, and Rx trends to generate a tailored briefing before each HCP visit.</p>
-              <div class="agent-tags">
+            <div class="ac-body">
+              <span class="ac-chip ac-chip-cyan">Field Rep Tool</span>
+              <h3 class="ac-name">Pre-Call Intel</h3>
+              <p class="ac-desc">Pulls CRM history, digital engagement, and Rx trends to generate a tailored briefing before each HCP visit.</p>
+              <div class="ac-tags">
                 <span class="atag">Dr. Müller · Zürich</span>
                 <span class="atag">Cardiology</span>
               </div>
             </div>
-            <button class="launch-btn sky-launch">
-              <span class="launch-label">Launch Agent</span>
-              <span class="launch-arrow">→</span>
-            </button>
+            <div class="ac-foot"><span>Launch Agent</span><span class="ac-arr">→</span></div>
           </div>
 
-          <!-- Agent 3: Content + MLR -->
           <div class="agent-card" data-agent="content">
-            <div class="agent-card-header green-header">
-              <div class="agent-card-icon">✍️</div>
-              <div class="agent-time-badge green-badge">11:00 AM</div>
+            <div class="ac-head ac-green">
+              <span class="ac-icon">✍️</span>
+              <span class="ac-time ac-time-green">11:00 AM</span>
             </div>
-            <div class="agent-card-body">
-              <span class="role-chip content-chip">Content Loop</span>
-              <h3 class="agent-card-name">Content + MLR</h3>
-              <p class="agent-card-desc">Generates HCP email content, runs it through a compliance pre-screener, and auto-revises until fully cleared.</p>
-              <div class="agent-tags">
+            <div class="ac-body">
+              <span class="ac-chip ac-chip-green">Content Loop</span>
+              <h3 class="ac-name">Content + MLR</h3>
+              <p class="ac-desc">Generates HCP email content, runs it through a compliance pre-screener, and auto-revises until fully cleared.</p>
+              <div class="ac-tags">
                 <span class="atag">Entresto · CH</span>
                 <span class="atag">Generate → MLR → Revise</span>
               </div>
             </div>
-            <button class="launch-btn green-launch">
-              <span class="launch-label">Launch Agent</span>
-              <span class="launch-arrow">→</span>
-            </button>
+            <div class="ac-foot"><span>Launch Agent</span><span class="ac-arr">→</span></div>
           </div>
 
-          <!-- Agent 4: Performance Coach -->
           <div class="agent-card" data-agent="coaching">
-            <div class="agent-card-header purple-header">
-              <div class="agent-card-icon">📊</div>
-              <div class="agent-time-badge purple-badge">15:00 PM</div>
+            <div class="ac-head ac-violet">
+              <span class="ac-icon">📊</span>
+              <span class="ac-time ac-time-violet">15:00 PM</span>
             </div>
-            <div class="agent-card-body">
-              <span class="role-chip coach-chip">Manager Tool</span>
-              <h3 class="agent-card-name">Performance Coach</h3>
-              <p class="agent-card-desc">Analyzes WEC cluster KPIs, diagnoses underperforming channels, and drafts a coaching note with next week's plan.</p>
-              <div class="agent-tags">
+            <div class="ac-body">
+              <span class="ac-chip ac-chip-violet">Manager Tool</span>
+              <h3 class="ac-name">Performance Coach</h3>
+              <p class="ac-desc">Analyzes WEC cluster KPIs, diagnoses underperforming channels, and drafts a coaching note with next week's plan.</p>
+              <div class="ac-tags">
                 <span class="atag atag-amber">Cosentyx BE at risk</span>
                 <span class="atag atag-green">Entresto CH ✓</span>
               </div>
             </div>
-            <button class="launch-btn purple-launch">
-              <span class="launch-label">Launch Agent</span>
-              <span class="launch-arrow">→</span>
-            </button>
+            <div class="ac-foot"><span>Launch Agent</span><span class="ac-arr">→</span></div>
           </div>
 
         </div>
       </section>
-
     </div>
   </div>
 
@@ -197,9 +189,7 @@
   <div id="agent-page" class="page">
 
     <div class="agent-subbar">
-      <button id="back-btn" class="back-btn">
-        <span>←</span> Dashboard
-      </button>
+      <button id="back-btn" class="back-btn">← Dashboard</button>
       <div class="subbar-crumb">
         <span class="crumb-sep">/</span>
         <span id="breadcrumb-name">Agent</span>
@@ -208,7 +198,7 @@
 
     <div class="agent-page-scroll">
 
-      <!-- ══ Agent 1: Morning Briefing ══ -->
+      <!-- Agent 1 -->
       <section class="agent-view active" id="view-briefing">
         <div class="hero amber-hero">
           <div class="hero-icon">📥</div>
@@ -223,33 +213,17 @@
               <span class="pill">WEC cluster</span>
             </div>
           </div>
-          <button class="run-btn amber-btn" id="run-briefing">
-            <span class="run-icon">▶</span> Run Agent
-          </button>
+          <button class="run-btn amber-btn" id="run-briefing"><span class="run-icon">▶</span> Run Agent</button>
         </div>
-
         <div class="steps-row" id="steplist-briefing">
-          <div class="step idle" data-step="inbox">
-            <div class="step-num">01</div>
-            <div class="step-label">Reading inbox</div>
-          </div>
+          <div class="step idle" data-step="inbox"><div class="step-num">01</div><div class="step-label">Reading inbox</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="deadlines">
-            <div class="step-num">02</div>
-            <div class="step-label">Checking deadlines</div>
-          </div>
+          <div class="step idle" data-step="deadlines"><div class="step-num">02</div><div class="step-label">Checking deadlines</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="urgency">
-            <div class="step-num">03</div>
-            <div class="step-label">Analyzing urgency</div>
-          </div>
+          <div class="step idle" data-step="urgency"><div class="step-num">03</div><div class="step-label">Analyzing urgency</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="generate">
-            <div class="step-num">04</div>
-            <div class="step-label">Generating briefing</div>
-          </div>
+          <div class="step idle" data-step="generate"><div class="step-num">04</div><div class="step-label">Generating briefing</div></div>
         </div>
-
         <div class="output-section">
           <div class="output-header">
             <span class="output-title">Agent output</span>
@@ -261,7 +235,7 @@
         </div>
       </section>
 
-      <!-- ══ Agent 2: Pre-Call Intel ══ -->
+      <!-- Agent 2 -->
       <section class="agent-view" id="view-precall">
         <div class="hero sky-hero">
           <div class="hero-icon">🩺</div>
@@ -276,33 +250,17 @@
               <span class="pill">Visit at 11:00 AM</span>
             </div>
           </div>
-          <button class="run-btn sky-btn" id="run-precall">
-            <span class="run-icon">▶</span> Run Agent
-          </button>
+          <button class="run-btn sky-btn" id="run-precall"><span class="run-icon">▶</span> Run Agent</button>
         </div>
-
         <div class="steps-row" id="steplist-precall">
-          <div class="step idle" data-step="crm">
-            <div class="step-num">01</div>
-            <div class="step-label">Pulling CRM history</div>
-          </div>
+          <div class="step idle" data-step="crm"><div class="step-num">01</div><div class="step-label">Pulling CRM history</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="digital">
-            <div class="step-num">02</div>
-            <div class="step-label">Digital engagement</div>
-          </div>
+          <div class="step idle" data-step="digital"><div class="step-num">02</div><div class="step-label">Digital engagement</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="rx">
-            <div class="step-num">03</div>
-            <div class="step-label">Rx trend analysis</div>
-          </div>
+          <div class="step idle" data-step="rx"><div class="step-num">03</div><div class="step-label">Rx trend analysis</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="generate">
-            <div class="step-num">04</div>
-            <div class="step-label">Generating briefing</div>
-          </div>
+          <div class="step idle" data-step="generate"><div class="step-num">04</div><div class="step-label">Generating briefing</div></div>
         </div>
-
         <div class="output-section">
           <div class="output-header">
             <span class="output-title">Agent output</span>
@@ -314,7 +272,7 @@
         </div>
       </section>
 
-      <!-- ══ Agent 3: Content + MLR ══ -->
+      <!-- Agent 3 -->
       <section class="agent-view" id="view-content">
         <div class="hero green-hero">
           <div class="hero-icon">✍️</div>
@@ -328,11 +286,8 @@
               <span class="pill">Generate → MLR → Revise loop</span>
             </div>
           </div>
-          <button class="run-btn green-btn" id="run-content">
-            <span class="run-icon">▶</span> Run Agent
-          </button>
+          <button class="run-btn green-btn" id="run-content"><span class="run-icon">▶</span> Run Agent</button>
         </div>
-
         <div class="brief-section">
           <div class="brief-label">Campaign brief — editable</div>
           <textarea id="content-brief" rows="6">Campaign: Entresto Switzerland — Heart Failure Spring Push
@@ -342,39 +297,19 @@ Key message: Entresto demonstrated superior reduction in CV death and HF hospita
 CTA: Register for the live webinar — April 10, 18:30 CET
 Constraints: Switzerland market, German-speaking audience, no competitor mentions, no pricing, include disclaimer placeholder</textarea>
         </div>
-
         <div class="steps-row" id="steplist-content">
-          <div class="step idle" data-step="brief">
-            <div class="step-num">01</div>
-            <div class="step-label">Reading brief</div>
-          </div>
+          <div class="step idle" data-step="brief"><div class="step-num">01</div><div class="step-label">Reading brief</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="generate">
-            <div class="step-num">02</div>
-            <div class="step-label">Generating content</div>
-          </div>
+          <div class="step idle" data-step="generate"><div class="step-num">02</div><div class="step-label">Generating content</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="mlr">
-            <div class="step-num">03</div>
-            <div class="step-label">MLR check</div>
-          </div>
+          <div class="step idle" data-step="mlr"><div class="step-num">03</div><div class="step-label">MLR check</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="revise">
-            <div class="step-num">04</div>
-            <div class="step-label">Revising content</div>
-          </div>
+          <div class="step idle" data-step="revise"><div class="step-num">04</div><div class="step-label">Revising content</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="recheck">
-            <div class="step-num">05</div>
-            <div class="step-label">Re-checking MLR</div>
-          </div>
+          <div class="step idle" data-step="recheck"><div class="step-num">05</div><div class="step-label">Re-checking MLR</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="final">
-            <div class="step-num">06</div>
-            <div class="step-label">Cleared</div>
-          </div>
+          <div class="step idle" data-step="final"><div class="step-num">06</div><div class="step-label">Cleared</div></div>
         </div>
-
         <div class="output-section">
           <div class="output-header">
             <span class="output-title">Agent output — full loop trace</span>
@@ -386,7 +321,7 @@ Constraints: Switzerland market, German-speaking audience, no competitor mention
         </div>
       </section>
 
-      <!-- ══ Agent 4: Performance Coach ══ -->
+      <!-- Agent 4 -->
       <section class="agent-view" id="view-coaching">
         <div class="hero purple-hero">
           <div class="hero-icon">📊</div>
@@ -401,33 +336,17 @@ Constraints: Switzerland market, German-speaking audience, no competitor mention
               <span class="pill gray-pill">Kisqali PT paused</span>
             </div>
           </div>
-          <button class="run-btn purple-btn" id="run-coaching">
-            <span class="run-icon">▶</span> Run Agent
-          </button>
+          <button class="run-btn purple-btn" id="run-coaching"><span class="run-icon">▶</span> Run Agent</button>
         </div>
-
         <div class="steps-row" id="steplist-coaching">
-          <div class="step idle" data-step="kpis">
-            <div class="step-num">01</div>
-            <div class="step-label">Pulling KPIs</div>
-          </div>
+          <div class="step idle" data-step="kpis"><div class="step-num">01</div><div class="step-label">Pulling KPIs</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="channels">
-            <div class="step-num">02</div>
-            <div class="step-label">Scoring channels</div>
-          </div>
+          <div class="step idle" data-step="channels"><div class="step-num">02</div><div class="step-label">Scoring channels</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="diagnose">
-            <div class="step-num">03</div>
-            <div class="step-label">Diagnosing issues</div>
-          </div>
+          <div class="step idle" data-step="diagnose"><div class="step-num">03</div><div class="step-label">Diagnosing issues</div></div>
           <div class="step-arrow">→</div>
-          <div class="step idle" data-step="generate">
-            <div class="step-num">04</div>
-            <div class="step-label">Writing coaching note</div>
-          </div>
+          <div class="step idle" data-step="generate"><div class="step-num">04</div><div class="step-label">Writing coaching note</div></div>
         </div>
-
         <div class="output-section">
           <div class="output-header">
             <span class="output-title">Agent output</span>
