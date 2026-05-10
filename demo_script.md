@@ -69,24 +69,30 @@ Three recommended next actions — each one clickable, each tied to a specific a
 
 ---
 
-## [1:35 – 2:25] Agent 3 — Content + MLR
+## [2:05 - 2:25] Agent Scheduler
 
-`[ACTION: Click "Today" to go back, then click the "Content + MLR" agent card]`
+`[ACTION: Click "Today" to go back, then click the "Scheduler" agent card]`
 
-**SPEAK:**
-"Now — the agent that shows the real power of an agentic loop. The Content + MLR agent takes a campaign brief and runs it through a full compliance cycle automatically.
 
-Here's what happened for the Entresto Netherlands email. Draft one was generated in Mary's voice — but it failed MLR on two specific issues: the phrase 'reinforces the mortality reduction' was flagged as an unsupported efficacy claim, and 'walk through' was flagged as promotional tone.
-
-The agent revised the copy automatically. In draft two, the claim is replaced with a precise citation — McMurray et al., NEJM 2014 — and 'walk through' becomes 'present and discuss.'
-
-Second pass: PASS. All seven regulatory rules cleared — fair balance, substantiation, ISI formatting, claim language, disclaimer, contraindications, referencing.
-
-One click to send to country MLR for final sign-off."
-
-> *"PASS · 0" verdict visible on screen. "Send to country MLR" button highlighted.*
 
 ---
+
+## [1:35 – 2:05] Agent Pre-call Intel
+
+`[ACTION: Calendar -> Pre-call Intel]`
+
+**SPEAK:**
+Now Mary looks at her calendar that is also supervised by an AI agent and notices that she has a meeting with Dr. Keller.
+She does not really remember her previous exchanges with Dr. Keller but fortunately she can lay on her pre-call intel agent
+
+`[ACTION: Pre-call Intel]`
+
+**SPEAK**:
+
+Now Mary knows how she left the relationship with Dr. Keller and how to lead the meeting with the main talking points.
+This allows you to handle more clients and be relevant right from the go.
+
+
 
 ## [2:25 – 2:40] The Other Agents
 
@@ -99,7 +105,11 @@ And the Performance Coach — it's already diagnosed that Belgium's drop is a ti
 
 ---
 
-## [2:40 – 3:00] Close
+## [2:40 – 3:00] Customization with the example of John
+
+
+
+### [3:00 – 3:30] Close
 
 **SPEAK:**
 "Five agents. One platform. Every role covered — from field rep to marketing manager.
@@ -112,12 +122,4 @@ This is what embedding AI in the commercial workflow looks like. Not a tool you 
 
 ## Timing cheat-sheet
 
-| Section | Time |
-|---|---|
-| Welcome screen | 0:00 – 0:18 |
-| Dashboard overview | 0:18 – 0:40 |
-| Morning Briefing agent | 0:40 – 1:25 |
-| Inbox + AI suggestion | 1:25 – 1:35 |
-| Content + MLR loop | 1:35 – 2:25 |
-| Agents 2 & 4 mention | 2:25 – 2:40 |
-| Closing | 2:40 – 3:00 |
+[To be rewritten ...]
