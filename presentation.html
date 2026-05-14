@@ -11,43 +11,45 @@
 
 <script type="application/json" id="speaker-notes">
 [
-  "Welcome. We're Group X from Universität St. Gallen, and over the next 15 to 20 minutes we'll walk you through NovaSphere — our proposal to help Novartis master the shift to personalized, AI-powered commercial engagement across the WEC cluster.",
+  "Welcome. We're Group 3 from Universität St. Gallen, and over the next fifteen minutes we'll walk you through NovaSphere — our proposal to help Novartis master the shift to personalized, AI-powered commercial engagement across the WEC cluster.",
 
-  "We've split this into four parts. First, the why — the problem we set out to solve and the product we built. Second, a quick demo. Third — and this is the heart of our work — how we'd actually implement it inside Novartis. And fourth, an honest look at limitations and the alternatives we considered.",
+  "Four parts. First, the why — the problem we set out to solve and the product we built. Second, a demo. Third — and this is the heart of our work — how we'd actually implement it inside Novartis. And fourth, an honest look at limitations and the alternatives we considered.",
 
   "Section one. Introducing NovaSphere — the problem we set out to solve, the personas we built for, and the product that emerged.",
 
-  "Novartis already knows where it wants to go: personalized, data-driven, omnichannel engagement at scale. But many teams still operate with a traditional marketing mix. Content is still one-size-fits-all. AI use in marketing is limited. Strategy and tactics update too slowly. Message recall and content performance aren't fully leveraged. And customers — HCPs — expect personalization but rarely get it. The gap between ambition and reality is the problem.",
+  "Novartis already knows where it wants to go: personalized, data-driven, omnichannel engagement at scale. But many teams still operate with a traditional marketing mix. Content is one-size-fits-all. AI use in marketing is limited. Strategy and tactics update too slowly. And customer expectations are increasingly shifting toward personalized engagement — a market reality that's only accelerating. That's the market side, on the left. But the real challenge sits on the right: bringing people over to a new way of working. Adoption — not technology — decides whether the shift sticks. Functional capabilities, seniority, mindset, day-to-day realities — all four shape how a person adopts. That's why this case is, fundamentally, an adoption case.",
 
-  "But here's the insight that shaped our entire proposal: the real challenge is not technology. It's adoption at scale. Different stakeholders have different functional capabilities, different levels of seniority, different mindsets toward change, and very different day-to-day operational realities. So introducing a tool isn't enough — we have to help every persona understand it, adopt it, and apply it inside their own workflow.",
+  "To pressure-test the design, we built two profiles representing the two types of resistance we expect. John, 24, junior marketer — an AI-native pragmatist. He uses AI daily for drafting and ideation, very open to it, but his fear is that AI replaces him. Mary, 31, marketer — a reluctant adopter. She sees AI as additional work; learning a new system feels like effort with unclear value for an already demanding workload. Same product, two very different barriers. That's the design constraint NovaSphere has to solve for.",
 
-  "To pressure-test that, we built two core test profiles. John, 24, junior marketer — an AI-native pragmatist. He already uses AI daily for drafting and ideation. Open to it, but secretly afraid it'll replace him. Mary, 31, senior marketer — a curious sceptic. Not against AI, but unsure how to leverage it without losing quality or control. Two very different barriers. Same product. That's the design constraint NovaSphere has to solve for.",
-
-  "This is NovaSphere. A human-centered AI adoption engine for Novartis' omnichannel transformation. Four role-specific agents — Morning Briefing for senior marketers, Pre-Call Intel for field reps, Content + MLR for junior marketers, and Performance Coach for managers. Each one tailored to a persona's function, seniority, and barriers. Together they help Novartis move beyond one-size-fits-all and embed omnichannel behavior at scale.",
+  "This is NovaSphere. An agentic AI system — not a chatbot. It plans, reasons and acts. It turns large volumes of data into actionable recommendations. The four agents you see below are illustrative — they're how the platform can be configured for these specific Novartis roles. The underlying system is flexible: more roles, more tasks, more workflows can be configured the same way. Morning Briefing. Pre-Call Intel for field reps. Content + MLR for marketers like John. Performance Coach for managers. And there are many more possible — the fifth, dashed card on the right makes that explicit.",
 
   "Now let's see it in action.",
 
-  "[Live demo — screen recording will play here. Approximately 5 minutes covering Mary's morning flow through Morning Briefing, Content + MLR, and the agent reasoning pipeline.]",
+  "[Demo — pre-recorded screen capture plays here, with voice-over. Approximately 5 minutes covering the agent flow end-to-end. Use the fullscreen button in the top right of the frame.]",
 
-  "Now to the heart of our work — implementation. How we actually roll NovaSphere out across seven WEC markets in a way that sticks. This is a six-to-seven minute section, so let's go.",
+  "Now to the heart of our work — implementation. How we actually roll NovaSphere out across the WEC markets in a way that sticks. This is a six-to-seven minute section, so let's go.",
 
-  "Our implementation is grounded in Kotter's 8-step change model, organized into three phases. Phase one — Feel it. Create emotional relevance before asking for intellectual buy-in: personalized nudges and leadership coalition. Phase two — Reveal it. Turn first experience into trust and shared vision: leaders connect the tool to omnichannel strategy, teams engage, and we address resistance per persona. Phase three — Build it. Convert buy-in into real outputs: first HCP campaigns built with live agents, peer exchange and usage tracking sustain momentum, and adoption becomes routine.",
+  "Here's the design principle. Each agent is engineered to dissolve a specific resistance — not through training, but through doing. Adoption resistance? Morning Briefing delivers value in 60 seconds before anyone has to learn anything. Capability gaps? Pre-Call Intel acts as a personal coach. Time and integration constraints? All four agents live inside the Novartis ecosystem — they replace existing steps and have access to all the data they need, so there's nothing new to learn. The barriers aren't trained away. They're made unnecessary.",
 
-  "Here's the design principle that makes this different. Each agent is engineered to dissolve a specific resistance — not through training, but through doing. Adoption resistance? Morning Briefing delivers value in 60 seconds before anyone has to learn anything. Capability gaps? Pre-Call Intel acts as a personal coach. Time constraints? All four agents live inside Teams, Veeva CRM and the LMS — no new platform. Quality concerns? Content + MLR auto-screens against seven pharma rules. The barriers aren't trained away. They're made unnecessary.",
+  "Implementation unfolds in three phases, grounded in Kotter's 8-step change model. Phase one — Feel it. The tool is rolled out to selected employees and teams for hands-on testing. They use it in their daily work, surface real pain points, and the urgency for change emerges bottom-up through practical experience — not top-down pressure. Two Kotter steps land here: Create Urgency, and Build the Coalition. The outcome is first user experience, visible pain points, and bottom-up momentum.",
 
-  "Adoption never happens uniformly. Some users will hesitate. So we built a four-step safety net — continuous monitoring detects inactivity and triggers escalating support. Take Mary, our sceptic. Week one or two of inactivity: a soft nudge, a peer story in Teams. Week three: a 15-minute manager touch reframing AI as quality enhancer. Week four: pairing with a country champion she can shadow. Week five and beyond: a structured reframe conversation tied to her specific barrier. Each step is calibrated to her profile. This is how we catch resistance before it becomes refusal.",
+  "Phase two — Reveal it. Now we make the initial learnings visible. Early KPIs, employee feedback and use cases demonstrate the tool's value. The organization gains clarity on what's possible, how the tool supports the broader strategy, and where the implementation is heading. Three Kotter steps land here: Form a Vision, Enlist the Army, Remove Barriers. The outcome is proof of value, shared understanding and a clearer direction.",
 
-  "Before we scale, we prove it works. Our UAT format is moderated think-aloud sessions, 45 to 60 minutes per person, running a multi-channel HCP campaign through all three core agents. Two profiles in cycle one — John and Mary. Decision framework is binary: all KPIs met means we proceed to pilot. Seventy-five percent or more met means rollout with mandatory quality checkpoints. Critical KPIs missed — we redesign before the next cycle. No partial rollouts.",
+  "Phase three — Build it. The rollout is completed across all relevant teams. Everyone has access, is onboarded, and is actively involved. The tool becomes part of the regular way of working. The focus shifts from testing to sustained adoption, routine integration, and long-term behavior change. Three Kotter steps close it out: Short-Term Wins, Sustain Momentum, Institute Change. The outcome is full rollout, organization-wide adoption, and lasting behavioral change.",
 
-  "These are the KPIs that gate the move from pilot to rollout. Comparative thresholds across all profiles: SUS at least 68, task completion at least 80%, AI suggestion acceptance at least 60%, internal NPS plus 20 or higher, willingness to continue at least 4 out of 5, and zero critical errors. Then profile-specific targets — for John, critical review rate above 50% so he doesn't blindly accept output. For Mary, trust conversion from sceptic to value-recogniser. Implementation is declared successful only when comparative KPIs are met across at least four of five profiles, zero critical errors, and trust conversion is confirmed for the sceptics.",
+  "Zooming back out: this is the whole picture. Three phases — Feel it, Reveal it, Build it — and eight Kotter steps distributed across them. Phase one earns emotional relevance and a leadership coalition. Phase two builds trust through first experience: a shared vision, an enlisted army, and barriers removed per persona. Phase three converts buy-in into outputs and lasting behaviour — short-term wins, sustained momentum, and adoption institutionalized across the WEC cluster.",
 
-  "Why did we build agentic AI, not conventional AI? Conventional tools — ChatGPT, Copilot, Salesforce Einstein — are reactive. They respond when prompted, reset every session, can't access live HCP data, can't act across systems. NovaSphere is goal-directed. Given an objective, it plans and executes. Persistent memory learns marketer and HCP preferences. It queries live Veeva data in real time. It orchestrates Veeva, Salesforce Marketing Cloud and MLR in one flow. It personalizes 200-plus HCPs in a single workflow. And it surfaces optimization suggestions unprompted.",
+  "Adoption never happens uniformly. So we built a four-step safety net — continuous monitoring detects inactivity and triggers escalating support. Take Mary, our reluctant adopter. Week one or two of inactivity: a soft nudge, a peer story in Teams. Week three: a 15-minute manager touch reframing AI as a time-saver. Week four: pairing with a country champion she can shadow. Week five and beyond: a structured 1:1 where AI handles the draft and Mary keeps final control. Each step is calibrated to her specific barrier — extra work. This is how we catch resistance before it becomes refusal.",
+
+  "Before we scale, we prove it works. Our UAT format is moderated think-aloud sessions, 45 to 60 minutes per person, running a multi-channel HCP campaign through the agents. Two profiles in cycle one — John and Mary. Decision framework is binary: all KPIs met means we proceed to pilot. Seventy-five percent or more met means rollout with mandatory quality checkpoints. Critical KPIs missed — we redesign before the next cycle. No partial rollouts.",
+
+  "These are the KPIs that gate the move from pilot to rollout. Comparative thresholds across all profiles: SUS at least 68 percent, task completion at least 80%, AI suggestion acceptance at least 60%, internal NPS plus 20 or higher, willingness to continue at least 4 out of 5, and zero critical errors. Then concrete, profile-specific targets — John spots and corrects at least 2 AI errors per campaign loop, which proves he reviews instead of blindly accepting. Mary: a weekly task that used to take 2 hours takes under 30 minutes with the agent by the end of Loop 2. Implementation is declared successful only when comparative KPIs are met across at least four of five profiles, zero critical errors, and the persona-specific targets are hit.",
 
   "Now an honest look at what's hard. Three minutes on limitations and the alternatives we ruled out.",
 
-  "Three real limitations of agentic AI. One — operational reliability. Performance degrades on long tasks. Reliability falls when the agent has to choose among many tools or operate in ambiguous contexts. Stochastic behavior makes outputs harder to audit. That's a constraint for enterprise processes that need repeatability. Two — cybersecurity. Greater autonomy means a broader attack surface. Prompt injection, sequential tool attacks, memory poisoning, supply-chain contamination. Persistent-state corruption can sharply increase attack success rates. Three — data storage and retrieval. Agent performance depends heavily on the quality and organization of internal data. Fragmented or siloed information reduces output quality. Without strong data infrastructure, agents generate noise rather than value. We're not blind to these. Our implementation plan accounts for all three.",
+  "Three real limitations of agentic AI. One — operational reliability. Performance degrades on long tasks. Reliability falls in ambiguous contexts. Stochastic outputs are harder to audit. Two — cybersecurity. Greater autonomy means a broader attack surface. Prompt injection, sequential tool attacks, memory poisoning. Persistent-state corruption can sharply increase attack success rates. Three — data storage and retrieval. Agent performance depends heavily on internal data quality. Fragmented or siloed information reduces output quality. Without strong data infrastructure, agents generate noise rather than value. We're not blind to these. The implementation plan accounts for all three.",
 
-  "Five alternatives we considered, and why each one fell short. Workshops and classic training — low cost, but no scalability across seven markets and knowledge fades. Off-the-shelf AI like Salesforce Einstein or Adobe Sensei — fast to deploy but confined to one system, no agentic capability, no pharma MLR built in. Generic GenAI like ChatGPT Enterprise or Copilot — familiar interface, but no live HCP data, no Novartis integration, resets every session, no compliance controls. An internal AI Centre of Excellence built from scratch — full control, but 18 to 24 months minimum to production. External AI consultants — expert access but knowledge leaves with them, no persistent platform. NovaSphere is the only path that's pharma-aware, agentic, persistent, and deployable inside Novartis' competitive window.",
+  "Five alternatives we considered. Workshops and classic training — low cost, but no scalability across markets and knowledge fades. Off-the-shelf AI like Salesforce Einstein or Adobe Sensei — fast to deploy but confined to one system, no agentic capability, no pharma MLR. Generic GenAI like ChatGPT Enterprise or Copilot — familiar interface, but no live HCP data, no Novartis integration, resets every session, no compliance controls. An internal AI Centre of Excellence — full control, but eighteen to twenty-four months minimum to production. External AI consultants — expert access but knowledge leaves with them. NovaSphere is the only path that's pharma-aware, agentic, persistent, and deployable inside Novartis' competitive window.",
 
   "That's our proposal. NovaSphere doesn't ask Novartis to learn a new tool. It asks the tool to meet every Novartis employee where they already work — and earns trust one micro-task at a time. Thank you. We're happy to take questions."
 ]
@@ -99,7 +101,7 @@
 
   /* Spacing */
   --pad-x:        120px;
-  --pad-top:      100px;
+  --pad-top:      120px;
   --pad-bottom:   100px;
   --gap-title:    56px;
   --gap-item:     28px;
@@ -193,10 +195,22 @@ section.bg-dark::after{
    re-entry because the property is removed when the slide
    deactivates.
    ============================================================ */
-section .anim{ opacity: 0; }
+/* Default to visible so thumbnails / print / export render content.
+   The active slide replays the rise animation, which the `both` fill-mode
+   carries from opacity:0 → 1 regardless of the default. */
+section .anim{ opacity: 1; }
 section[data-deck-active] .anim{
   animation: kn-rise 0.85s var(--ease) both;
   animation-delay: var(--d, 0s);
+}
+@media print {
+  section .anim,
+  section[data-deck-active] .anim{
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    filter: none !important;
+  }
 }
 section[data-deck-active] .anim-blur{
   animation: kn-blur 1.0s var(--ease) both;
@@ -402,20 +416,30 @@ section[data-deck-active] .anim-fade{
 /* ============================================================
    COVER (slide 1)
    ============================================================ */
+/* ============================================================
+   COVER (slide 1) — stacked layout, sphere above text
+   ============================================================ */
 .cover{
-  align-items: center; justify-content: center; text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
   position: relative;
+  padding-top: 110px;
+  padding-bottom: 80px;
 }
 .cover-sphere-wrap{
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, calc(-50% - 90px));
-  width: 500px; height: 500px;
+  position: relative;
+  width: 360px; height: 360px;
+  margin: 0 auto 14px;
   display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
 }
+.cover-sphere-wrap .sphere{ width: 360px; height: 360px; }
+.cover-sphere-wrap .sphere-ring.r1{ width: 600px; height: 220px; }
+.cover-sphere-wrap .sphere-ring.r2{ width: 880px; height: 320px; }
 .cover-content{
   position: relative; z-index: 3;
-  margin-top: 380px;
+  margin-top: 0;
   display: flex; flex-direction: column; align-items: center;
 }
 .cover-chip{
@@ -455,7 +479,7 @@ section[data-deck-active] .anim-fade{
 }
 .cover-name{
   font-family:'Inter', sans-serif;
-  font-size: 200px;
+  font-size: 180px;
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 0.95;
@@ -609,21 +633,21 @@ section[data-deck-active] .anim-fade{
   background: var(--grad-aurora);
 }
 .gap-list{
-  display: flex; flex-direction: column; gap: 22px;
+  display: flex; flex-direction: column; gap: 12px;
 }
 .gap-item{
   display: grid;
   grid-template-columns: 60px 1fr;
   gap: 22px;
   align-items: baseline;
-  padding: 22px 28px;
+  padding: 14px 24px;
   background: rgba(255,255,255,0.65);
   border: 1px solid var(--line);
   border-radius: var(--r-md);
-  font-size: 28px;
+  font-size: 24px;
   color: var(--ink);
   font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.3;
 }
 .gap-num{
   font-family:'JetBrains Mono', monospace;
@@ -873,7 +897,481 @@ section[data-deck-active] .anim-fade{
 .agent.coach{ --accent: var(--a-bronze); }
 
 /* ============================================================
-   DEMO PLACEHOLDER (slide 8)
+   MERGED PROBLEM + ADOPTION (slide 4)
+   ============================================================ */
+.challenge-split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  flex: 1;
+  align-items: stretch;
+}
+.challenge-col{
+  display: flex; flex-direction: column;
+  padding: 32px 36px;
+  background: linear-gradient(165deg, rgba(255,255,255,0.85) 0%, rgba(248,247,242,0.6) 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--lift-1);
+  position: relative;
+  overflow: hidden;
+}
+.challenge-col:first-child{
+  background:
+    radial-gradient(ellipse 80% 60% at 110% -10%, rgba(78,91,122,0.18), transparent 60%),
+    linear-gradient(165deg, rgba(78,91,122,0.08) 0%, rgba(255,255,255,0.55) 65%);
+  border-color: rgba(78,91,122,0.18);
+  box-shadow: var(--lift-1), 0 0 60px -28px rgba(78,91,122,0.4);
+}
+.challenge-col:last-child{
+  background:
+    radial-gradient(ellipse 80% 60% at 110% -10%, rgba(107,132,96,0.18), transparent 60%),
+    linear-gradient(165deg, rgba(107,132,96,0.10) 0%, rgba(255,255,255,0.55) 65%);
+  border-color: rgba(107,132,96,0.22);
+  box-shadow: var(--lift-1), 0 0 60px -28px rgba(107,132,96,0.4);
+}
+.challenge-col:first-child::before{
+  content: ''; position: absolute; top: 0; left: 32px; right: 32px; height: 3px;
+  background: var(--a-slate);
+}
+.challenge-col:last-child::before{
+  content: ''; position: absolute; top: 0; left: 32px; right: 32px; height: 3px;
+  background: var(--a-sage);
+}
+.challenge-head{
+  display: flex; align-items: baseline; gap: 16px;
+  margin-bottom: 6px;
+}
+.challenge-num{
+  font-family:'Inter', sans-serif;
+  font-weight: 200;
+  font-size: 56px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--a-slate);
+}
+.challenge-col:last-child .challenge-num{ color: var(--a-sage); }
+.challenge-label{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.challenge-lead{
+  font-size: 26px;
+  color: var(--ink-2);
+  line-height: 1.4;
+  max-width: 540px;
+}
+.challenge-lead em{
+  font-family:'Instrument Serif', serif; font-style: italic;
+  color: var(--a-sage); font-weight: 400;
+}
+.dim-grid.mini{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.dim-card.mini{
+  padding: 22px 22px;
+  background: linear-gradient(165deg, rgba(255,255,255,0.85), rgba(248,247,242,0.5));
+  border: 1px solid rgba(46,58,86,0.10);
+  border-radius: var(--r-md);
+  display: flex; flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.dim-card.mini::before{
+  content: ''; position: absolute; top: 0; left: 22px; right: 22px; height: 2px;
+  background: var(--accent, var(--a-sage));
+  border-radius: 0 0 4px 4px;
+}
+.dim-card.mini .dim-num{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--accent, var(--a-sage));
+  letter-spacing: 0.1em;
+}
+.dim-card.mini .dim-name{
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+/* Tighter limits cards to keep within slide bounds */
+.stage > .limits{ margin-bottom: 24px; }
+.limit{
+  padding: 22px 26px;
+  gap: 14px;
+}
+.limit-name{
+  font-size: 28px;
+  white-space: nowrap;
+}
+.limit-num{ font-size: 56px; }
+.limit-item{ font-size: 19px; line-height: 1.35; }
+.limits-intro{
+  font-size: 24px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+}
+
+/* ============================================================
+   PRODUCT slide (S6) — pillars + section-head + 'more' card
+   ============================================================ */
+.product-pillars{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.product-pillar{
+  padding: 22px 26px;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--lift-1);
+  display: flex; flex-direction: column;
+  gap: 8px;
+}
+.product-pillar-tag{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--a-sage);
+}
+.product-pillar:nth-child(2) .product-pillar-tag{ color: var(--a-slate); }
+.product-pillar:nth-child(3) .product-pillar-tag{ color: var(--a-bronze); }
+.product-pillar-text{
+  font-size: 24px;
+  color: var(--ink);
+  line-height: 1.35;
+  font-weight: 500;
+}
+.product-section-head{
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+}
+.product-section-rule{ height: 1px; background: var(--line); }
+.product-section-label{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.product-section-note{
+  font-family:'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--ink-3);
+  max-width: 540px;
+  line-height: 1.35;
+  text-align: right;
+}
+.agents-with-more{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+.agents-with-more .agent{
+  padding: 26px 20px;
+  gap: 12px;
+}
+.agents-with-more .agent-name{ font-size: 26px; }
+.agents-with-more .agent-desc{ font-size: 18px; line-height: 1.4; }
+.agents-with-more .agent-persona{ font-size: 18px; }
+.agents-with-more .agent-tag{ font-size: 18px; }
+.agent.more{
+  --accent: var(--ink-4);
+  background: repeating-linear-gradient(135deg, rgba(255,255,255,0.6) 0 10px, rgba(248,247,242,0.35) 10px 20px);
+  border-style: dashed;
+  border-color: rgba(46,58,86,0.25);
+}
+.agent.more::before{ display: none; }
+.agent-more-dots{
+  display: flex; gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.agent-more-dots span{
+  width: 14px; height: 14px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.85), transparent 50%), radial-gradient(circle at 50% 50%, var(--a-sage-2), var(--a-sage));
+  opacity: 0.6;
+}
+.agent-more-dots span:nth-child(2){
+  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.85), transparent 50%), radial-gradient(circle at 50% 50%, var(--a-plum-2), var(--a-plum));
+  opacity: 0.45;
+}
+.agent-more-dots span:nth-child(3){
+  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.85), transparent 50%), radial-gradient(circle at 50% 50%, var(--a-bronze-2), var(--a-bronze));
+  opacity: 0.3;
+}
+.agent.more .agent-tag{ color: var(--ink-3); }
+.agent.more .agent-name{ color: var(--ink-2); }
+.agent.more .agent-desc{ color: var(--ink-3); font-style: italic; }
+
+/* ============================================================
+   IMPLEMENTATION phase slides (S11-13) — Feel / Reveal / Build
+   ============================================================ */
+.impl-top{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.impl-title{
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.0;
+  color: var(--ink);
+}
+.impl-title em{
+  font-family:'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  background: var(--grad-aurora);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.impl-sub{
+  font-family:'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--ink-3);
+  margin-top: 10px;
+}
+.impl-tagline{
+  font-family:'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 30px;
+  color: var(--ink-2);
+  text-align: right;
+  padding-bottom: 6px;
+}
+.impl-tabs{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.impl-tab{
+  padding: 22px 28px;
+  border-radius: var(--r-md);
+  background: rgba(46,58,86,0.06);
+  border: 1px solid var(--line);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink-3);
+  text-align: center;
+  transition: all 0.25s var(--ease);
+}
+.impl-tab.passed{
+  border-style: dashed;
+  color: var(--ink-4);
+  background: transparent;
+}
+.impl-tab.active{
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--lift-2);
+}
+.impl-tab.active.phase-feel{
+  background: linear-gradient(135deg, var(--a-sage-2), var(--a-sage));
+}
+.impl-tab.active.phase-reveal{
+  background: linear-gradient(135deg, var(--a-slate-2), var(--a-slate));
+}
+.impl-tab.active.phase-build{
+  background: linear-gradient(135deg, var(--a-bronze-2), var(--a-bronze));
+}
+
+.impl-body{
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 50px;
+  flex: 1;
+}
+.impl-col{
+  display: flex; flex-direction: column;
+  gap: 22px;
+}
+.impl-col-head{
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.impl-steps{
+  display: flex; flex-direction: column;
+  gap: 0;
+}
+.impl-step{
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 22px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.impl-step:last-child{ border-bottom: none; }
+.impl-step-num{
+  width: 64px; height: 64px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family:'Inter', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: var(--lift-1);
+}
+.impl-steps.phase-feel .impl-step-num{
+  background: linear-gradient(135deg, var(--a-sage-2), var(--a-sage));
+}
+.impl-steps.phase-reveal .impl-step-num{
+  background: linear-gradient(135deg, var(--a-slate-2), var(--a-slate));
+}
+.impl-steps.phase-build .impl-step-num{
+  background: linear-gradient(135deg, var(--a-bronze-2), var(--a-bronze));
+}
+.impl-step-name{
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+.impl-step-desc{
+  font-size: 24px;
+  color: var(--ink-2);
+  line-height: 1.4;
+}
+
+.impl-narrative{
+  position: relative;
+  padding-left: 32px;
+}
+.impl-narrative-rail{
+  position: absolute;
+  top: 50px; bottom: 10px;
+  left: 0;
+  width: 4px;
+  border-radius: 4px;
+}
+.impl-narrative.phase-feel .impl-narrative-rail{ background: var(--a-sage); }
+.impl-narrative.phase-reveal .impl-narrative-rail{ background: var(--a-slate); }
+.impl-narrative.phase-build .impl-narrative-rail{ background: var(--a-bronze); }
+.impl-narrative-text{
+  font-size: 28px;
+  color: var(--ink);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+.impl-narrative-text strong{ color: var(--ink); font-weight: 700; }
+.impl-outcome{
+  margin-top: auto;
+  padding-top: 24px;
+  display: flex; flex-direction: column;
+  gap: 6px;
+}
+.impl-outcome-label{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.impl-narrative.phase-feel .impl-outcome-label{ color: var(--a-sage); }
+.impl-narrative.phase-reveal .impl-outcome-label{ color: var(--a-slate); }
+.impl-narrative.phase-build .impl-outcome-label{ color: var(--a-bronze); }
+.impl-outcome-text{
+  font-family:'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 26px;
+  color: var(--ink-2);
+  line-height: 1.4;
+}
+
+
+.demo-video-wrap.pseudo-fs{
+  position: fixed !important;
+  top: 0 !important; left: 0 !important;
+  width: 100vw !important; height: 100vh !important;
+  z-index: 9999 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  background: #000;
+}
+.demo-video-wrap.pseudo-fs video{
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+}
+.demo-fullscreen-btn.is-fs::after{ content: ' \00d7'; }
+
+
+
+.demo-video-wrap{
+  width: 1500px; height: 720px;
+  border-radius: var(--r-xl);
+  background: #0A0814;
+  border: 1px solid var(--line);
+  box-shadow: var(--lift-3);
+  position: relative;
+  overflow: hidden;
+}
+.demo-video-wrap video{
+  width: 100%; height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #0A0814;
+  border-radius: var(--r-xl);
+}
+.demo-fullscreen-btn{
+  position: absolute; top: 18px; right: 18px;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 18px;
+  background: rgba(20,24,40,0.75);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 100px;
+  color: #F8F7F2;
+  font-family:'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  backdrop-filter: blur(14px);
+  transition: all 0.2s var(--ease);
+  z-index: 3;
+  cursor: pointer;
+}
+.demo-fullscreen-btn:hover{
+  background: rgba(255,255,255,0.92);
+  color: var(--ink);
+  border-color: rgba(46,58,86,0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.demo-fullscreen-btn svg{ width: 18px; height: 18px; }
+.demo-video-wrap video:fullscreen{ object-fit: contain; }
+.demo-video-wrap video::-webkit-media-controls-panel{ background: rgba(20,24,40,0.6); }
+
+/* ============================================================
+   DEMO PLACEHOLDER (legacy)
    ============================================================ */
 .demo{
   align-items: center; justify-content: center;
@@ -1244,8 +1742,223 @@ section[data-deck-active] .anim-fade{
 .lstep-action strong{ color: var(--ink); font-weight: 600; }
 
 /* ============================================================
-   UAT METHODOLOGY
+   UAT v2 (S13) — clean redesign
    ============================================================ */
+.uat2-top{
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 28px;
+}
+.uat2-card{
+  padding: 30px 32px;
+  background: linear-gradient(165deg, rgba(255,255,255,0.95), rgba(248,247,242,0.7));
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--lift-1);
+  display: flex; flex-direction: column;
+  gap: 20px;
+}
+.uat2-card-head{
+  display: flex; align-items: center; gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.uat2-tag{
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family:'Inter', sans-serif;
+  font-size: 24px; font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--a-slate-2), var(--a-slate));
+  flex-shrink: 0;
+}
+.uat2-card:nth-child(2) .uat2-tag{
+  background: linear-gradient(135deg, var(--a-sage-2), var(--a-sage));
+}
+.uat2-decision-head .uat2-tag{
+  background: linear-gradient(135deg, var(--a-bronze-2), var(--a-bronze));
+}
+.uat2-label{
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.uat2-cycle{
+  margin-left: auto;
+  font-family:'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 6px 12px;
+  background: rgba(46,58,86,0.06);
+  border-radius: 100px;
+}
+.uat2-list{
+  display: flex; flex-direction: column;
+  gap: 14px;
+}
+.uat2-item{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.uat2-item:last-child{ border-bottom: none; }
+.uat2-key{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.uat2-val{
+  font-size: 22px;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.uat2-val strong{ color: var(--ink); font-weight: 700; }
+
+.uat2-profiles{
+  display: flex; flex-direction: column;
+  gap: 16px;
+}
+.uat2-profile{
+  padding: 18px 22px;
+  border-radius: var(--r-md);
+  display: flex; flex-direction: column;
+  gap: 10px;
+}
+.uat2-profile.john{
+  background: rgba(220,228,206,0.5);
+  border: 1px solid rgba(107,132,96,0.3);
+}
+.uat2-profile.mary{
+  background: rgba(199,174,125,0.25);
+  border: 1px solid rgba(166,139,85,0.3);
+}
+.uat2-profile-row{
+  display: flex; align-items: center; gap: 14px;
+}
+.uat2-profile-avatar{
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+}
+.uat2-profile.john .uat2-profile-avatar{
+  background: linear-gradient(135deg, #A8B89A, #6B8460);
+  box-shadow: 0 4px 12px rgba(107,132,96,0.4);
+}
+.uat2-profile.mary .uat2-profile-avatar{
+  background: linear-gradient(135deg, #C7AE7D, #A68B55);
+  box-shadow: 0 4px 12px rgba(166,139,85,0.4);
+}
+.uat2-profile-id{
+  display: flex; flex-direction: column;
+}
+.uat2-profile-name{
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  line-height: 1;
+}
+.uat2-profile-role{
+  font-size: 18px;
+  color: var(--ink-3);
+  margin-top: 4px;
+}
+.uat2-profile-tag{
+  align-self: flex-start;
+  font-family:'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+.uat2-profile.john .uat2-profile-tag{
+  background: rgba(107,132,96,0.2);
+  color: #4F6649;
+  border: 1px solid rgba(107,132,96,0.35);
+}
+.uat2-profile.mary .uat2-profile-tag{
+  background: rgba(166,139,85,0.2);
+  color: #7E6638;
+  border: 1px solid rgba(166,139,85,0.35);
+}
+.uat2-profile-test{
+  font-size: 22px;
+  color: var(--ink-2);
+  line-height: 1.4;
+}
+.uat2-profile-test strong{ color: var(--ink); font-weight: 600; }
+
+.uat2-decision-head{
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 30px;
+}
+.uat2-decision{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 14px;
+}
+.uat2-gate{
+  padding: 22px 26px;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 14px;
+  align-items: center;
+  box-shadow: var(--lift-1);
+  border-left: 4px solid;
+}
+.uat2-gate.gate-green{ border-left-color: #4F7A4A; }
+.uat2-gate.gate-amber{ border-left-color: var(--a-bronze); }
+.uat2-gate.gate-red{ border-left-color: #B36F6F; }
+.uat2-gate-cond{
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.uat2-gate-cond span{
+  font-weight: 500;
+  color: var(--ink-3);
+  font-size: 18px;
+  display: block;
+  font-family:'JetBrains Mono', monospace;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+.uat2-gate-arrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 26px;
+  color: var(--ink-4);
+  font-weight: 400;
+}
+.uat2-gate-result{
+  font-size: 22px;
+  color: var(--ink-2);
+  line-height: 1.3;
+}
+
+
 .uat{
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -1518,13 +2231,13 @@ section[data-deck-active] .anim-fade{
    LIMITATIONS — 3 columns
    ============================================================ */
 .limits-intro{
-  font-size: 28px;
+  font-size: 22px;
   color: var(--ink-2);
   max-width: 1500px;
-  line-height: 1.45;
-  padding-bottom: 32px;
+  line-height: 1.4;
+  padding-bottom: 18px;
   border-bottom: 1px dashed var(--line);
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 }
 .limits-intro em{
   font-family:'Instrument Serif', serif;
@@ -1534,16 +2247,17 @@ section[data-deck-active] .anim-fade{
 .limits{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  flex: 1;
+  gap: 28px;
+  flex: 0 0 auto;
+  margin-bottom: 80px;
 }
 .limit{
-  padding: 36px 32px;
+  padding: 24px 28px;
   background: linear-gradient(165deg, rgba(255,255,255,0.92), rgba(248,247,242,0.6));
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
   display: flex; flex-direction: column;
-  gap: 22px;
+  gap: 14px;
   box-shadow: var(--lift-1);
   position: relative;
   overflow: hidden;
@@ -1556,32 +2270,33 @@ section[data-deck-active] .anim-fade{
 .limit-num{
   font-family:'Inter', sans-serif;
   font-weight: 200;
-  font-size: 80px;
+  font-size: 50px;
   line-height: 1;
   letter-spacing: -0.04em;
   color: var(--a-bronze);
 }
 .limit-name{
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: -0.025em;
   color: var(--ink);
   line-height: 1.1;
+  white-space: nowrap;
 }
 .limit-list{
   display: flex; flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 .limit-item{
-  font-size: 22px;
+  font-size: 18px;
   color: var(--ink-2);
-  line-height: 1.4;
+  line-height: 1.35;
   padding-left: 20px;
   position: relative;
 }
 .limit-item::before{
   content: ''; position: absolute;
-  left: 0; top: 12px;
+  left: 0; top: 10px;
   width: 8px; height: 2px;
   background: var(--a-bronze);
 }
@@ -1643,31 +2358,37 @@ section[data-deck-active] .anim-fade{
 /* ============================================================
    CLOSING
    ============================================================ */
+/* ============================================================
+   CLOSING (slide 18) — stacked layout, sphere above text
+   ============================================================ */
 .closing{
-  align-items: center; justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   text-align: center;
   position: relative;
+  padding-top: 140px;
+  padding-bottom: 80px;
 }
 .closing-sphere-wrap{
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, calc(-50% - 60px));
-  width: 460px; height: 460px;
+  position: relative;
+  width: 340px; height: 340px;
+  margin: 0 auto 24px;
   display: flex; align-items: center; justify-content: center;
-  opacity: 0.85;
+  opacity: 0.95;
+  flex-shrink: 0;
 }
-.closing .sphere{ width: 380px; height: 380px; }
-.closing .sphere-ring.r1{ width: 700px; height: 260px; }
-.closing .sphere-ring.r2{ width: 980px; height: 360px; }
+.closing .sphere{ width: 320px; height: 320px; }
+.closing .sphere-ring.r1{ width: 580px; height: 220px; }
+.closing .sphere-ring.r2{ width: 820px; height: 300px; }
 .closing-content{
   position: relative; z-index: 3;
-  margin-top: 360px;
+  margin-top: 0;
   display: flex; flex-direction: column; align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 .closing-line{
   font-family:'Inter', sans-serif;
-  font-size: 110px;
+  font-size: 96px;
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.0;
@@ -1715,7 +2436,7 @@ section[data-deck-active] .anim-fade{
       <div class="cover-content">
         <div class="cover-chip anim" style="--d:0.5s">
           <div class="cover-chip-dot"></div>
-          <span class="cover-chip-text">Group X · Pitch · 2026</span>
+          <span class="cover-chip-text">Group 3 · Pitch · 2026</span>
         </div>
 
         <div class="cover-eyebrow anim-blur" style="--d:0.7s">Introducing</div>
@@ -1734,8 +2455,6 @@ section[data-deck-active] .anim-fade{
         </div>
         <div class="cobrand-right">
           <span>WEC Cluster</span>
-          <span class="cobrand-divider"></span>
-          <span>15 min</span>
         </div>
       </div>
     </div>
@@ -1748,28 +2467,28 @@ section[data-deck-active] .anim-fade{
   <section class="bg-cream" data-label="02 Agenda">
     <div class="stage">
       <div class="eyebrow anim" style="--d:0.05s"><span>Agenda</span><span class="bar"></span><span>4 parts</span></div>
-      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Where we're <em>going</em>, in the next fifteen minutes.</h1>
+      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Our <em>path</em> forward.</h1>
 
       <div class="toc-list" style="margin-top: 80px;">
         <div class="toc-row anim" style="--d:0.35s">
           <div class="toc-num">01</div>
           <div class="toc-name">Introducing NovaSphere</div>
-          <div class="toc-time">~ 3 min</div>
+          <div class="toc-time"></div>
         </div>
         <div class="toc-row anim" style="--d:0.45s">
           <div class="toc-num">02</div>
-          <div class="toc-name">Live demo</div>
-          <div class="toc-time">~ 5 min</div>
+          <div class="toc-name">Demo</div>
+          <div class="toc-time"></div>
         </div>
         <div class="toc-row anim" style="--d:0.55s">
           <div class="toc-num">03</div>
           <div class="toc-name">Implementation path</div>
-          <div class="toc-time">~ 7 min</div>
+          <div class="toc-time"></div>
         </div>
         <div class="toc-row anim" style="--d:0.65s">
           <div class="toc-num">04</div>
           <div class="toc-name">Limitations &amp; alternatives</div>
-          <div class="toc-time">~ 3 min</div>
+          <div class="toc-time"></div>
         </div>
       </div>
 
@@ -1794,7 +2513,6 @@ section[data-deck-active] .anim-fade{
         <div class="divider-tag anim" style="--d:0.1s">Section One</div>
         <div class="divider-num anim-blur" style="--d:0.2s"><strong>01</strong></div>
         <h1 class="divider-title anim" style="--d:0.4s">Introducing<br>NovaSphere.</h1>
-        <p class="divider-sub anim" style="--d:0.55s">The problem we set out to solve, the personas we built for, and the product that emerged.</p>
       </div>
 
       <div class="divider-right anim-grow" style="--d:0.1s">
@@ -1810,40 +2528,63 @@ section[data-deck-active] .anim-fade{
 
 
   <!-- ============================================================
-       SLIDE 4 — THE PROBLEM
+       SLIDE 4 — THE PROBLEM (merged: market gap + adoption challenge)
        ============================================================ -->
-  <section class="bg-cream" data-label="04 Problem">
+  <section class="bg-cream" data-label="04 The challenge">
     <div class="stage">
-      <div class="eyebrow anim" style="--d:0.05s"><span>The gap</span><span class="bar"></span><span>Ambition vs. reality</span></div>
-      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Novartis wants <em>personalized</em> engagement.<br>The current model can't deliver it.</h1>
+      <div class="eyebrow anim" style="--d:0.05s"><span>The challenge</span><span class="bar"></span><span>Market gap → adoption gap</span></div>
+      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Novartis wants <em>personalized</em> engagement —<br>bringing people there is the real challenge.</h1>
 
-      <div class="problem" style="margin-top: 60px;">
-        <div class="problem-left">
-          <div class="problem-quote anim" style="--d:0.35s">
-            "Novartis wants personalized, data-driven omnichannel engagement — but many teams still operate with a traditional marketing mix."
+      <div class="challenge-split" style="margin-top: 56px;">
+        <div class="challenge-col">
+          <div class="challenge-head anim" style="--d:0.3s">
+            <span class="challenge-num">A</span>
+            <span class="challenge-label">The market</span>
+          </div>
+          <p class="challenge-lead anim" style="--d:0.35s">Today's traditional marketing mix can't deliver what customers expect.</p>
+          <div class="gap-list" style="margin-top: 22px;">
+            <div class="gap-item anim" style="--d:0.45s">
+              <span class="gap-num">01</span>
+              <span>One-size-fits-all content is still too common</span>
+            </div>
+            <div class="gap-item anim" style="--d:0.55s">
+              <span class="gap-num">02</span>
+              <span>AI use in marketing is still limited</span>
+            </div>
+            <div class="gap-item anim" style="--d:0.65s">
+              <span class="gap-num">03</span>
+              <span>Strategy and tactics update too slowly</span>
+            </div>
+            <div class="gap-item anim" style="--d:0.75s">
+              <span class="gap-num">04</span>
+              <span>Customer expectations are increasingly shifting toward personalized engagement</span>
+            </div>
           </div>
         </div>
 
-        <div class="gap-list">
-          <div class="gap-item anim" style="--d:0.5s">
-            <span class="gap-num">01</span>
-            <span>One-size-fits-all content is still too common</span>
+        <div class="challenge-col">
+          <div class="challenge-head anim" style="--d:0.5s">
+            <span class="challenge-num">B</span>
+            <span class="challenge-label">The transformation</span>
           </div>
-          <div class="gap-item anim" style="--d:0.6s">
-            <span class="gap-num">02</span>
-            <span>AI use in marketing is still limited</span>
-          </div>
-          <div class="gap-item anim" style="--d:0.7s">
-            <span class="gap-num">03</span>
-            <span>Strategy and tactics update too slowly</span>
-          </div>
-          <div class="gap-item anim" style="--d:0.8s">
-            <span class="gap-num">04</span>
-            <span>Message recall and content performance aren't fully leveraged</span>
-          </div>
-          <div class="gap-item anim" style="--d:0.9s">
-            <span class="gap-num">05</span>
-            <span>Customers expect personalization — but rarely receive it</span>
+          <p class="challenge-lead anim" style="--d:0.55s"><em>Adoption</em> — not technology — decides whether the shift sticks.</p>
+          <div class="dim-grid mini anim" style="--d:0.65s; margin-top: 22px;">
+            <div class="dim-card mini" style="--accent: var(--a-sage)">
+              <div class="dim-num">01</div>
+              <div class="dim-name">Functional capabilities</div>
+            </div>
+            <div class="dim-card mini" style="--accent: var(--a-slate)">
+              <div class="dim-num">02</div>
+              <div class="dim-name">Seniority</div>
+            </div>
+            <div class="dim-card mini" style="--accent: var(--a-plum)">
+              <div class="dim-num">03</div>
+              <div class="dim-name">Mindset toward change</div>
+            </div>
+            <div class="dim-card mini" style="--accent: var(--a-bronze)">
+              <div class="dim-num">04</div>
+              <div class="dim-name">Day-to-day realities</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1861,53 +2602,9 @@ section[data-deck-active] .anim-fade{
 
 
   <!-- ============================================================
-       SLIDE 5 — ADOPTION DIMENSIONS
-       ============================================================ -->
-  <section class="bg-cream" data-label="05 Adoption challenge">
-    <div class="stage">
-      <div class="eyebrow anim" style="--d:0.05s"><span>The real challenge</span><span class="bar"></span><span>Adoption at scale</span></div>
-      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Adoption is the <em>real</em> challenge.<br>Not the technology.</h1>
-      <p class="subtitle anim" style="--d:0.3s; margin-top:24px;">It's not enough to introduce a new approach. We have to help every persona understand it, adopt it, and apply it inside their daily role.</p>
-
-      <div class="dim-grid" style="margin-top: 56px;">
-        <div class="dim-card anim" style="--d:0.45s; --accent: var(--a-sage)">
-          <div class="dim-num">01</div>
-          <div class="dim-name">Functional capabilities</div>
-          <div class="dim-desc">What each role can technically do — and what they need help to do.</div>
-        </div>
-        <div class="dim-card anim" style="--d:0.55s; --accent: var(--a-slate)">
-          <div class="dim-num">02</div>
-          <div class="dim-name">Seniority</div>
-          <div class="dim-desc">A junior marketer adopts very differently from a senior strategist.</div>
-        </div>
-        <div class="dim-card anim" style="--d:0.65s; --accent: var(--a-plum)">
-          <div class="dim-num">03</div>
-          <div class="dim-name">Mindset toward change</div>
-          <div class="dim-desc">Openness, scepticism, fear of replacement. All real, all different.</div>
-        </div>
-        <div class="dim-card anim" style="--d:0.75s; --accent: var(--a-bronze)">
-          <div class="dim-num">04</div>
-          <div class="dim-name">Day-to-day realities</div>
-          <div class="dim-desc">The tool has to fit inside Teams, Veeva and the LMS — not replace them.</div>
-        </div>
-      </div>
-
-      <div class="cobrand anim-fade" style="--d:1.0s">
-        <div class="cobrand-left">
-          <span class="cobrand-novartis">NOVARTIS</span>
-          <span class="cobrand-divider"></span>
-          <span>Universität St.Gallen</span>
-        </div>
-        <div class="cobrand-right"><span>01 / Introducing NovaSphere</span></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
        SLIDE 6 — PERSONAS: JOHN & MARY
        ============================================================ -->
-  <section class="bg-cream" data-label="06 Personas">
+  <section class="bg-cream" data-label="05 Personas">
     <div class="stage">
       <div class="eyebrow anim" style="--d:0.05s"><span>Two profiles</span><span class="bar"></span><span>One product to serve both</span></div>
       <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Two test profiles tell us <em>what adoption requires</em>.</h1>
@@ -1932,21 +2629,21 @@ section[data-deck-active] .anim-fade{
         </div>
 
         <div class="persona mary anim" style="--d:0.5s">
-          <div class="persona-tag">Curious Sceptic</div>
+          <div class="persona-tag">Reluctant Adopter</div>
           <div class="persona-head">
             <div class="persona-avatar">MK</div>
             <div>
               <div class="persona-name">Mary</div>
-              <div class="persona-role">Senior Marketer</div>
+              <div class="persona-role">Marketer</div>
             </div>
           </div>
           <div class="persona-meta">
             <span>AGE <strong>31</strong></span>
             <span>GENDER <strong>F</strong></span>
-            <span>USAGE <strong>Curious</strong></span>
+            <span>VIEW <strong>Reluctant</strong></span>
           </div>
-          <p class="persona-view">Curious but sceptical. Not against AI — unsure how to leverage it without <strong>losing quality or control</strong>.</p>
-          <div class="persona-quote">"I can see the potential of AI, but I need to know how to use it in a way that actually improves my work."</div>
+          <p class="persona-view">Sees AI as <strong>additional work</strong>. Believes learning a new system will take too much time and effort, with unclear practical value for an already demanding workload.</p>
+          <div class="persona-quote">"I already have enough on my plate — I don't see why I should spend time learning another tool that may not even help me."</div>
         </div>
       </div>
 
@@ -1965,47 +2662,66 @@ section[data-deck-active] .anim-fade{
   <!-- ============================================================
        SLIDE 7 — PRODUCT INTRO + 4 AGENTS
        ============================================================ -->
-  <section class="bg-cream" data-label="07 NovaSphere product">
+  <section class="bg-cream" data-label="06 NovaSphere product">
     <div class="stage">
-      <div class="eyebrow anim" style="--d:0.05s"><span>The product</span><span class="bar"></span><span>Four role-specific agents</span></div>
-      <div class="product-head">
-        <h1 class="title anim" style="--d:0.15s">NovaSphere transforms AI<br>from a tool into a <em>trusted companion</em>.</h1>
-        <ul class="product-promise-list">
-          <li class="product-promise-item anim" style="--d:0.4s">Role-specific support, not one generic chatbot</li>
-          <li class="product-promise-item anim" style="--d:0.5s">Tailored to function, seniority, and daily needs</li>
-          <li class="product-promise-item anim" style="--d:0.6s">Lives inside Teams, Veeva CRM and the LMS</li>
-          <li class="product-promise-item anim" style="--d:0.7s">Embeds omnichannel behavior at scale</li>
-        </ul>
+      <div class="eyebrow anim" style="--d:0.05s"><span>The product</span><span class="bar"></span><span>An agentic AI system</span></div>
+      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">NovaSphere is a <em>trusted companion</em>, not a chatbot.</h1>
+
+      <div class="product-pillars anim" style="--d:0.32s; margin-top: 28px;">
+        <div class="product-pillar">
+          <div class="product-pillar-tag">Agentic</div>
+          <div class="product-pillar-text">Plans, reasons and acts — not just answers.</div>
+        </div>
+        <div class="product-pillar">
+          <div class="product-pillar-tag">Personal</div>
+          <div class="product-pillar-text">Tailored to function, seniority and daily needs.</div>
+        </div>
+        <div class="product-pillar">
+          <div class="product-pillar-tag">Actionable</div>
+          <div class="product-pillar-text">Turns large volumes of data into recommendations.</div>
+        </div>
       </div>
 
-      <div class="agents">
-        <div class="agent briefing anim" style="--d:0.85s">
+      <div class="product-section-head anim" style="--d:0.5s; margin-top: 32px;">
+        <div class="product-section-rule"></div>
+        <div class="product-section-label">Four illustrative agents</div>
+        <div class="product-section-note">The platform is configurable — these are example configurations for the Novartis WEC context.</div>
+      </div>
+
+      <div class="agents agents-with-more" style="margin-top: 18px;">
+        <div class="agent briefing anim" style="--d:0.65s">
           <div class="agent-orb"></div>
           <div class="agent-tag">Agent 01</div>
           <div class="agent-name">Morning Briefing</div>
-          <div class="agent-persona">For Mary · Senior Marketer</div>
+          <div class="agent-persona">For Mary · Marketer</div>
           <div class="agent-desc">A 60-second daily brief — value before any "learning" happens.</div>
         </div>
-        <div class="agent precall anim" style="--d:0.95s">
+        <div class="agent precall anim" style="--d:0.72s">
           <div class="agent-orb"></div>
           <div class="agent-tag">Agent 02</div>
           <div class="agent-name">Pre-Call Intel</div>
           <div class="agent-persona">For Field Reps</div>
           <div class="agent-desc">Personal coach. Guided HCP prep before every call.</div>
         </div>
-        <div class="agent content anim" style="--d:1.05s">
+        <div class="agent content anim" style="--d:0.79s">
           <div class="agent-orb"></div>
           <div class="agent-tag">Agent 03</div>
           <div class="agent-name">Content + MLR</div>
           <div class="agent-persona">For John · Junior Marketer</div>
           <div class="agent-desc">Auto-screens against 7 pharma rules. Marketer reviews, doesn't generate.</div>
         </div>
-        <div class="agent coach anim" style="--d:1.15s">
+        <div class="agent coach anim" style="--d:0.86s">
           <div class="agent-orb"></div>
           <div class="agent-tag">Agent 04</div>
           <div class="agent-name">Performance Coach</div>
           <div class="agent-persona">For Marketing Managers</div>
           <div class="agent-desc">Surfaces underperformance and recommendations unprompted.</div>
+        </div>
+        <div class="agent more anim" style="--d:0.93s">
+          <div class="agent-more-dots"><span></span><span></span><span></span></div>
+          <div class="agent-tag">+ Many more</div>
+          <div class="agent-name">Configurable<br>for any role</div>
+          <div class="agent-desc">New agents can be designed for any function, market or workflow as NovaSphere scales.</div>
         </div>
       </div>
 
@@ -2024,13 +2740,12 @@ section[data-deck-active] .anim-fade{
   <!-- ============================================================
        SLIDE 8 — SECTION 02 DIVIDER (DEMO)
        ============================================================ -->
-  <section class="bg-dark" data-label="08 Section 02 Demo">
+  <section class="bg-dark" data-label="07 Section 02 Demo">
     <div class="stage divider">
       <div class="divider-left">
         <div class="divider-tag anim" style="--d:0.1s">Section Two</div>
         <div class="divider-num anim-blur" style="--d:0.2s"><strong>02</strong></div>
-        <h1 class="divider-title anim" style="--d:0.4s">Live demo.</h1>
-        <p class="divider-sub anim" style="--d:0.55s">Mary's morning, end-to-end. Five minutes through Morning Briefing and Content + MLR.</p>
+        <h1 class="divider-title anim" style="--d:0.4s">Demo.</h1>
       </div>
 
       <div class="divider-right anim-grow" style="--d:0.1s">
@@ -2048,22 +2763,120 @@ section[data-deck-active] .anim-fade{
   <!-- ============================================================
        SLIDE 9 — DEMO PLACEHOLDER
        ============================================================ -->
-  <section class="bg-cream" data-label="09 Demo">
+  <section class="bg-cream" data-label="08 Demo">
     <div class="stage demo">
-      <div class="eyebrow anim" style="--d:0.05s"><span>Demo</span><span class="bar"></span><span>NovaSphere · live</span></div>
+      <div class="eyebrow anim" style="--d:0.05s"><span>Demo</span><span class="bar"></span><span>NovaSphere walkthrough</span></div>
       <h1 class="title anim" style="--d:0.15s; margin-top:24px; text-align:center;">See NovaSphere <em>in action</em>.</h1>
 
-      <div class="demo-frame anim-blur" style="--d:0.4s; margin-top: 40px;">
-        <div class="demo-frame-corners">
-          <span class="demo-frame-dot d1"></span>
-          <span class="demo-frame-dot d2"></span>
-          <span class="demo-frame-dot d3"></span>
-        </div>
-        <div class="demo-play">
-          <div class="demo-play-tri"></div>
-        </div>
-        <div class="demo-frame-label">Screen recording · placeholder</div>
+      <div class="demo-video-wrap anim-blur" id="demoWrap" style="--d:0.4s; margin-top: 40px;">
+        <video id="demoVideo" controls preload="metadata" playsinline webkit-playsinline>
+          <source src="assets/demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button type="button" class="demo-fullscreen-btn" id="demoFsBtn" aria-label="Open video in fullscreen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V5a1 1 0 0 1 1-1h4"/><path d="M20 9V5a1 1 0 0 0-1-1h-4"/><path d="M4 15v4a1 1 0 0 0 1 1h4"/><path d="M20 15v4a1 1 0 0 1-1 1h-4"/></svg>
+          <span>Fullscreen</span>
+        </button>
       </div>
+
+      <script>
+      (function(){
+        var btn = document.getElementById('demoFsBtn');
+        var wrap = document.getElementById('demoWrap');
+        var video = document.getElementById('demoVideo');
+        if (!btn || !wrap || !video) return;
+        var origParent = null;
+        var origNext = null;
+        function isInFs(){
+          return !!(document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement || wrap.classList.contains('pseudo-fs'));
+        }
+        function enterPseudoFs(){
+          if (origParent) return;
+          origParent = wrap.parentNode;
+          origNext = wrap.nextSibling;
+          /* Lift wrap out of the deck-stage's transform context so position:fixed
+             can fill the viewport. */
+          document.body.appendChild(wrap);
+          wrap.classList.add('pseudo-fs');
+          try { video.play(); } catch(e){}
+          updateBtn();
+        }
+        function exitPseudoFs(){
+          if (!wrap.classList.contains('pseudo-fs')) return;
+          wrap.classList.remove('pseudo-fs');
+          if (origParent){
+            origParent.insertBefore(wrap, origNext);
+            origParent = null; origNext = null;
+          }
+          updateBtn();
+        }
+        function exitFs(){
+          if (document.exitFullscreen) { try { document.exitFullscreen(); } catch(e){} }
+          else if (document.webkitExitFullscreen) { try { document.webkitExitFullscreen(); } catch(e){} }
+          else if (document.msExitFullscreen) { try { document.msExitFullscreen(); } catch(e){} }
+          exitPseudoFs();
+        }
+        function tryFs(el){
+          var fns = ['requestFullscreen','webkitRequestFullscreen','mozRequestFullScreen','msRequestFullscreen'];
+          for (var i = 0; i < fns.length; i++){
+            if (typeof el[fns[i]] === 'function'){
+              try {
+                var r = el[fns[i]]();
+                return (r && typeof r.then === 'function') ? r : Promise.resolve();
+              } catch(e) {}
+            }
+          }
+          return Promise.reject();
+        }
+        function enterFs(){
+          /* iOS Safari special path — fullscreens the video element directly */
+          if (typeof video.webkitEnterFullscreen === 'function'){
+            try { video.webkitEnterFullscreen(); return; } catch(e){}
+          }
+          tryFs(video)
+            .catch(function(){ return tryFs(wrap); })
+            .catch(function(){ return tryFs(document.documentElement); })
+            .catch(function(){
+              /* Iframe / sandbox blocked native FS — use pseudo-fullscreen
+                 by moving the wrap to body so position:fixed escapes the
+                 deck-stage scale transform. */
+              enterPseudoFs();
+            })
+            .then(function(){ updateBtn(); });
+        }
+        function updateBtn(){
+          var span = btn.querySelector('span');
+          if (isInFs()){
+            btn.classList.add('is-fs');
+            if (span) span.textContent = 'Exit fullscreen';
+            btn.setAttribute('aria-label','Exit fullscreen');
+          } else {
+            btn.classList.remove('is-fs');
+            if (span) span.textContent = 'Fullscreen';
+            btn.setAttribute('aria-label','Open video in fullscreen');
+          }
+        }
+        btn.addEventListener('click', function(e){
+          e.stopPropagation();
+          if (isInFs()) exitFs(); else enterFs();
+        });
+        ['fullscreenchange','webkitfullscreenchange','msfullscreenchange'].forEach(function(ev){
+          document.addEventListener(ev, function(){
+            /* If native FS exited but wrap is still detached, snap it back. */
+            if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement){
+              if (origParent && !wrap.classList.contains('pseudo-fs')){
+                origParent.insertBefore(wrap, origNext);
+                origParent = null; origNext = null;
+              }
+            }
+            updateBtn();
+          });
+        });
+        document.addEventListener('keydown', function(e){
+          if (e.key === 'Escape') exitFs();
+        });
+      })();
+      </script>
 
       <div class="cobrand anim-fade" style="--d:0.9s">
         <div class="cobrand-left">
@@ -2071,7 +2884,7 @@ section[data-deck-active] .anim-fade{
           <span class="cobrand-divider"></span>
           <span>Universität St.Gallen</span>
         </div>
-        <div class="cobrand-right"><span>02 / Live demo</span></div>
+        <div class="cobrand-right"><span>02 / Demo</span></div>
       </div>
     </div>
   </section>
@@ -2080,13 +2893,12 @@ section[data-deck-active] .anim-fade{
   <!-- ============================================================
        SLIDE 10 — SECTION 03 DIVIDER (IMPLEMENTATION)
        ============================================================ -->
-  <section class="bg-dark" data-label="10 Section 03 Implementation">
+  <section class="bg-dark" data-label="09 Section 03 Implementation">
     <div class="stage divider">
       <div class="divider-left">
         <div class="divider-tag anim" style="--d:0.1s">Section Three</div>
         <div class="divider-num anim-blur" style="--d:0.2s"><strong>03</strong></div>
         <h1 class="divider-title anim" style="--d:0.4s">Implementation<br>path.</h1>
-        <p class="divider-sub anim" style="--d:0.55s">Three phases. Eight steps. One safety net. The work that makes adoption stick.</p>
       </div>
 
       <div class="divider-right anim-grow" style="--d:0.1s">
@@ -2102,9 +2914,279 @@ section[data-deck-active] .anim-fade{
 
 
   <!-- ============================================================
-       SLIDE 11 — KOTTER 3-PHASE
+       SLIDE 11 — BARRIER → AGENT (now first in Implementation)
        ============================================================ -->
-  <section class="bg-cream" data-label="11 Kotter 3-phase">
+  <section class="bg-cream" data-label="10 Barriers to agents">
+    <div class="stage">
+      <div class="eyebrow anim" style="--d:0.05s"><span>The design principle</span><span class="bar"></span><span>Resistance, dissolved by doing</span></div>
+      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Each agent dissolves a <em>specific barrier</em>.</h1>
+      <p class="subtitle anim" style="--d:0.3s; margin-top:24px;">Not through training — through doing.</p>
+
+      <div class="barriers anim" style="--d:0.45s; margin-top: 44px;">
+        <div class="barrier-row head">
+          <div>Barrier</div>
+          <div>Why it exists</div>
+          <div>Agent response</div>
+        </div>
+
+        <div class="barrier-row body-row r-briefing">
+          <div class="barrier-name">Adoption &amp;<br>change resistance</div>
+          <div class="barrier-why">Perceived as extra work · fear of replacement</div>
+          <div class="barrier-agent">
+            <div class="barrier-agent-orb"></div>
+            <div class="barrier-agent-text">
+              <strong>Morning Briefing</strong>
+              <span>Value in 60 seconds before anyone has to "learn" anything. Resistance dissolves because effort is near zero.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="barrier-row body-row r-precall">
+          <div class="barrier-name">Capability &amp;<br>confidence gaps</div>
+          <div class="barrier-why">No tech understanding · lack of coaching · limited visibility</div>
+          <div class="barrier-agent">
+            <div class="barrier-agent-orb"></div>
+            <div class="barrier-agent-text">
+              <strong>Pre-Call Intel</strong>
+              <span>Personal coach in daily work. Guided HCP prep builds confidence through use, not theory.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="barrier-row body-row r-all">
+          <div class="barrier-name">Time &amp;<br>practical constraints</div>
+          <div class="barrier-why">Hard to integrate into existing workflows · effort investment</div>
+          <div class="barrier-agent">
+            <div class="barrier-agent-orb"></div>
+            <div class="barrier-agent-text">
+              <strong>All four agents</strong>
+              <span>Live inside the Novartis ecosystem. Replace existing steps having access to all relevant data needed.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="barrier-foot anim" style="--d:0.9s">The barriers aren't overcome through training. They're overcome by agents doing the work in a way that makes resistance unnecessary.</p>
+
+      <div class="cobrand anim-fade" style="--d:1.1s">
+        <div class="cobrand-left">
+          <span class="cobrand-novartis">NOVARTIS</span>
+          <span class="cobrand-divider"></span>
+          <span>Universität St.Gallen</span>
+        </div>
+        <div class="cobrand-right"><span>03 / Implementation</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SLIDE 11 — IMPLEMENTATION PHASE 1: FEEL IT
+       ============================================================ -->
+  <section class="bg-cream" data-label="11 Feel it">
+    <div class="stage">
+      <div class="impl-top anim" style="--d:0.05s">
+        <div>
+          <h1 class="impl-title">Implementation — <em>01 Feel it</em></h1>
+          <div class="impl-sub">Grounded in Kotter's 8-Step Change Model</div>
+        </div>
+        <div class="impl-tagline">Test phase &amp; bottom-up urgency</div>
+      </div>
+
+      <div class="impl-tabs anim" style="--d:0.18s">
+        <div class="impl-tab active phase-feel">01 Feel it</div>
+        <div class="impl-tab">02 Reveal it</div>
+        <div class="impl-tab">03 Build it</div>
+      </div>
+
+      <div class="impl-body">
+        <div class="impl-col">
+          <div class="impl-col-head anim" style="--d:0.35s">Kotter steps in this phase</div>
+          <div class="impl-steps phase-feel">
+            <div class="impl-step anim" style="--d:0.45s">
+              <div class="impl-step-num">1</div>
+              <div class="impl-step-body">
+                <div class="impl-step-name">Create Urgency</div>
+                <div class="impl-step-desc">Employees experience the tool and surface real pain points.</div>
+              </div>
+            </div>
+            <div class="impl-step anim" style="--d:0.55s">
+              <div class="impl-step-num">2</div>
+              <div class="impl-step-body">
+                <div class="impl-step-name">Build the Coalition</div>
+                <div class="impl-step-desc">Access is enabled and early feedback is collected across teams.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="impl-col impl-narrative phase-feel">
+          <div class="impl-col-head anim" style="--d:0.5s">What happens in this phase</div>
+          <div class="impl-narrative-rail"></div>
+          <p class="impl-narrative-text anim" style="--d:0.6s">The tool is rolled out to selected employees or teams for hands-on testing. Employees use it in their daily work, provide feedback, and identify where it creates value or solves pain points. Urgency for change emerges <strong>bottom-up</strong> through practical experience rather than top-down pressure.</p>
+          <div class="impl-outcome anim" style="--d:0.75s">
+            <span class="impl-outcome-label">Outcome</span>
+            <span class="impl-outcome-text">first user experience, visible pain points, and bottom-up momentum.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cobrand anim-fade" style="--d:1.0s">
+        <div class="cobrand-left">
+          <span class="cobrand-novartis">NOVARTIS</span>
+          <span class="cobrand-divider"></span>
+          <span>Universität St.Gallen</span>
+        </div>
+        <div class="cobrand-right"><span>03 / Implementation</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SLIDE 12 — IMPLEMENTATION PHASE 2: REVEAL IT
+       ============================================================ -->
+  <section class="bg-cream" data-label="12 Reveal it">
+    <div class="stage">
+      <div class="impl-top anim" style="--d:0.05s">
+        <div>
+          <h1 class="impl-title">Implementation — <em>02 Reveal it</em></h1>
+          <div class="impl-sub">Grounded in Kotter's 8-Step Change Model</div>
+        </div>
+        <div class="impl-tagline">Show value &amp; clarify direction</div>
+      </div>
+
+      <div class="impl-tabs anim" style="--d:0.18s">
+        <div class="impl-tab passed">01 Feel it</div>
+        <div class="impl-tab active phase-reveal">02 Reveal it</div>
+        <div class="impl-tab">03 Build it</div>
+      </div>
+
+      <div class="impl-body">
+        <div class="impl-col">
+          <div class="impl-col-head anim" style="--d:0.35s">Kotter steps in this phase</div>
+          <div class="impl-steps phase-reveal">
+            <div class="impl-step anim" style="--d:0.45s">
+              <div class="impl-step-num">3</div>
+              <div class="impl-step-body">
+                <div class="impl-step-name">Form a Vision</div>
+                <div class="impl-step-desc">Early learnings are translated into a clear future direction.</div>
+              </div>
+            </div>
+            <div class="impl-step anim" style="--d:0.55s">
+              <div class="impl-step-num">4</div>
+              <div class="impl-step-body">
+                <div class="impl-step-name">Enlist the Army</div>
+                <div class="impl-step-desc">Teams understand what is possible and why it matters.</div>
+              </div>
+            </div>
+            <div class="impl-step anim" style="--d:0.65s">
+              <div class="impl-step-num">5</div>
+              <div class="impl-step-body">
+                <div class="impl-step-name">Remove Barriers</div>
+                <div class="impl-step-desc">Open questions, resistance, and adoption blockers are addressed.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="impl-col impl-narrative phase-reveal">
+          <div class="impl-col-head anim" style="--d:0.5s">What happens in this phase</div>
+          <div class="impl-narrative-rail"></div>
+          <p class="impl-narrative-text anim" style="--d:0.6s">Initial learnings from the test phase are made visible. Early KPIs, employee feedback, and use cases <strong>demonstrate the tool's value</strong>. The organization gains clarity on what is possible, how the tool supports the broader strategy, and where the implementation is heading next.</p>
+          <div class="impl-outcome anim" style="--d:0.75s">
+            <span class="impl-outcome-label">Outcome</span>
+            <span class="impl-outcome-text">proof of value, shared understanding, and a clearer implementation direction.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cobrand anim-fade" style="--d:1.0s">
+        <div class="cobrand-left">
+          <span class="cobrand-novartis">NOVARTIS</span>
+          <span class="cobrand-divider"></span>
+          <span>Universität St.Gallen</span>
+        </div>
+        <div class="cobrand-right"><span>03 / Implementation</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SLIDE 13 — IMPLEMENTATION PHASE 3: BUILD IT
+       ============================================================ -->
+  <section class="bg-cream" data-label="13 Build it">
+    <div class="stage">
+      <div class="impl-top anim" style="--d:0.05s">
+        <div>
+          <h1 class="impl-title">Implementation — <em>03 Build it</em></h1>
+          <div class="impl-sub">Grounded in Kotter's 8-Step Change Model</div>
+        </div>
+        <div class="impl-tagline">Full rollout &amp; embedded adoption</div>
+      </div>
+
+      <div class="impl-tabs anim" style="--d:0.18s">
+        <div class="impl-tab passed">01 Feel it</div>
+        <div class="impl-tab passed">02 Reveal it</div>
+        <div class="impl-tab active phase-build">03 Build it</div>
+      </div>
+
+      <div class="impl-body">
+        <div class="impl-col">
+          <div class="impl-col-head anim" style="--d:0.35s">Kotter steps in this phase</div>
+          <div class="impl-steps phase-build">
+            <div class="impl-step anim" style="--d:0.45s">
+              <div class="impl-step-num">6</div>
+              <div class="impl-step-body">
+                <div class="impl-step-name">Short-Term Wins</div>
+                <div class="impl-step-desc">First concrete outcomes are scaled and communicated.</div>
+              </div>
+            </div>
+            <div class="impl-step anim" style="--d:0.55s">
+              <div class="impl-step-num">7</div>
+              <div class="impl-step-body">
+                <div class="impl-step-name">Sustain Momentum</div>
+                <div class="impl-step-desc">Usage, peer exchange, and champions keep adoption moving.</div>
+              </div>
+            </div>
+            <div class="impl-step anim" style="--d:0.65s">
+              <div class="impl-step-num">8</div>
+              <div class="impl-step-body">
+                <div class="impl-step-name">Institute Change</div>
+                <div class="impl-step-desc">The tool becomes part of daily routines and standard processes.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="impl-col impl-narrative phase-build">
+          <div class="impl-col-head anim" style="--d:0.5s">What happens in this phase</div>
+          <div class="impl-narrative-rail"></div>
+          <p class="impl-narrative-text anim" style="--d:0.6s">The rollout is completed across all relevant teams. Everyone has access, is onboarded, and is actively involved. The tool becomes part of the regular way of working. <strong>The focus shifts from testing to sustained adoption</strong>, integration into routines, and long-term behavior change.</p>
+          <div class="impl-outcome anim" style="--d:0.75s">
+            <span class="impl-outcome-label">Outcome</span>
+            <span class="impl-outcome-text">full rollout, organization-wide adoption, and lasting behavioral change.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cobrand anim-fade" style="--d:1.0s">
+        <div class="cobrand-left">
+          <span class="cobrand-novartis">NOVARTIS</span>
+          <span class="cobrand-divider"></span>
+          <span>Universität St.Gallen</span>
+        </div>
+        <div class="cobrand-right"><span>03 / Implementation</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SLIDE 14 — KOTTER 3-PHASE OVERVIEW (recap)
+       ============================================================ -->
+  <section class="bg-cream" data-label="14 Kotter overview">
     <div class="stage">
       <div class="eyebrow anim" style="--d:0.05s"><span>The plan</span><span class="bar"></span><span>Kotter · 8 steps · 3 phases</span></div>
       <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Change unfolds in <em>three phases</em>,<br>grounded in Kotter.</h1>
@@ -2195,88 +3277,9 @@ section[data-deck-active] .anim-fade{
 
 
   <!-- ============================================================
-       SLIDE 12 — BARRIER → AGENT
-       ============================================================ -->
-  <section class="bg-cream" data-label="12 Barriers to agents">
-    <div class="stage">
-      <div class="eyebrow anim" style="--d:0.05s"><span>The design principle</span><span class="bar"></span><span>Resistance, dissolved by doing</span></div>
-      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Each agent dissolves a <em>specific barrier</em>.</h1>
-      <p class="subtitle anim" style="--d:0.3s; margin-top:24px;">Not through training — through doing.</p>
-
-      <div class="barriers anim" style="--d:0.45s; margin-top: 44px;">
-        <div class="barrier-row head">
-          <div>Barrier</div>
-          <div>Why it exists</div>
-          <div>Agent response</div>
-        </div>
-
-        <div class="barrier-row body-row r-briefing">
-          <div class="barrier-name">Adoption &amp;<br>change resistance</div>
-          <div class="barrier-why">Perceived as extra work · fear of replacement</div>
-          <div class="barrier-agent">
-            <div class="barrier-agent-orb"></div>
-            <div class="barrier-agent-text">
-              <strong>Morning Briefing</strong>
-              <span>Value in 60 seconds before anyone has to "learn" anything. Resistance dissolves because effort is near zero.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="barrier-row body-row r-precall">
-          <div class="barrier-name">Capability &amp;<br>confidence gaps</div>
-          <div class="barrier-why">No tech understanding · lack of coaching · limited visibility</div>
-          <div class="barrier-agent">
-            <div class="barrier-agent-orb"></div>
-            <div class="barrier-agent-text">
-              <strong>Pre-Call Intel</strong>
-              <span>Personal coach in daily work. Guided HCP prep builds confidence through use, not theory.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="barrier-row body-row r-all">
-          <div class="barrier-name">Time &amp;<br>practical constraints</div>
-          <div class="barrier-why">Hard to integrate into existing workflows · effort investment</div>
-          <div class="barrier-agent">
-            <div class="barrier-agent-orb"></div>
-            <div class="barrier-agent-text">
-              <strong>All four agents</strong>
-              <span>Live inside Teams, Veeva CRM and the LMS. Replace existing steps rather than adding new ones. Integration is invisible.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="barrier-row body-row r-content">
-          <div class="barrier-name">Quality &amp;<br>credibility concerns</div>
-          <div class="barrier-why">Distrust in AI-generated content · accuracy risks</div>
-          <div class="barrier-agent">
-            <div class="barrier-agent-orb"></div>
-            <div class="barrier-agent-text">
-              <strong>Content + MLR</strong>
-              <span>Auto-screens every output against 7 pharma regulatory rules and loops until compliant. Mary reviews — she stays in control.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="barrier-foot anim" style="--d:0.9s">The barriers aren't overcome through training. They're overcome by agents doing the work in a way that makes resistance unnecessary.</p>
-
-      <div class="cobrand anim-fade" style="--d:1.1s">
-        <div class="cobrand-left">
-          <span class="cobrand-novartis">NOVARTIS</span>
-          <span class="cobrand-divider"></span>
-          <span>Universität St.Gallen</span>
-        </div>
-        <div class="cobrand-right"><span>03 / Implementation</span></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
        SLIDE 13 — ESCALATION LADDER (MARY)
        ============================================================ -->
-  <section class="bg-cream" data-label="13 Adoption safety net">
+  <section class="bg-cream" data-label="15 Adoption safety net">
     <div class="stage">
       <div class="eyebrow anim" style="--d:0.05s"><span>Adoption safety net</span><span class="bar"></span><span>Continuous monitoring · per persona, per market</span></div>
       <h1 class="title anim" style="--d:0.15s; margin-top:24px;">A safety net catches resistance<br><em>before</em> it becomes refusal.</h1>
@@ -2291,8 +3294,8 @@ section[data-deck-active] .anim-fade{
               <div class="ladder-mary-role">Senior Marketer · 31</div>
             </div>
           </div>
-          <p style="font-size:22px; color: var(--ink-2); line-height:1.4;">Curious but sceptical — unsure how to leverage AI without losing quality or control.</p>
-          <div class="ladder-mary-quote">"I can see the potential of AI, but I need to know how to use it in a way that actually improves my work."</div>
+          <p style="font-size:22px; color: var(--ink-2); line-height:1.4;">Sees AI as additional work. Believes learning a new system will take too much time and effort, with unclear practical value for an already demanding workload.</p>
+          <div class="ladder-mary-quote">"I already have enough on my plate — I don't see why I should spend time learning another tool that may not even help me."</div>
         </div>
 
         <div class="ladder-steps">
@@ -2338,56 +3341,89 @@ section[data-deck-active] .anim-fade{
   <!-- ============================================================
        SLIDE 14 — UAT METHODOLOGY
        ============================================================ -->
-  <section class="bg-cream" data-label="14 UAT methodology">
+  <section class="bg-cream" data-label="16 UAT methodology">
     <div class="stage">
       <div class="eyebrow anim" style="--d:0.05s"><span>User Acceptance Testing</span><span class="bar"></span><span>Cycle 1</span></div>
-      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">We <em>prove it works</em><br>before we scale it.</h1>
+      <h1 class="title anim" style="--d:0.15s; margin-top:20px;">We <em>prove it works</em> before we scale it.</h1>
 
-      <div class="uat" style="margin-top: 52px;">
-        <div class="uat-block">
-          <div class="uat-block-head anim" style="--d:0.35s">Test format</div>
-          <div class="uat-list anim" style="--d:0.45s">
-            <div class="uat-list-item"><strong>Moderated think-aloud sessions</strong> · 45–60 min per person</div>
-            <div class="uat-list-item">Multi-channel HCP campaign using all 3 core agents · <span>Content, Campaign, Compliance (MLR)</span></div>
-            <div class="uat-list-item">Minimum <strong>2 full agent loops</strong> per tester</div>
-            <div class="uat-list-item">KPI design: <strong>comparative</strong> (across all profiles) + <strong>individual</strong> (persona-specific growth)</div>
+      <div class="uat2-top" style="margin-top: 38px;">
+        <div class="uat2-card anim" style="--d:0.32s">
+          <div class="uat2-card-head">
+            <span class="uat2-tag">A</span>
+            <span class="uat2-label">How we test</span>
           </div>
-
-          <div class="uat-block-head anim" style="--d:0.6s; margin-top:12px;">2 Profiles · Cycle 1</div>
-          <div class="profiles anim" style="--d:0.7s">
-            <div class="uat-profile john">
-              <div class="uat-profile-name">John, 24</div>
-              <div class="uat-profile-tag">AI-Native Pragmatist</div>
-              <div class="uat-profile-risk">Risk: speed over quality, uncritical adoption</div>
+          <div class="uat2-list">
+            <div class="uat2-item">
+              <span class="uat2-key">Format</span>
+              <span class="uat2-val">Moderated think-aloud, <strong>45–60 min</strong> per tester</span>
             </div>
-            <div class="uat-profile mary">
-              <div class="uat-profile-name">Mary, 31</div>
-              <div class="uat-profile-tag">Curious Sceptic</div>
-              <div class="uat-profile-risk">Test: does the system earn trust through quality?</div>
+            <div class="uat2-item">
+              <span class="uat2-key">Scenario</span>
+              <span class="uat2-val">Multi-channel HCP campaign through <strong>the agents</strong></span>
+            </div>
+            <div class="uat2-item">
+              <span class="uat2-key">Depth</span>
+              <span class="uat2-val">Minimum <strong>2 full agent loops</strong> per tester</span>
+            </div>
+            <div class="uat2-item">
+              <span class="uat2-key">KPIs</span>
+              <span class="uat2-val"><strong>Comparative</strong> across profiles + <strong>individual</strong> growth targets</span>
             </div>
           </div>
         </div>
 
-        <div class="uat-block">
-          <div class="uat-block-head anim" style="--d:0.5s">Decision framework</div>
-          <div class="decision anim" style="--d:0.65s">
-            <div class="decision-row">
-              <div class="l">All KPIs met</div>
-              <div class="r">→ Proceed to pilot</div>
+        <div class="uat2-card anim" style="--d:0.45s">
+          <div class="uat2-card-head">
+            <span class="uat2-tag">B</span>
+            <span class="uat2-label">Who we test</span>
+            <span class="uat2-cycle">Cycle 1</span>
+          </div>
+          <div class="uat2-profiles">
+            <div class="uat2-profile john">
+              <div class="uat2-profile-row">
+                <div class="uat2-profile-avatar">JK</div>
+                <div class="uat2-profile-id">
+                  <div class="uat2-profile-name">John, 24</div>
+                  <div class="uat2-profile-role">Junior Marketer · Male</div>
+                </div>
+              </div>
+              <div class="uat2-profile-tag">AI-Native Pragmatist</div>
+              <div class="uat2-profile-test">Does John <strong>review and correct</strong> AI output — or just blindly accept it?</div>
             </div>
-            <div class="decision-row">
-              <div class="l">Majority met (≥ 75%)</div>
-              <div class="r">→ Rollout with mandatory quality checkpoints, friction added at review stages</div>
-            </div>
-            <div class="decision-row">
-              <div class="l">Critical KPIs missed</div>
-              <div class="r">→ Do not proceed. Redesign before next UAT cycle</div>
+            <div class="uat2-profile mary">
+              <div class="uat2-profile-row">
+                <div class="uat2-profile-avatar">MK</div>
+                <div class="uat2-profile-id">
+                  <div class="uat2-profile-name">Mary, 31</div>
+                  <div class="uat2-profile-role">Marketer · Female</div>
+                </div>
+              </div>
+              <div class="uat2-profile-tag">Reluctant Adopter</div>
+              <div class="uat2-profile-test">Does the system <strong>save real time</strong> vs. add extra work?</div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div style="padding: 24px 28px; background: rgba(107,132,96,0.1); border:1px solid rgba(107,132,96,0.25); border-radius: var(--r-md); margin-top: auto; font-family:'Instrument Serif',serif; font-style:italic; font-size:26px; line-height:1.4; color: var(--ink); opacity:0;" class="anim" data-d="0.85s">
-            "No partial rollouts. Either we earn the right to scale, or we redesign."
-          </div>
+      <div class="uat2-decision-head anim" style="--d:0.6s">
+        <span class="uat2-tag">C</span>
+        <span class="uat2-label">Decision framework</span>
+      </div>
+      <div class="uat2-decision">
+        <div class="uat2-gate gate-green anim" style="--d:0.72s">
+          <div class="uat2-gate-cond">All KPIs met</div>
+          <div class="uat2-gate-arrow">→</div>
+          <div class="uat2-gate-result">Proceed to pilot</div>
+        </div>
+        <div class="uat2-gate gate-amber anim" style="--d:0.82s">
+          <div class="uat2-gate-cond">Majority met <span>(≥ 75%)</span></div>
+          <div class="uat2-gate-arrow">→</div>
+          <div class="uat2-gate-result">Rollout with mandatory quality checkpoints</div>
+        </div>
+        <div class="uat2-gate gate-red anim" style="--d:0.92s">
+          <div class="uat2-gate-cond">Critical KPIs missed</div>
+          <div class="uat2-gate-arrow">→</div>
+          <div class="uat2-gate-result">Redesign before next cycle</div>
         </div>
       </div>
 
@@ -2406,7 +3442,7 @@ section[data-deck-active] .anim-fade{
   <!-- ============================================================
        SLIDE 15 — KPIs
        ============================================================ -->
-  <section class="bg-cream" data-label="15 KPI thresholds">
+  <section class="bg-cream" data-label="17 KPI thresholds">
     <div class="stage">
       <div class="eyebrow anim" style="--d:0.05s"><span>KPI thresholds</span><span class="bar"></span><span>The gate to rollout</span></div>
       <h1 class="title anim" style="--d:0.15s; margin-top:20px;">KPIs <em>gate</em> the move<br>from pilot to rollout.</h1>
@@ -2417,7 +3453,7 @@ section[data-deck-active] .anim-fade{
           <div class="kpi-list">
             <div class="kpi-row anim" style="--d:0.45s">
               <div class="kpi-name">System Usability Scale (SUS)</div>
-              <div class="kpi-target">≥ 68</div>
+              <div class="kpi-target">≥ 68%</div>
               <div class="kpi-method">Post-session 10-item questionnaire</div>
             </div>
             <div class="kpi-row anim" style="--d:0.5s">
@@ -2437,7 +3473,7 @@ section[data-deck-active] .anim-fade{
             </div>
             <div class="kpi-row anim" style="--d:0.65s">
               <div class="kpi-name">Willingness to Continue</div>
-              <div class="kpi-target">≥ 4.0/5</div>
+              <div class="kpi-target">≥ 4/5</div>
               <div class="kpi-method">Post-session questionnaire Q10</div>
             </div>
             <div class="kpi-row anim" style="--d:0.7s">
@@ -2454,16 +3490,16 @@ section[data-deck-active] .anim-fade{
             <div class="pkpi john anim" style="--d:0.6s">
               <div class="pkpi-head">
                 <div class="pkpi-dot"></div>
-                <div class="pkpi-name">John · Junior</div>
+                <div class="pkpi-name">John · Junior · 24</div>
               </div>
-              <div class="pkpi-target">Critical review rate <strong>≥ 50%</strong> — does NOT blindly accept AI output. Prompt sophistication <strong>≥ 2 by Loop 2</strong>.</div>
+              <div class="pkpi-target">John <strong>spots and corrects ≥ 2 AI errors</strong> per campaign loop — proof he reviews, not just accepts.</div>
             </div>
             <div class="pkpi mary anim" style="--d:0.75s">
               <div class="pkpi-head">
                 <div class="pkpi-dot"></div>
-                <div class="pkpi-name">Mary · Senior Sceptic</div>
+                <div class="pkpi-name">Mary · Marketer · 31</div>
               </div>
-              <div class="pkpi-target">Trust conversion score <strong>≥ 2</strong> (sceptic → value recognised). At least <strong>2 value-add moments</strong> identified.</div>
+              <div class="pkpi-target">A weekly task that took <strong>2 hours</strong> takes <strong>under 30 minutes</strong> with the agent by end of Loop 2.</div>
             </div>
             <div class="pkpi anim" style="--d:0.9s">
               <div class="pkpi-head">
@@ -2473,9 +3509,6 @@ section[data-deck-active] .anim-fade{
               <div class="pkpi-target">Control retention <strong>≥ 40%</strong> — marketer modifies / overrides, not passive acceptance.</div>
             </div>
           </div>
-          <p class="anim" style="--d:1.05s; font-family:'Instrument Serif',serif; font-style:italic; font-size:24px; line-height:1.4; color: var(--ink-2); margin-top: 22px;">
-            Trust conversion is confirmed for sceptic profiles before broader rollout is authorised.
-          </p>
         </div>
       </div>
 
@@ -2492,65 +3525,14 @@ section[data-deck-active] .anim-fade{
 
 
   <!-- ============================================================
-       SLIDE 16 — AGENTIC vs CONVENTIONAL
+       SLIDE 16 — SECTION 04 DIVIDER (LIMITATIONS) [renumbered]
        ============================================================ -->
-  <section class="bg-cream" data-label="16 Agentic vs conventional">
-    <div class="stage">
-      <div class="eyebrow anim" style="--d:0.05s"><span>The technical case</span><span class="bar"></span><span>Why agentic</span></div>
-      <h1 class="title anim" style="--d:0.15s; margin-top:24px;">Agentic AI does what <em>conventional AI</em> cannot.</h1>
-
-      <div class="versus" style="margin-top: 56px;">
-        <div class="col conventional anim" style="--d:0.4s">
-          <div class="col-tag">Conventional AI</div>
-          <div class="col-name">ChatGPT · Copilot · Einstein</div>
-          <div class="col-sub">Reactive · session-bound · single-system</div>
-          <div class="col-list">
-            <div class="col-item"><span class="col-item-mark">✕</span><span>Reactive — responds only when prompted</span></div>
-            <div class="col-item"><span class="col-item-mark">✕</span><span>No memory across sessions — resets every conversation</span></div>
-            <div class="col-item"><span class="col-item-mark">✕</span><span>No access to live HCP data from Veeva or CRM</span></div>
-            <div class="col-item"><span class="col-item-mark">✕</span><span>Cannot act across multiple systems in one workflow</span></div>
-            <div class="col-item"><span class="col-item-mark">✕</span><span>Personalisation requires manual effort per HCP or segment</span></div>
-            <div class="col-item"><span class="col-item-mark">✕</span><span>Cannot proactively flag underperformance</span></div>
-          </div>
-        </div>
-
-        <div class="col agentic anim" style="--d:0.55s">
-          <div class="col-tag">Agentic AI · NovaSphere</div>
-          <div class="col-name"><em>Goal-directed.</em><br>Persistent. Orchestrating.</div>
-          <div class="col-sub">Plans, executes, learns, monitors</div>
-          <div class="col-list">
-            <div class="col-item"><span class="col-item-mark">✓</span><span>Goal-directed — plans and executes all steps autonomously</span></div>
-            <div class="col-item"><span class="col-item-mark">✓</span><span>Persistent memory — learns marketer and HCP preferences over time</span></div>
-            <div class="col-item"><span class="col-item-mark">✓</span><span>Queries live Veeva data in real time for every recommendation</span></div>
-            <div class="col-item"><span class="col-item-mark">✓</span><span>Orchestrates Veeva + Salesforce Marketing Cloud + MLR in one flow</span></div>
-            <div class="col-item"><span class="col-item-mark">✓</span><span>Personalises 200+ HCPs in a single workflow</span></div>
-            <div class="col-item"><span class="col-item-mark">✓</span><span>Monitors KPIs continuously and surfaces optimisation unprompted</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cobrand anim-fade" style="--d:1.0s">
-        <div class="cobrand-left">
-          <span class="cobrand-novartis">NOVARTIS</span>
-          <span class="cobrand-divider"></span>
-          <span>Universität St.Gallen</span>
-        </div>
-        <div class="cobrand-right"><span>03 / Implementation</span></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       SLIDE 17 — SECTION 04 DIVIDER (LIMITATIONS)
-       ============================================================ -->
-  <section class="bg-dark" data-label="17 Section 04 Limitations">
+  <section class="bg-dark" data-label="18 Section 04 Limitations">
     <div class="stage divider">
       <div class="divider-left">
         <div class="divider-tag anim" style="--d:0.1s">Section Four</div>
         <div class="divider-num anim-blur" style="--d:0.2s"><strong>04</strong></div>
         <h1 class="divider-title anim" style="--d:0.4s">Limitations<br>&amp; alternatives.</h1>
-        <p class="divider-sub anim" style="--d:0.55s">An honest look at what's hard — and the five paths we ruled out.</p>
       </div>
 
       <div class="divider-right anim-grow" style="--d:0.1s">
@@ -2568,12 +3550,12 @@ section[data-deck-active] .anim-fade{
   <!-- ============================================================
        SLIDE 18 — LIMITATIONS
        ============================================================ -->
-  <section class="bg-cream" data-label="18 Limitations">
+  <section class="bg-cream" data-label="19 Limitations">
     <div class="stage">
       <div class="eyebrow anim" style="--d:0.05s"><span>Real limitations</span><span class="bar"></span><span>Three constraints we plan around</span></div>
       <h1 class="title anim" style="--d:0.15s; margin-top:20px;">Agentic AI has <em>real limits</em><br>we plan around.</h1>
 
-      <p class="limits-intro anim" style="--d:0.3s; margin-top: 36px;">
+      <p class="limits-intro anim" style="--d:0.3s; margin-top: 22px;">
         Agentic AI isn't a chatbot. It's a system that <em>plans, reasons, retrieves, and executes</em> through tools. That agency is where the value comes from — and where the limits get severe.
       </p>
 
@@ -2627,7 +3609,7 @@ section[data-deck-active] .anim-fade{
   <!-- ============================================================
        SLIDE 19 — ALTERNATIVES
        ============================================================ -->
-  <section class="bg-cream" data-label="19 Alternatives">
+  <section class="bg-cream" data-label="20 Alternatives">
     <div class="stage">
       <div class="eyebrow anim" style="--d:0.05s"><span>Alternatives considered</span><span class="bar"></span><span>Why not them</span></div>
       <h1 class="title anim" style="--d:0.15s; margin-top:20px;">We chose NovaSphere over <em>five alternatives</em>.</h1>
@@ -2675,7 +3657,7 @@ section[data-deck-active] .anim-fade{
   <!-- ============================================================
        SLIDE 20 — CLOSING
        ============================================================ -->
-  <section class="bg-dark" data-label="20 Closing">
+  <section class="bg-dark" data-label="21 Closing">
     <div class="stage closing">
       <div class="closing-sphere-wrap anim-grow" style="--d:0.05s">
         <div class="sphere"></div>
